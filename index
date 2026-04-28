@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rokelin | Rediseño moderno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff8ef;
+      --bg-soft: #f7eadb;
+      --dark: #22140f;
+      --muted: #765f54;
+      --red: #8f1d17;
+      --red-dark: #66100c;
+      --gold: #c8923f;
+      --cream: #fffdf8;
+      --border: rgba(34, 20, 15, .12);
+      --shadow: 0 24px 70px rgba(34, 20, 15, .15);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--dark);
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .topbar .container {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .topbar span {
+      opacity: .86;
+    }
+
+    .topbar strong {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 248, 239, .84);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--gold));
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(143, 29, 23, .25);
+    }
+
+    .logo small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .16em;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #4b352c;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: var(--red);
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 16px 38px rgba(143, 29, 23, .25);
+    }
+
+    .btn-primary:hover {
+      background: var(--red-dark);
+    }
+
+    .btn-ghost {
+      background: #fff;
+      border-color: var(--border);
+      color: var(--dark);
+    }
+
+    .hero {
+      position: relative;
+      padding: 88px 0 70px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -220px -180px auto auto;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: rgba(200, 146, 63, .24);
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(143, 29, 23, .08);
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 86px);
+      line-height: .95;
+      letter-spacing: -.045em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 620px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .7);
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      color: var(--red);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 620px;
+      border-radius: 42px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(34, 20, 15, .05), rgba(34, 20, 15, .72)),
+        url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1100&q=80") center/cover;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      padding: 26px;
+      border-radius: 28px;
+      background: rgba(255, 253, 248, .92);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+    }
+
+    .floating-card h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .floating-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      color: var(--red-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.035em;
+    }
+
+    .section-head p {
+      max-width: 510px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      position: relative;
+      min-height: 320px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      border-radius: var(--radius);
+      overflow: hidden;
+      color: #fff;
+      box-shadow: 0 20px 50px rgba(34, 20, 15, .12);
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.74));
+      z-index: 1;
+    }
+
+    .feature > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      opacity: .9;
+      line-height: 1.6;
+    }
+
+    .feature:nth-child(1) { background: url("https://images.unsplash.com/photo-1615900128652-3f2035f1992f?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .feature:nth-child(2) { background: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .feature:nth-child(3) { background: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80") center/cover; }
+
+    .products {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(34, 20, 15, .08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-img {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product:nth-child(1) .product-img { background-image: url("https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=900&q=80"); }
+    .product:nth-child(2) .product-img { background-image: url("https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=80"); }
+    .product:nth-child(3) .product-img { background-image: url("https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80"); }
+
+    .product-content {
+      padding: 24px;
+    }
+
+    .product-content small {
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .product-content h3 {
+      margin: 9px 0 10px;
+      font-size: 25px;
+    }
+
+    .product-content p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--red);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .story-photo {
+      min-height: 520px;
+      border-radius: 38px;
+      background:
+        linear-gradient(180deg, rgba(143, 29, 23, .05), rgba(34, 20, 15, .45)),
+        url("https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1000&q=80") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .timeline-item {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--border);
+    }
+
+    .timeline-item strong {
+      color: var(--red);
+      font-size: 20px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    .restaurant {
+      background: var(--red);
+      color: #fff;
+      padding: 88px 0;
+    }
+
+    .restaurant .section-head p {
+      color: rgba(255,255,255,.76);
+    }
+
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+
+    .menu-item h4 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .menu-item span {
+      color: #ffd99d;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .menu-item p {
+      color: rgba(255,255,255,.72);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .cta {
+      padding: 100px 0;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 40px;
+      padding: 58px;
+      background:
+        linear-gradient(90deg, rgba(34,20,15,.92), rgba(34,20,15,.55)),
+        url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80") center/cover;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 64px);
+      max-width: 700px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      max-width: 560px;
+      color: rgba(255,255,255,.78);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 44px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    footer h4 {
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+
+    footer p, footer a {
+      color: rgba(255,255,255,.68);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links, .nav-actions {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: inline-flex;
+      }
+
+      .hero-grid,
+      .story-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 480px;
+      }
+
+      .feature-grid,
+      .product-grid,
+      .menu-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .topbar span:last-child {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-card {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .cta-box {
+        padding: 36px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Jamón y productos de Teruel con envío online</span>
+      <span><strong>Tel.</strong> 978 611 869 · rokelin@rokelin.com</span>
+    </div>
+  </div>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo" aria-label="Rokelin">
+        <span class="logo-mark">R</span>
+        <span>ROKELIN <small>PURO CERDO</small></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#historia">Empresa</a>
+        <a href="#productos">Tienda</a>
+        <a href="#restaurantes">Restaurantes</a>
+        <a href="#exportacion">Exportación</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="#productos">Ver productos</a>
+        <a class="btn btn-primary" href="#contacto">Comprar ahora</a>
+      </div>
+
+      <button class="mobile-menu" onclick="document.body.classList.toggle('menu-open')">Menú</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Desde Teruel al mundo</div>
+          <h1>Tradición turolense con sabor <span>premium.</span></h1>
+          <p>
+            Una propuesta renovada para Rokelin: más visual, más elegante y más enfocada a vender producto,
+            contar historia y llevar al usuario hacia tienda, restaurantes y contacto sin perder la esencia artesanal.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#productos">Descubrir selección</a>
+            <a class="btn btn-ghost" href="#historia">Conocer la historia</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>1975</strong><span>Origen familiar</span></div>
+            <div class="stat"><strong>D.O.P.</strong><span>Jamón de Teruel</span></div>
+            <div class="stat"><strong>360º</strong><span>Tienda, restauración y exportación</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Jamón y gastronomía de Teruel">
+          <div class="floating-card">
+            <h3>Jamón curado en altura</h3>
+            <p>Producto protagonista, presentación limpia y llamadas a la acción claras para mejorar la conversión.</p>
+            <div class="badge-row">
+              <span class="badge">Artesanal</span>
+              <span class="badge">Teruel</span>
+              <span class="badge">Selección gourmet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="container story-grid">
+        <div class="story-photo"></div>
+        <div>
+          <div class="eyebrow">Nuestra historia</div>
+          <div class="section-head" style="margin-bottom: 0; display: block;">
+            <h2>Raíz familiar, mirada moderna.</h2>
+            <p style="margin-top: 18px;">
+              Rokelin nace como una marca turolense ligada a la charcutería tradicional y evoluciona hasta convertirse
+              en una referencia en producto, restauración, franquicia y exportación.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Origen</strong>
+              <p>Una identidad cercana, familiar y muy vinculada al producto local.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Producto</strong>
+              <p>Jamón D.O.P., embutidos y elaboraciones propias como eje principal de la marca.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Expansión</strong>
+              <p>Tienda online, restaurantes, franquicias y presencia internacional desde Teruel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Qué ofrecemos</div>
+            <h2>Tres caminos, una misma esencia.</h2>
+          </div>
+          <p>La web queda organizada para que el usuario entienda rápido dónde ir: comprar, reservar o conocer la marca.</p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature" href="#productos">
+            <h3>Tienda online</h3>
+            <p>Productos seleccionados, fichas claras y compra rápida.</p>
+          </a>
+          <a class="feature" href="#restaurantes">
+            <h3>Restaurantes</h3>
+            <p>Una experiencia gastronómica con platos tradicionales actualizados.</p>
+          </a>
+          <a class="feature" id="exportacion" href="#contacto">
+            <h3>Exportación</h3>
+            <p>Producto de Teruel preparado para llegar a nuevos mercados.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="productos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Nuestra selección</div>
+            <h2>Productos estrella.</h2>
+          </div>
+          <p>Tarjetas más visuales, con jerarquía clara, textos cortos y botón de compra directo.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product">
+            <div class="product-img"></div>
+            <div class="product-content">
+              <small>Producto estrella</small>
+              <h3>Jamón D.O.P.</h3>
+              <p>Elaborado y curado en secadero propio. Ideal como producto principal de la tienda.</p>
+              <div class="price-row">
+                <span class="price">6 - 8 kg</span>
+                <a class="btn btn-primary" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img"></div>
+            <div class="product-content">
+              <small>Selección gourmet</small>
+              <h3>Caña de lomo</h3>
+              <p>Elaborada con lomos seleccionados, perfecta para destacar en packs premium.</p>
+              <div class="price-row">
+                <span class="price">Premium</span>
+                <a class="btn btn-primary" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img"></div>
+            <div class="product-content">
+              <small>Más demandado</small>
+              <h3>Longaniza de Aragón</h3>
+              <p>Uno de los embutidos más reconocibles de la marca, con una presentación directa.</p>
+              <div class="price-row">
+                <span class="price">Artesanal</span>
+                <a class="btn btn-primary" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurant" id="restaurantes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" style="background: rgba(255,255,255,.12); color: #ffd99d;">Para recoger</div>
+            <h2>Carta rápida y apetecible.</h2>
+          </div>
+          <p>Una sección de restaurante mucho más limpia, pensada para leer rápido desde móvil y pedir sin perderse.</p>
+        </div>
+
+        <div class="menu-list">
+          <div class="menu-item">
+            <div>
+              <h4>Plato de jamón D.O. Teruel</h4>
+              <p>Corte fino, sabor intenso y presentación clásica.</p>
+            </div>
+            <span>14,00€</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <h4>Huevos rotos con jamón</h4>
+              <p>Un plato directo, reconocible y muy vendible.</p>
+            </div>
+            <span>9,00€</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <h4>Canelón Rokelin</h4>
+              <p>Con salsa de boletus y toque de cocina actual.</p>
+            </div>
+            <span>8,00€</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <h4>Hamburguesa Rokelin</h4>
+              <p>Una opción potente para público joven y familiar.</p>
+            </div>
+            <span>9,50€</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Una web más clara, elegante y pensada para vender.</h2>
+          <p>
+            Este rediseño mantiene la esencia de Rokelin, pero ordena mejor la información y refuerza lo importante:
+            producto, tradición, calidad, restaurante y contacto.
+          </p>
+          <a class="btn btn-primary" href="mailto:rokelin@rokelin.com">Contactar con Rokelin</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 14px;">
+          <span class="logo-mark">R</span>
+          <span>ROKELIN <small>PURO CERDO</small></span>
+        </div>
+        <p>Referente turolense en producción, distribución y restauración de productos de Teruel.</p>
+      </div>
+      <div>
+        <h4>Marca</h4>
+        <a href="#historia">Empresa</a><br>
+        <a href="#productos">Tienda</a><br>
+        <a href="#restaurantes">Restaurantes</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Condiciones de venta</a><br>
+        <a href="#">Política de cookies</a><br>
+        <a href="#">Privacidad</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>rokelin@rokelin.com<br>978 611 869<br>Teruel, España</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      header.style.boxShadow = window.scrollY > 20
+        ? '0 18px 45px rgba(34, 20, 15, .10)'
+        : 'none';
+    });
+  </script>
+</body>
+</html>
