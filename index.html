@@ -58,6 +58,22 @@
             border-color: rgb(255, 0, 0);
             color: black;
         }
+
+        .patricio {
+            background-color: #ff0000;
+            border-radius: 20px;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .card-title {
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -80,11 +96,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            Desplegable
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com">YT</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com">IG</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -92,7 +108,8 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link"
+                            href="https://github.com/cactusAstro/ajiaajia/blob/main/index.html">Disabled</a>
                     </li>
                 </ul>
             </div>
@@ -140,16 +157,16 @@
 
     <div class="container text-center mt-5">
         <div class="row">
-            <div class="12 col-md-4 mt-5 margin-left: 20px;">
+            <div class="col-12 col-md-4 mt-5 margin-left: 20px;">
                 <div class="card" style="mx-auto">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
                         class="card-img-top " alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Tarjeta Nº 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card’s content.</p>
-                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
-                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                        <a href="https://www.youtube.com/watch?v=h7PM8_L7oYc" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial</a>
                     </div>
                 </div>
             </div>
@@ -158,11 +175,11 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Tarjeta Nº 2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card’s content.</p>
-                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
-                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                        <a href="https://www.youtube.com/watch?v=2Jj2RA-NCc8" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial 2</a>
                     </div>
                 </div>
             </div>
@@ -171,15 +188,66 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Tarjeta Nº 3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card’s content.</p>
-                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
-                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                        <a href="https://www.youtube.com/watch?v=IdtDSctsdl0" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial 3</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container mt-5 patricio">
+        <form class="row g-3">
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputEmail4" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputPassword4" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputAddress" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Ajia micky">
+            </div>
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputAddress2" class="form-label">Dirección 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="no me pegues gilipollas">
+            </div>
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputCity" class="form-label">Ciudad </label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-2 col-12 mx-auto">
+                <label for="inputState" class="form-label">Estado</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Elige...</option>
+                    <option>Mickey 1</option>
+                    <option>Mickey 2</option>
+                    <option>Mickey 3</option>
+                    <option>Mickey 4</option>
+                    <option>Mickey 5</option>
+                </select>
+            </div>
+            <div class="col-md-12 col-12 mx-auto">
+                <label for="inputZip" class="form-label">Reseña</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Pulsame si eres gilipollas
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">inicion sesiada</button>
+            </div>
+        </form>
     </div>
 
 </body>
