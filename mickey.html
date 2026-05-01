@@ -216,13 +216,11 @@
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the
-                        collapse
-                        plugin adds the appropriate classes that we use to style each element. These classes control the
-                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                        this with custom CSS or overriding our default variables. It’s also worth noting that just about
-                        any
-                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        El iPhone es el teléfono de Apple. Destaca por usar iOS, un sistema operativo muy optimizado,
+
+                        seguro y fácil de usar. Se integra muy bien con otros dispositivos Apple, permite hacer fotos
+
+                        de alta calidad, usar Face ID, instalar apps desde la App Store y sincronizar datos con iCloud.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
                             data-bs-content="Me cago en tu puta madre gilipollas">
@@ -241,14 +239,13 @@
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        El Mac es la línea de ordenadores de Apple. Usa macOS, un sistema estable y pensado para
+                        trabajar,
+
+                        estudiar, editar fotos, programar y crear contenido. Los modelos con chip Apple Silicon, como
+                        M1,
+
+                        M2, M3 o M4, ofrecen buen rendimiento, bajo consumo y mucha autonomía.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
                             data-bs-content="Me cago en tu puta madre gilipollas">
@@ -267,14 +264,36 @@
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        El Apple Watch es el reloj inteligente de Apple. Sirve para recibir notificaciones, medir pasos,
+
+                        controlar entrenamientos, revisar la frecuencia cardíaca, usar Apple Pay y consultar información
+
+                        rápida sin sacar el iPhone. Es muy útil para deporte, salud y productividad diaria.
+                        <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-title="AJIA"
+                            data-bs-content="Me cago en tu puta madre gilipollas">
+                            Me pulsas y te doy un premio GILIPOLLAS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapsefour">
+                        Acordeón numero 4
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Los AirPods son los auriculares inalámbricos de Apple. Se conectan automáticamente al iPhone,
+
+                        iPad o Mac gracias al ecosistema Apple. Ofrecen buena calidad de sonido, cancelación de ruido
+
+                        en modelos Pro, modo transparencia y control táctil. También permiten usar Siri y cambiar de
+
+                        dispositivo de forma rápida.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
                             data-bs-content="Me cago en tu puta madre gilipollas">
@@ -341,8 +360,12 @@
 
 
 
-    <script>   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+        const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+            container: 'body'
+        }));
     </script>
 
 </body>
