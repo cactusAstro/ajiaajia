@@ -1,878 +1,191 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rediseño moderno, oscuro y premium de Rokelin: jamón de Teruel, tienda gourmet, restaurantes, franquicias y exportación." />
-  <title>Rokelin | Experiencia Gourmet Premium</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #5d5252;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        .navbar {
+            background-color: #ff0000;
+            font-weight: bold;
+        }
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: red;
+            width: 40px;
+            border-radius: 50%;
+            height: 40px;
+        }
 
-  <style>
-    :root {
-      --cream: #0f0b09;
-      --paper: #17110e;
-      --soft: #241915;
-      --dark: #fff6ea;
-      --muted: #c7a99a;
-      --red: #b83329;
-      --red2: #7d1711;
-      --gold: #d7a24e;
-      --gold2: #f1c77b;
-      --line: rgba(255, 246, 234, .12);
-      --shadow: 0 28px 80px rgba(0, 0, 0, .45);
-      --radius: 30px;
-    }
+        .carousel-control-prev-icon {
+            position: relative;
+            width: 40px;
+        }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Inter, system-ui, sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(184, 51, 41, .16), transparent 38%),
-        radial-gradient(circle at top left, rgba(215, 162, 78, .10), transparent 34%),
-        linear-gradient(180deg, #0f0b09, #140d0a 45%, #0b0807);
-      color: var(--dark);
-      overflow-x: hidden;
-    }
-    body.light-mode {
-      --cream: #fff8ef;
-      --paper: #fffdf8;
-      --soft: #f6eadb;
-      --dark: #21130f;
-      --muted: #745c51;
-      --line: rgba(33, 19, 15, .14);
-      background: linear-gradient(180deg, #fff8ef, #f6eadb);
-      color: var(--dark);
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1200px, calc(100% - 36px)); margin: 0 auto; }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-left: 300px;
+            margin-right: 300px;
+            border-radius: 90px;
+            color: lightblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
 
-    .cursor-glow {
-      position: fixed;
-      width: 320px;
-      height: 320px;
-      pointer-events: none;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(215,162,78,.13), transparent 65%);
-      transform: translate(-50%, -50%);
-      z-index: 0;
-      mix-blend-mode: screen;
-    }
+        .card {
+            background-color: #ff0000;
+            color: white;
+            border-radius: 20px;
+        }
 
-    .progress-line {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      width: 0%;
-      z-index: 2000;
-      background: linear-gradient(90deg, var(--red), var(--gold2));
-    }
+        .card-img-top {
+            border-radius: 20px 20px 0 0;
+        }
 
-    .topbar {
-      background: #070504;
-      color: rgba(255,255,255,.78);
-      font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      position: relative;
-      z-index: 5;
-    }
-    .topbar .container {
-      min-height: 38px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
-    .topbar strong { color: var(--gold2); }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(15, 11, 9, .82);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,.09);
-    }
-    .light-mode header { background: rgba(255,248,239,.86); }
-    nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .logo { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .05em; }
-    .logo-mark {
-      width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
-      color: #120b08;
-      background: linear-gradient(135deg, var(--gold2), var(--gold), var(--red));
-      box-shadow: 0 16px 45px rgba(215, 162, 78, .25);
-    }
-    .logo small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .18em; margin-top: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 20px; font-size: 14px; font-weight: 800; color: rgba(255,246,234,.76); }
-    .light-mode .nav-links { color: #49342d; }
-    .nav-links a { position: relative; }
-    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -9px; width: 0; height: 2px; background: var(--gold); transition: .25s; }
-    .nav-links a:hover { color: #fff; }
-    .light-mode .nav-links a:hover { color: var(--red); }
-    .nav-links a:hover::after { width: 100%; }
-
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-      min-height: 45px; padding: 0 19px; border-radius: 999px; border: 1px solid transparent;
-      font-weight: 900; cursor: pointer; transition: .22s ease; font-size: 14px;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--red), var(--red2));
-      color: #fff;
-      box-shadow: 0 18px 42px rgba(184, 51, 41, .32);
-    }
-    .btn-primary:hover { filter: brightness(1.08); color: #fff; }
-    .btn-ghost {
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.14);
-      color: #fff;
-    }
-    .light-mode .btn-ghost { color: var(--dark); background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.12); }
-
-    .hero {
-      position: relative;
-      padding: 96px 0 68px;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: ""; position: absolute; width: 620px; height: 620px; right: -210px; top: -260px;
-      background: rgba(215, 162, 78, .16); border-radius: 50%; filter: blur(14px); z-index: -1;
-    }
-    .hero::after {
-      content: ""; position: absolute; inset: auto 0 0 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(215,162,78,.35), transparent);
-    }
-    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 54px; align-items: center; }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; padding: 8px 13px; border-radius: 999px;
-      background: rgba(215, 162, 78, .12); color: var(--gold2); font-size: 12px; font-weight: 900;
-      letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px;
-      border: 1px solid rgba(215,162,78,.22);
-    }
-    h1, h2 { font-family: "Playfair Display", serif; letter-spacing: -.04em; }
-    h1 { font-size: clamp(50px, 7vw, 92px); line-height: .94; margin-bottom: 24px; }
-    h1 span, h2 span { color: var(--gold2); }
-    .lead { color: var(--muted); font-size: 18px; line-height: 1.75; max-width: 660px; margin-bottom: 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-bottom: 32px; }
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .stat {
-      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
-      border: 1px solid rgba(255,255,255,.11);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
-    }
-    .light-mode .stat, .light-mode .card { background: rgba(255,255,255,.74); border-color: rgba(33,19,15,.12); }
-    .stat strong { color: var(--gold2); font-size: 25px; display: block; }
-    .stat span { color: var(--muted); font-size: 12px; font-weight: 800; }
-    .hero-card {
-      min-height: 625px; border-radius: 42px; overflow: hidden; position: relative; box-shadow: var(--shadow);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.78)),
-        url("https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=1200&q=80") center/cover;
-      border: 1px solid rgba(255,255,255,.12);
-      transform-style: preserve-3d;
-    }
-    .hero-float {
-      position: absolute; left: 28px; right: 28px; bottom: 28px; padding: 26px; border-radius: 28px;
-      background: rgba(18, 11, 8, .78);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,.14);
-    }
-    .hero-float h3 { font-size: 27px; margin-bottom: 8px; color: #fff; }
-    .hero-float p { color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
-    .badges { display: flex; flex-wrap: wrap; gap: 9px; }
-    .badge {
-      padding: 8px 12px; border-radius: 999px;
-      background: rgba(215, 162, 78, .13);
-      color: var(--gold2);
-      border: 1px solid rgba(215,162,78,.22);
-      font-size: 12px; font-weight: 900;
-    }
-
-    section { padding: 86px 0; }
-    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 36px; }
-    .section-head h2 { font-size: clamp(38px, 5vw, 62px); line-height: 1; }
-    .section-head p { max-width: 540px; color: var(--muted); line-height: 1.7; }
-
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
-      border: 1px solid rgba(255,255,255,.11);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: 0 22px 54px rgba(0, 0, 0, .22), inset 0 1px 0 rgba(255,255,255,.05);
-    }
-    .card h3 { font-size: 24px; margin-bottom: 10px; color: #fff; }
-    .light-mode .card h3 { color: var(--dark); }
-    .card p, .card li { color: var(--muted); line-height: 1.65; }
-    .card ul { padding-left: 18px; display: grid; gap: 7px; }
-    .icon {
-      width: 48px; height: 48px; display: grid; place-items: center; border-radius: 18px;
-      background: linear-gradient(135deg, var(--gold), var(--red));
-      color: #120b08; font-weight: 900; margin-bottom: 16px;
-    }
-
-    .image-card {
-      min-height: 345px; border-radius: var(--radius); overflow: hidden; position: relative; color: #fff; display: flex; align-items: end; padding: 28px;
-      background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.82)), var(--img) center/cover;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .image-card h3 { font-size: 30px; margin-bottom: 8px; }
-    .image-card p { color: rgba(255,255,255,.76); line-height: 1.55; }
-
-    .products {
-      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.16));
-      border-top: 1px solid rgba(255,255,255,.09);
-      border-bottom: 1px solid rgba(255,255,255,.09);
-    }
-    .product { overflow: hidden; padding: 0; transition: .25s ease; position: relative; }
-    .product:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(215,162,78,.28); }
-    .product-img { height: 220px; background: var(--img) center/cover; filter: saturate(.9) contrast(1.05); }
-    .product-body { padding: 24px; }
-    .tag { color: var(--gold2); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
-    .product-price { color: #fff; font-weight: 900; font-size: 22px; }
-    .light-mode .product-price { color: var(--red); }
-    .premium-chip { position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,.72); color: var(--gold2); border: 1px solid rgba(215,162,78,.35); padding: 7px 10px; border-radius: 999px; font-size: 12px; font-weight: 900; }
-
-    .filter-panel {
-      display: grid;
-      grid-template-columns: 1.4fr .7fr .7fr;
-      gap: 12px;
-      margin-bottom: 26px;
-    }
-
-    .dark-section {
-      background:
-        radial-gradient(circle at top left, rgba(215,162,78,.12), transparent 32%),
-        linear-gradient(180deg, #180d0a, #110907);
-      color: #fff;
-      border-top: 1px solid rgba(255,255,255,.08);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .dark-section .eyebrow { background: rgba(215,162,78,.12); color: var(--gold2); }
-    .dark-section .section-head p, .dark-section .card p, .dark-section .card li { color: var(--muted); }
-    .dark-section .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); box-shadow: none; }
-
-    .restaurant-card { display: grid; gap: 10px; }
-    .restaurant-card .type { color: var(--gold2); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
-    .restaurant-card h3 { margin-bottom: 4px; }
-    .restaurant-card p { margin: 0; }
-
-    .menu-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .menu-item {
-      display: flex; justify-content: space-between; gap: 18px; padding: 20px 22px; border-radius: 22px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .menu-item h4 { margin-bottom: 5px; color: #fff; }
-    .menu-item p { color: var(--muted); font-size: 14px; line-height: 1.5; }
-    .menu-item span { color: var(--gold2); font-weight: 900; white-space: nowrap; }
-
-    .blog-card { display: flex; flex-direction: column; gap: 10px; }
-    .blog-card small { color: var(--gold2); font-weight: 900; }
-
-    .form { display: grid; gap: 12px; }
-    input, select, textarea {
-      width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 15px 16px;
-      font: inherit; background: rgba(255,255,255,.06); color: #fff;
-      outline: none;
-    }
-    .light-mode input, .light-mode select, .light-mode textarea { color: var(--dark); background: rgba(255,255,255,.9); border-color: rgba(0,0,0,.12); }
-    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.45); }
-    .light-mode input::placeholder, .light-mode textarea::placeholder { color: rgba(0,0,0,.45); }
-    select option { color: #111; }
-    textarea { min-height: 140px; resize: vertical; }
-
-    .floating-cart {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 1000;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 1px solid rgba(215,162,78,.35);
-      background: linear-gradient(135deg, var(--red), var(--gold));
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 26px;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-    }
-    .cart-count {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      background: #fff;
-      color: var(--red);
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      display: grid;
-      place-items: center;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .toast-premium {
-      position: fixed;
-      left: 50%;
-      bottom: 28px;
-      transform: translateX(-50%) translateY(120px);
-      z-index: 1200;
-      background: rgba(18,11,8,.9);
-      border: 1px solid rgba(215,162,78,.28);
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-      transition: .35s ease;
-    }
-    .toast-premium.show { transform: translateX(-50%) translateY(0); }
-
-    footer {
-      background: #070504;
-      color: #fff;
-      padding: 48px 0;
-      border-top: 1px solid rgba(255,255,255,.09);
-    }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(4, 1fr); gap: 30px; }
-    footer h4 { color: var(--gold2); margin-bottom: 12px; }
-    footer p, footer a { color: rgba(255,255,255,.62); line-height: 1.8; font-size: 14px; }
-
-    .mobile-menu { display: none; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color:#fff; border-radius: 14px; padding: 10px 12px; font-weight: 900; }
-
-    @media (max-width: 980px) {
-      .nav-links, .nav .btn, nav > .btn { display: none; }
-      .mobile-menu { display: inline-flex; }
-      .hero-grid, .grid-2, .footer-grid, .filter-panel { grid-template-columns: 1fr; }
-      .grid-3, .stats, .menu-list { grid-template-columns: 1fr; }
-      .section-head { display: block; }
-      .section-head p { margin-top: 15px; }
-      .hero-card { min-height: 500px; }
-    }
-
-    @media (max-width: 620px) {
-      .topbar .container { justify-content: center; text-align: center; }
-      .topbar span:last-child { display: none; }
-      .hero { padding-top: 54px; }
-      .hero-float { left: 16px; right: 16px; bottom: 16px; }
-      .menu-item { display: block; }
-      .menu-item span { display: inline-block; margin-top: 10px; }
-    }
-  </style>
+        .btn-success:hover {
+            background-color: #ffff00;
+            border-color: rgb(255, 0, 0);
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="progress-line" id="progressLine"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
-  <div class="topbar">
-    <div class="container">
-      <span>ES · DE · FR · EN · Comprar jamón de Teruel Rokelin, secado en altura</span>
-      <span><strong>Carrito:</strong> Ver carrito · Pagar</span>
-    </div>
-  </div>
 
-  <header>
-    <nav class="container">
-      <a class="logo" href="#inicio"><span class="logo-mark">R</span><span>ROKELIN<small>PURO CERDO</small></span></a>
-      <div class="nav-links">
-        <a href="#empresa">Empresa</a>
-        <a href="#tienda">Tienda</a>
-        <a href="#restaurantes">Restaurantes</a>
-        <a href="#franquicias">Franquicias</a>
-        <a href="#exportacion">Exportación</a>
-        <a href="#blog">Blog</a>
-        <a href="#centro">Centro Histórico</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-      <button class="btn btn-ghost" id="themeToggle" type="button"><i class="bi bi-moon-stars"></i></button>
-      <button class="btn btn-ghost" type="button" data-bs-toggle="offcanvas" data-bs-target="#premiumMenu"><i class="bi bi-grid-3x3-gap"></i></button>
-      <a class="btn btn-primary" href="#tienda">Comprar</a>
-      <button class="mobile-menu">Menú</button>
+    <nav class="navbar navbar-expand-lg navbar-brand sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Iván</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com">YT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="premiumMenu">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Rokelin Premium</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p class="text-secondary">Navegación rápida por la experiencia gourmet.</p>
-      <div class="d-grid gap-2">
-        <a class="btn btn-outline-light" href="#empresa">Empresa</a>
-        <a class="btn btn-outline-light" href="#tienda">Tienda</a>
-        <a class="btn btn-outline-light" href="#restaurantes">Restaurantes</a>
-        <a class="btn btn-outline-light" href="#franquicias">Franquicias</a>
-        <a class="btn btn-outline-light" href="#exportacion">Exportación</a>
-        <a class="btn btn-outline-light" href="#contacto">Contacto</a>
-      </div>
-    </div>
-  </div>
 
-  <main id="inicio">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Desde Teruel al mundo</div>
-          <h1>Rokelin, sabor de Teruel con imagen <span>premium.</span></h1>
-          <p class="lead">Rediseño completo de la web de Rokelin: empresa, tienda online, restaurantes, franquicias, exportación, blog, contacto y ficha del Centro Histórico de Teruel en una experiencia moderna, clara y mucho más vendible.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#tienda">Ver productos</a>
-            <a class="btn btn-ghost" href="#restaurantes">Ver restaurantes</a>
-            <a class="btn btn-ghost" href="#centro">Tiendas en Teruel</a>
-          </div>
-          <div class="stats">
-            <div class="stat"><strong data-count="1975">0</strong><span>Origen de la marca</span></div>
-            <div class="stat"><strong>D.O.P.</strong><span>Jamón de Teruel</span></div>
-            <div class="stat"><strong data-count="4">0</strong><span>Idiomas web</span></div>
-            <div class="stat"><strong data-count="10">0</strong><span>Mercados internacionales</span></div>
-          </div>
-        </div>
-        <div class="hero-card" id="heroTilt">
-          <div class="hero-float">
-            <h3>Referente turolense</h3>
-            <p>Producción, distribución, restauración, franquicia y exportación de productos artesanales de Teruel.</p>
-            <div class="badges"><span class="badge">Jamón</span><span class="badge">Embutidos</span><span class="badge">Restaurantes</span><span class="badge">Exportación</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="empresa">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Empresa</div><h2>El sabor de <span>Teruel.</span></h2></div>
-          <p>Rokelin nace en 1975 cuando Roque Orriols abre su primera tienda de charcutería. Desde ahí evoluciona hacia fabricación propia, tienda gourmet, franquicias y exportación.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><div class="icon">01</div><h3>Origen familiar</h3><p>Una primera tienda propia con productos de diferentes proveedores que se transforma poco a poco en una marca con surtido propio.</p></article>
-          <article class="card"><div class="icon">02</div><h3>Fabricación propia</h3><p>Jamones y embutidos elaborados combinando normas artesanales, tecnología moderna, trazabilidad y control sanitario.</p></article>
-          <article class="card"><div class="icon">03</div><h3>Filosofía</h3><p>Elaborar cada producto pensando en la persona que ha confiado en la marca y no decepcionarla.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container grid-3">
-        <a class="image-card" href="#tienda" style="--img:url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=80')"><div><h3>Tienda online</h3><p>Descubre nuestros productos más selectos.</p></div></a>
-        <a class="image-card" href="#restaurantes" style="--img:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80')"><div><h3>Restaurantes</h3><p>Una experiencia gastronómica única.</p></div></a>
-        <a class="image-card" href="#exportacion" style="--img:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80')"><div><h3>Exportación</h3><p>Desde Teruel a Europa, Asia y América.</p></div></a>
-      </div>
-    </section>
-
-    <section class="products" id="tienda">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Tienda online</div><h2>Nuestros productos más <span>selectos.</span></h2></div>
-          <p>Catálogo principal de productos Rokelin, presentado con tarjetas limpias y llamadas a la acción directas.</p>
-        </div>
-        <div class="filter-panel">
-          <input id="productSearch" type="search" placeholder="Buscar producto: jamón, lomo, chorizo...">
-          <select id="categoryFilter">
-            <option value="todos">Todas las categorías</option>
-            <option value="jamon">Jamón</option>
-            <option value="embutido">Embutido</option>
-            <option value="gourmet">Gourmet</option>
-          </select>
-          <select id="sortFilter">
-            <option value="default">Orden recomendado</option>
-            <option value="priceAsc">Precio menor a mayor</option>
-            <option value="priceDesc">Precio mayor a menor</option>
-          </select>
-        </div>
-
-        <div class="grid-3" id="productGrid">
-          <article class="card product" data-name="jamón dop" data-category="jamon" data-price="129"><span class="premium-chip">Top</span><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Producto estrella · 6-8 kg</span><h3>Jamón D.O.P.</h3><p>Elaborado y curado en secadero propio.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">129€</span><button class="btn btn-primary add-cart" data-product="Jamón D.O.P.">Añadir</button></div></div></article>
-          <article class="card product" data-name="jamón curado rokelin" data-category="jamon" data-price="89"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Jamón curado</span><h3>Jamón Curado Rokelin</h3><p>Una opción esencial dentro de la tienda online.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">89€</span><button class="btn btn-primary add-cart" data-product="Jamón Curado Rokelin">Añadir</button></div></div></article>
-          <article class="card product" data-name="caña de lomo" data-category="gourmet" data-price="24"><span class="premium-chip">Gourmet</span><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Lomos selectos</span><h3>Caña de Lomo</h3><p>Elaborada con los mejores lomos de cerdo selectos.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">24€</span><button class="btn btn-primary add-cart" data-product="Caña de Lomo">Añadir</button></div></div></article>
-          <article class="card product" data-name="longaniza de aragón" data-category="embutido" data-price="12"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Más demandado</span><h3>Longaniza de Aragón</h3><p>Uno de los embutidos más representativos de la marca.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">12€</span><button class="btn btn-primary add-cart" data-product="Longaniza de Aragón">Añadir</button></div></div></article>
-          <article class="card product" data-name="chorizo picante" data-category="embutido" data-price="10"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Embutido curado</span><h3>Chorizo Picante</h3><p>Sabor intenso para destacar dentro de la gama de embutidos.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">10€</span><button class="btn btn-primary add-cart" data-product="Chorizo Picante">Añadir</button></div></div></article>
-          <article class="card product" data-name="salchichón de montaña" data-category="embutido" data-price="11"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Montaña</span><h3>Salchichón de Montaña</h3><p>Producto curado con carácter tradicional.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">11€</span><button class="btn btn-primary add-cart" data-product="Salchichón de Montaña">Añadir</button></div></div></article>
-          <article class="card product" data-name="chorizo casero" data-category="embutido" data-price="9"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Casero</span><h3>Chorizo Casero</h3><p>Embutido clásico para completar la selección Rokelin.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">9€</span><button class="btn btn-primary add-cart" data-product="Chorizo Casero">Añadir</button></div></div></article>
-          <article class="card product" data-name="fuet casero" data-category="gourmet" data-price="8"><div class="product-img" style="--img:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><span class="tag">Casero</span><h3>Fuet Casero</h3><p>Formato perfecto para compra rápida y packs gourmet.</p><div class="d-flex align-items-center justify-content-between gap-3"><span class="product-price">8€</span><button class="btn btn-primary add-cart" data-product="Fuet Casero">Añadir</button></div></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark-section" id="restaurantes">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Restaurantes</div><h2>Locales Rokelin en España.</h2></div>
-          <p>Restaurantes y tiendas listados con ciudad, dirección, teléfono y horario para que el usuario lo encuentre rápido desde móvil.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card restaurant-card"><span class="type">Teruel · Restaurante</span><h3>Sanz Gadea</h3><p>Avda. Sanz Gadea, 1</p><p>978 620 145</p><p>L-S 9:00-00:00 · D 12:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Teruel · Restaurante</span><h3>Ramón y Cajal</h3><p>C/ Ramón y Cajal, 7</p><p>978 609 363</p><p>L-D 9:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Teruel · Tienda</span><h3>Rincón</h3><p>C/ Rincón, 2</p><p>978 611 869</p><p>L-S 9:30-13:30 · 17:30-20:30</p></article>
-          <article class="card restaurant-card"><span class="type">Benicasim · Restaurante</span><h3>Santa Amalia</h3><p>C/ Santa Amalia, 17</p><p>978 600 299</p><p>L-S 9:00-00:00 · D 19:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Castellón · Restaurante</span><h3>Joaquín Costa</h3><p>C/ Joaquín Costa, 33 bajo</p><p>978 623 266</p><p>L-V 9:30-14:30 · 19:30-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Teruel · Tienda</span><h3>Ramón y Cajal</h3><p>C/ Ramón y Cajal, 15</p><p>978 611 912</p><p>L-S 9:30-13:30 · 17:30-20:30</p></article>
-          <article class="card restaurant-card"><span class="type">Castellón · Restaurante</span><h3>Santo Tomás</h3><p>C/ Santo Tomás, 7</p><p>964 300 570</p><p>L-D 9:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Castellón · Restaurante</span><h3>Maestro Ripolles</h3><p>C/ Maestro Ripolles, 24</p><p>964 232 308</p><p>L-D 9:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Castellón · Restaurante</span><h3>Rosa María Molas</h3><p>C/ Rosa María Molas, 15</p><p>964 269 087</p><p>L-D 9:00-00:00</p></article>
-          <article class="card restaurant-card"><span class="type">Valencia · Restaurante</span><h3>Puro Cerdo Valencia - Ruzafa</h3><p>C. de Cuba, 48, Valencia</p><p>+960 461 653</p><p>X 19:30-23:30 · J-S 13:00-16:00 y 19:30-23:30 · D 12:00-16:00</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark-section">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Para recoger</div><h2>Carta destacada.</h2></div>
-          <p>Servicio actualmente disponible en el restaurante Sanz Gadea de Teruel.</p>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div><h4>Plato de jamón D.O. Teruel</h4><p>Corte fino y presentación clásica.</p></div><span>14,00€</span></div>
-          <div class="menu-item"><div><h4>Plato de jamón D.O. Teruel y embutidos Rokelin</h4><p>Selección variada de la casa.</p></div><span>14,00€</span></div>
-          <div class="menu-item"><div><h4>Huevos rotos con jamón, chistorra o gulas</h4><p>Plato directo y muy reconocible.</p></div><span>9,00€</span></div>
-          <div class="menu-item"><div><h4>Canelón Rokelin con salsa de boletus</h4><p>Receta más actual dentro de la carta.</p></div><span>8,00€</span></div>
-          <div class="menu-item"><div><h4>Longaniza oreada con salsa de queso curado</h4><p>Producto tradicional con toque cremoso.</p></div><span>6,00€</span></div>
-          <div class="menu-item"><div><h4>Ensalada Rokelin de jamón y trigueros</h4><p>Opción ligera con producto protagonista.</p></div><span>8,00€</span></div>
-          <div class="menu-item"><div><h4>Chuletón con salsa chimichurri</h4><p>Carne con salsa potente.</p></div><span>12,00€</span></div>
-          <div class="menu-item"><div><h4>Hamburguesa Rokelin</h4><p>Formato moderno y fácil de pedir.</p></div><span>9,50€</span></div>
-          <div class="menu-item"><div><h4>Hamburguesa con costilla</h4><p>Versión más contundente.</p></div><span>10,50€</span></div>
-          <div class="menu-item"><div><h4>Bocadillo jamón D.O. Teruel y aceite de oliva</h4><p>Clásico simple y efectivo.</p></div><span>5,50€</span></div>
-          <div class="menu-item"><div><h4>Bocadillo chistorra, pimientos verdes y huevo frito</h4><p>Opción caliente tradicional.</p></div><span>5,50€</span></div>
-          <div class="menu-item"><div><h4>Trenza de chocolate con helado de mascarpone</h4><p>Postre de la carta.</p></div><span>5,00€</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="chefs">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Nuestros chefs</div><h2>Tradición actualizada.</h2></div>
-          <p>Rokelin cuenta con colaboración y asesoramiento técnico para modernizar su carta respetando los sabores de siempre.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card"><h3>Emilio Hernández</h3><p>Elabora platos con altos estándares de calidad, manteniendo sabores tradicionales a través de Cocina Central Siete Suertes.</p></article>
-          <article class="card"><h3>David Leiva</h3><p>Chef formado en escuelas de hostelería; lidera Rokelin Gourmet en Barcelona, donde evoluciona y reinterpreta platos tradicionales como I+D gastronómico de la marca.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="franquicias">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Franquicias</div><h2>Forma parte de la familia.</h2></div>
-          <p>Modelo de restaurante moderno basado en el cerdo, con el Jamón de Teruel como producto estrella.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><div class="icon">M</div><h3>Modelo probado</h3><p>Carta basada en cerdo, entrantes, ensaladas, bocadillos gourmet y carnes de gran calidad.</p></article>
-          <article class="card"><div class="icon">L</div><h3>Local ideal</h3><p>175-200 m², salida de humos, terraza y ubicación con alto tráfico de personas.</p></article>
-          <article class="card"><div class="icon">€</div><h3>Alta rentabilidad</h3><p>Modelo consolidado con fabricación propia, proveedores homologados y condiciones ventajosas en productos de rotación.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="products" id="exportacion">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Exportación</div><h2>Homologados para nuevos <span>mercados.</span></h2></div>
-          <p>Vocación exportadora con estándares de calidad, seguridad alimentaria y trazabilidad. Presencia en Europa, Asia y América.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><h3>Jamón</h3><p>Producto principal para mercados nacionales e internacionales.</p></article>
-          <article class="card"><h3>Embutido curado</h3><p>Elaborado con tripa natural y secado tradicional.</p></article>
-          <article class="card"><h3>Embutido fresco</h3><p>Gama complementaria para distribución y restauración.</p></article>
-        </div>
-        <div class="card" style="margin-top:20px"><p>Rokelin trabaja con auditorías obligatorias y voluntarias externas para garantizar procesos productivos, con presencia indicada en Francia, Reino Unido, Alemania, Holanda, Bélgica, Italia, Suecia, República Checa, Eslovaquia y Hong Kong.</p></div>
-      </div>
-    </section>
-
-    <section id="centro">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Centro Histórico de Teruel</div><h2>Tiendas Rokelin en el centro.</h2></div>
-          <p>Contenido añadido desde la ficha del Centro Histórico: Tienda Gourmet, Tienda Tozal, contacto, ubicación y horarios.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><h3>Tienda Gourmet</h3><p>Ubicada en calle Ramón y Cajal. Aparece como Tienda Gourmet Rokelin en el Centro Histórico de Teruel.</p><a class="btn btn-primary" href="#contacto">Ver contacto</a></article>
-          <article class="card"><h3>Tienda Tozal</h3><p>Ubicada en calle Rincón. Ficha destacada como tienda de alimentación Rokelin.</p><a class="btn btn-primary" href="#contacto">Ver contacto</a></article>
-          <article class="card"><h3>Horario de apertura</h3><p>Lunes a viernes: 9:30h a 13:30h y 17:00h a 20:00h.</p><a class="btn btn-primary" href="#contacto">Contactar</a></article>
-        </div>
-        <div class="card" style="margin-top:20px"><h3>Contacto y ubicación de tiendas</h3><p><strong>Tienda Gourmet:</strong> calle Ramón y Cajal · Teléfono: 978611869</p><p><strong>Tienda Tozal:</strong> calle Rincón · Teléfono: 978611869</p></div>
-      </div>
-    </section>
-
-    <section class="products" id="blog">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Blog</div><h2>Noticias y contenido.</h2></div>
-          <p>Sección pensada para mejorar SEO y atraer visitas con temas sobre jamón, recetas, regalos y novedades.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card blog-card"><small>Guía</small><h3>10 sencillos pasos para aprender a cortar jamón de Teruel</h3><p>Contenido educativo para clientes y amantes del jamón.</p></article>
-          <article class="card blog-card"><small>Salud</small><h3>Adelgaza comiendo Jamón de Teruel de forma saludable</h3><p>Artículo orientado a beneficios y consumo responsable.</p></article>
-          <article class="card blog-card"><small>Recetas</small><h3>Los mejores entrantes con jamón para Navidad</h3><p>Ideas sencillas y vistosas con Jamón Rokelin.</p></article>
-          <article class="card blog-card"><small>Regalos</small><h3>El mejor regalo para estas navidades</h3><p>Promoción de la Caja Jamón Rokelin.</p></article>
-          <article class="card blog-card"><small>Marca</small><h3>Bienvenidos a nuestro Blog</h3><p>Espacio para amantes del jamón y del mundo Puro Cerdo.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experiencia">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Experiencia digital</div><h2>Funciones de web <span>superélite.</span></h2></div>
-          <p>Interacciones modernas con Bootstrap y JavaScript: buscador, filtros, carrito simulado, modo claro/oscuro, contador animado, menú lateral, progreso de lectura y animaciones.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><div class="icon"><i class="bi bi-bag-check"></i></div><h3>Carrito premium</h3><p>Añade productos y visualiza el pedido en un panel lateral tipo ecommerce.</p></article>
-          <article class="card"><div class="icon"><i class="bi bi-funnel"></i></div><h3>Filtros inteligentes</h3><p>Busca productos por nombre, categoría y ordena por precio sin recargar la página.</p></article>
-          <article class="card"><div class="icon"><i class="bi bi-stars"></i></div><h3>Microinteracciones</h3><p>Animaciones suaves, tarjetas con hover, contador animado y efecto visual premium.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="container grid-2">
-        <div>
-          <div class="eyebrow">Contacto</div>
-          <h2>Hablemos.</h2>
-          <p class="lead">Departamento de atención al cliente para consultas, exportación, franquicias y tiendas.</p>
-          <div class="card">
-            <h3>Datos de contacto</h3>
-            <p><strong>Dirección:</strong> Polígono Industrial La Paz, Parcela 55, 44195 Teruel</p>
-            <p><strong>Horario:</strong> L-V de 9:00 a 14:00 y de 16:00 a 19:00</p>
-            <p><strong>Teléfono:</strong> (+34) 978 612 013</p>
-            <p><strong>Email:</strong> rokelin@rokelin.com</p>
-          </div>
-        </div>
-        <form class="card form">
-          <h3>Formulario</h3>
-          <input type="text" placeholder="Tu nombre (requerido)">
-          <input type="email" placeholder="Tu correo electrónico (requerido)">
-          <input type="text" placeholder="Asunto">
-          <select><option>Atención al cliente</option><option>Exportación</option><option>Franquicias</option><option>Tiendas</option></select>
-          <textarea placeholder="Tu mensaje"></textarea>
-          <label style="color:var(--muted);font-size:13px"><input type="checkbox"> He leído y acepto la política de privacidad.</label>
-          <button class="btn btn-primary" type="button">Enviar mensaje</button>
-          <p style="font-size:12px">Responsable: Rokelin S.L.U. Finalidad: responder solicitudes del formulario. No se cederán datos a terceros salvo obligación legal.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <button class="floating-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
-    <i class="bi bi-bag"></i>
-    <span class="cart-count" id="cartCount">0</span>
-  </button>
-
-  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="cartPanel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Carrito Rokelin</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div id="cartItems" class="d-grid gap-3"></div>
-      <hr>
-      <div class="d-flex justify-content-between align-items-center">
-        <strong>Total estimado</strong>
-        <strong id="cartTotal" style="color: var(--gold2); font-size: 24px;">0€</strong>
-      </div>
-      <button class="btn btn-primary w-100 mt-4" type="button">Finalizar pedido</button>
-      <p class="text-secondary mt-3 small">Carrito simulado para demo visual. Para tienda real haría falta backend o plataforma ecommerce.</p>
-    </div>
-  </div>
-
-  <div class="toast-premium" id="toastPremium">Producto añadido al carrito</div>
-
-  <footer>
-    <div class="container footer-grid">
-      <div><div class="logo" style="margin-bottom:14px"><span class="logo-mark">R</span><span>ROKELIN<small>PURO CERDO</small></span></div><p>Referente turolense en la producción, distribución y restauración de productos de Teruel.</p></div>
-      <div><h4>Web</h4><a href="#empresa">Empresa</a><br><a href="#tienda">Tienda</a><br><a href="#restaurantes">Restaurantes</a><br><a href="#franquicias">Franquicias</a></div>
-      <div><h4>Productos</h4><a href="#tienda">Jamón D.O.P.</a><br><a href="#tienda">Caña de Lomo</a><br><a href="#tienda">Longaniza</a><br><a href="#tienda">Embutidos</a></div>
-      <div><h4>Legal</h4><a href="#">Condiciones de venta</a><br><a href="#">Política cookies</a><br><a href="#">Política privacidad</a></div>
-      <div><h4>Contacto</h4><p>rokelin@rokelin.com<br>(+34) 978 611 869<br>Teruel, España</p></div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 80 });
-
-    const header = document.querySelector('header');
-    const progressLine = document.getElementById('progressLine');
-    const cursorGlow = document.getElementById('cursorGlow');
-    const heroTilt = document.getElementById('heroTilt');
-    const themeToggle = document.getElementById('themeToggle');
-    const productSearch = document.getElementById('productSearch');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const sortFilter = document.getElementById('sortFilter');
-    const productGrid = document.getElementById('productGrid');
-    const cartCount = document.getElementById('cartCount');
-    const cartItems = document.getElementById('cartItems');
-    const cartTotal = document.getElementById('cartTotal');
-    const toastPremium = document.getElementById('toastPremium');
-
-    let cart = [];
-
-    window.addEventListener('scroll', () => {
-      header.style.boxShadow = window.scrollY > 20 ? '0 18px 45px rgba(0,0,0,.35)' : 'none';
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-      progressLine.style.width = progress + '%';
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = e.clientX + 'px';
-      cursorGlow.style.top = e.clientY + 'px';
-    });
-
-    if (heroTilt) {
-      heroTilt.addEventListener('mousemove', (e) => {
-        const rect = heroTilt.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const rotateY = ((x / rect.width) - .5) * 8;
-        const rotateX = ((y / rect.height) - .5) * -8;
-        heroTilt.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-      heroTilt.addEventListener('mouseleave', () => {
-        heroTilt.style.transform = 'rotateX(0) rotateY(0)';
-      });
-    }
-
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      themeToggle.innerHTML = document.body.classList.contains('light-mode')
-        ? '<i class="bi bi-sun"></i>'
-        : '<i class="bi bi-moon-stars"></i>';
-    });
-
-    const counters = document.querySelectorAll('[data-count]');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = Number(el.dataset.count);
-        let current = 0;
-        const step = Math.max(1, Math.floor(target / 80));
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            el.textContent = target === 10 ? '+10' : target;
-            clearInterval(timer);
-          } else {
-            el.textContent = current;
-          }
-        }, 16);
-        counterObserver.unobserve(el);
-      });
-    }, { threshold: .8 });
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    const productCards = () => Array.from(productGrid.querySelectorAll('.product'));
-
-    function filterProducts() {
-      const search = productSearch.value.toLowerCase().trim();
-      const category = categoryFilter.value;
-      const sort = sortFilter.value;
-      const cards = productCards();
-
-      cards.forEach(card => {
-        const name = card.dataset.name;
-        const cardCategory = card.dataset.category;
-        const matchSearch = name.includes(search);
-        const matchCategory = category === 'todos' || cardCategory === category;
-        card.style.display = matchSearch && matchCategory ? '' : 'none';
-      });
-
-      const sortedCards = cards.sort((a, b) => {
-        const priceA = Number(a.dataset.price);
-        const priceB = Number(b.dataset.price);
-        if (sort === 'priceAsc') return priceA - priceB;
-        if (sort === 'priceDesc') return priceB - priceA;
-        return 0;
-      });
-      sortedCards.forEach(card => productGrid.appendChild(card));
-    }
-
-    [productSearch, categoryFilter, sortFilter].forEach(input => input.addEventListener('input', filterProducts));
-
-    function showToast(text) {
-      toastPremium.textContent = text;
-      toastPremium.classList.add('show');
-      setTimeout(() => toastPremium.classList.remove('show'), 1700);
-    }
-
-    function renderCart() {
-      cartCount.textContent = cart.length;
-      cartItems.innerHTML = '';
-      let total = 0;
-
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="text-secondary">Todavía no has añadido productos.</p>';
-      }
-
-      cart.forEach((item, index) => {
-        total += item.price;
-        const row = document.createElement('div');
-        row.className = 'card p-3';
-        row.innerHTML = `
-          <div class="d-flex justify-content-between gap-3 align-items-center">
-            <div>
-              <strong>${item.name}</strong>
-              <p class="m-0 text-secondary small">Producto gourmet Rokelin</p>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://wallpapers.com/images/featured/imagenes-de-hermosos-paisajes-ycxy8o2ii84zsgiv.jpg"
+                    class="mx-auto d-block" alt="foto 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
-            <div class="text-end">
-              <strong style="color: var(--gold2);">${item.price}€</strong><br>
-              <button class="btn btn-sm btn-outline-light mt-2" data-remove="${index}">Quitar</button>
+            <div class="carousel-item">
+                <img src="https://wallpapers.com/images/featured/imagenes-de-hermosos-paisajes-ycxy8o2ii84zsgiv.jpg"
+                    class="mx-auto d-block" alt="foto 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
-          </div>
-        `;
-        cartItems.appendChild(row);
-      });
+            <div class="carousel-item">
+                <img src="https://wallpapers.com/images/featured/imagenes-de-hermosos-paisajes-ycxy8o2ii84zsgiv.jpg"
+                    class="mx-auto d-block" alt="foto 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
 
-      cartTotal.textContent = total + '€';
+    </div>
 
-      document.querySelectorAll('[data-remove]').forEach(button => {
-        button.addEventListener('click', () => {
-          cart.splice(Number(button.dataset.remove), 1);
-          renderCart();
-        });
-      });
-    }
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="12 col-md-4 mt-5 margin-left: 20px;">
+                <div class="card" style="mx-auto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
+                        class="card-img-top " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mt-5 ">
+                <div class="card" style="mx-auto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="12 col-md-4 mt-5 margin-left: 20px;">
+                <div class="card" style="mx-auto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a href="https://www.youtube.com/@relatoscontrolly" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    document.querySelectorAll('.add-cart').forEach(button => {
-      button.addEventListener('click', () => {
-        const card = button.closest('.product');
-        cart.push({ name: button.dataset.product, price: Number(card.dataset.price) });
-        renderCart();
-        showToast(button.dataset.product + ' añadido');
-      });
-    });
-
-    document.querySelectorAll('section, .card, .image-card, .product').forEach((el, index) => {
-      if (!el.hasAttribute('data-aos')) {
-        el.setAttribute('data-aos', index % 2 === 0 ? 'fade-up' : 'fade-right');
-      }
-    });
-
-    renderCart();
-  </script>
 </body>
+
 </html>
