@@ -11,15 +11,25 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <style>
+        /* Cuerpo */
         body {
             background-color: #000000;
         }
 
+        /* Cabecera */
         .navbar {
             background-color: #ff0000;
             font-weight: bold;
         }
 
+        /* Carrusel */
+
+        .carousel-item img {
+            border-radius: 20px;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
+        }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: red;
@@ -41,8 +51,18 @@
             color: lightblue;
             font-weight: bold;
             font-size: 20px;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
         }
 
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* Cartas */
         .card {
             background-color: #ff0000;
             color: white;
@@ -52,8 +72,17 @@
             border-width: 2px;
         }
 
+        .card-title {
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
         .card-img-top {
             border-radius: 20px 20px 0 0;
+            border-bottom: 2px solid white;
         }
 
         .btn-success:hover {
@@ -62,8 +91,13 @@
             color: black;
         }
 
+        /* Formulario */
+        .forma::placeholder {
+            color: gray;
+        }
+
         .formulario {
-            background-color: #ffffff;
+            background-color: white;
             border-radius: 20px;
             padding: 20px;
             font-weight: bold;
@@ -71,32 +105,47 @@
         }
 
         .forma {
-            color: red;
-            border-radius: 20px;
-            border-color: lightcoral;
-            border-width: 3px;
-            background-color: black;
+            background-color: white;
+            color: black;
+            border-color: orange;
+            border-width: 5px;
+            border-style: solid;
         }
+
         .forma:hover {
             background-color: yellow;
             color: black;
             border-color: black;
             border-width: 5px;
+            box-shadow: none !important;
             transition: background-color 2s, color 0.3s, border-color 0.3s;
         }
 
-        .card-title {
-            font-size: 30px;
+        .forma:hover::placeholder {
+            color: black;
+        }
+
+        .forma:focus {
+            box-shadow: none !important;
+            border-color: orange;
             background-color: white;
             color: black;
-            border-radius: 20px;
-            padding: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            color: black;
+            width: 100%;
+            margin: 0;
+            padding: 15px;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Iván</a>
@@ -107,7 +156,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link" href="https://claude.ai/new">Claude AI</a>
                     </li>
@@ -136,42 +184,49 @@
 
 
     <!-- Carrusel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://img.wattpad.com/d4a86099dfa698e4b2663cb21a627fe3bf19f408/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6345435a71786d575546653247513d3d2d333633352e313537623763383631393965373336633132393032313339333630362e6a7067?s=fit&w=720&h=720"
-                    class="mx-auto d-block" alt="foto 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Primer subtitulo ajiudo</h5>
-                    <p>Messi calvo</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://s3.us-east-2.amazonaws.com/images.marvin.com.mx/2019/04/Nickelodeon-5.jpg"
-                    class="mx-auto d-block" alt="foto 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Segundo subtitulo ajiudo</h5>
-                    <p>Cacahuetes</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://i1.sndcdn.com/artworks-3AnYnRh1QNKSmB9A-FZpJ2Q-t500x500.jpg"
-                    class="mx-auto d-block" alt="foto 3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Tercer subtitulo ajiudo</h5>
-                    <p>ALONSOOOO</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ytimg.com/vi/Xpxxuz_ItNE/hqdefault.jpg?v=5ea73063"
+                                class="d-block w-100" alt="foto 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Primer subtitulo ajiudo</h5>
+                                <p>Messi calvo</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://s3.us-east-2.amazonaws.com/images.marvin.com.mx/2019/04/Nickelodeon-5.jpg"
+                                class="d-block w-100" alt="foto 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Segundo subtitulo ajiudo</h5>
+                                <p>Cacahuetes</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ytimg.com/vi/rT_SK9fUwGs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA1FFBaM28988CyV6zOy2HRlrsJkw"
+                                class="d-block w-100" alt="foto 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Tercer subtitulo ajiudo</h5>
+                                <p>Oscar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
     </div>
 
 
@@ -179,39 +234,36 @@
     <div class="container text-center mx-auto">
         <div class="row">
             <div class="col-12 col-md-4 mt-5">
-                <div class="card" style="mx-auto">
+                <div class="card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
                         class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=h7PM8_L7oYc" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mt-5 ">
-                <div class="card" style="mx-auto">
+            <div class="col-12 col-md-4 mt-5">
+                <div class="card">
                     <img src="https://i.pinimg.com/564x/4a/49/5d/4a495dc97a467dd57c19e56f2331560d.jpg"
                         class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=2Jj2RA-NCc8" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial 2</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mt-5 margin-left: 20px;">
-                <div class="card" style="mx-auto">
+            <div class="col-12 col-md-4 mt-5">
+                <div class="card">
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9601b76d-da0e-4a63-9c67-f38f5dd76eca/dgk6hu4-4ce65dbf-6154-415f-9c89-2889d9a151ed.png/v1/fill/w_320,h_343/cursed_spongebob_image_2_by_timpyteam_dgk6hu4-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzQzIiwicGF0aCI6Ii9mLzk2MDFiNzZkLWRhMGUtNGE2My05YzY3LWYzOGY1ZGQ3NmVjYS9kZ2s2aHU0LTRjZTY1ZGJmLTYxNTQtNDE1Zi05Yzg5LTI4ODlkOWExNTFlZC5wbmciLCJ3aWR0aCI6Ijw9MzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.b-jiqT7GYibQwnTdTrpA76MBTOm5Z7eyT5RplbbsJy8"
                         class="card-img-top object-fit-cover" style="height: 416px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=IdtDSctsdl0" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial 3</a>
                     </div>
@@ -235,13 +287,11 @@
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         El iPhone es el teléfono de Apple. Destaca por usar iOS, un sistema operativo muy optimizado,
-
                         seguro y fácil de usar. Se integra muy bien con otros dispositivos Apple, permite hacer fotos
-
                         de alta calidad, usar Face ID, instalar apps desde la App Store y sincronizar datos con iCloud.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
-                            data-bs-content="Me cago en tu puta madre gilipollas">
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
                             Me pulsas y te doy un premio GILIPOLLAS
                         </button>
                     </div>
@@ -258,15 +308,11 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         El Mac es la línea de ordenadores de Apple. Usa macOS, un sistema estable y pensado para
-                        trabajar,
-
-                        estudiar, editar fotos, programar y crear contenido. Los modelos con chip Apple Silicon, como
-                        M1,
-
-                        M2, M3 o M4, ofrecen buen rendimiento, bajo consumo y mucha autonomía.
+                        trabajar, estudiar, editar fotos, programar y crear contenido. Los modelos con chip Apple
+                        Silicon, como M1, M2, M3 o M4, ofrecen buen rendimiento, bajo consumo y mucha autonomía.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
-                            data-bs-content="Me cago en tu puta madre gilipollas">
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
                             Me pulsas y te doy un premio GILIPOLLAS
                         </button>
                     </div>
@@ -283,13 +329,11 @@
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         El Apple Watch es el reloj inteligente de Apple. Sirve para recibir notificaciones, medir pasos,
-
                         controlar entrenamientos, revisar la frecuencia cardíaca, usar Apple Pay y consultar información
-
                         rápida sin sacar el iPhone. Es muy útil para deporte, salud y productividad diaria.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
-                            data-bs-content="Me cago en tu puta madre gilipollas">
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
                             Me pulsas y te doy un premio GILIPOLLAS
                         </button>
                     </div>
@@ -306,15 +350,12 @@
                 <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         Los AirPods son los auriculares inalámbricos de Apple. Se conectan automáticamente al iPhone,
-
                         iPad o Mac gracias al ecosistema Apple. Ofrecen buena calidad de sonido, cancelación de ruido
-
                         en modelos Pro, modo transparencia y control táctil. También permiten usar Siri y cambiar de
-
                         dispositivo de forma rápida.
                         <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
                             data-bs-placement="bottom" data-bs-title="AJIA"
-                            data-bs-content="Me cago en tu puta madre gilipollas">
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
                             Me pulsas y te doy un premio GILIPOLLAS
                         </button>
                     </div>
@@ -331,70 +372,61 @@
                 <h1>Formulario de contacto</h1>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label" style="color: black;">Cuenta de correo</label>
-                    <input type="email" class="form-control forma" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="email" class="form-control forma" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
                 </div>
-
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Cuenta bancaria</label>
-                    <textarea class="form-control forma" id="exampleFormControlTextarea1" placeholder="Ponga todos sus datos bancarios aquí..." rows="1"></textarea>
+                    <textarea class="form-control forma" id="exampleFormControlTextarea1"
+                        placeholder="Ponga todos sus datos bancarios aquí..." rows="1"></textarea>
                 </div>
-
                 <div class="mb-3">
                     <label for="Nombre" class="form-label" style="color: black;">Nombre</label>
                     <input type="text" class="form-control forma" placeholder="Escribe tu nombre aquí..." id="Nombre">
                 </div>
-
                 <div class="mb-3">
                     <label for="Apellidos" class="form-label" style="color: black;">Apellidos</label>
                     <input type="text" class="form-control forma" placeholder="Escribe tus apellidos aquí..." id="Apellidos">
-                </div>  
-
+                </div>
                 <div class="mb-3">
                     <label for="inputCity" class="form-label" style="color: black;">Ciudad</label>
                     <input type="text" class="form-control forma" placeholder="Escribe tu ciudad aquí..." id="inputCity">
                 </div>
-
                 <div class="mb-3">
                     <label for="inputState" class="form-label" style="color: black;">Estado</label>
                     <select id="inputState" class="form-select forma">
                         <option selected>Elige...</option>
-                        <option>Eurpa</option>
-                        <option>EE. UU.</option>
-                        <option>Peruanos de mierda</option>
+                        <option>Messi_1</option>
+                        <option>Messi_2</option>
+                        <option>Messi_3</option>
                     </select>
                 </div>
-
                 <div class="mb-3">
                     <label for="inputZip" class="form-label" style="color: black;">Reseña</label>
                     <input type="text" class="form-control forma" placeholder="Escribe tu reseña aquí..." id="inputZip">
                 </div>
-
                 <div class="form-check">
-                    <input class="form-check-input forma" type="checkbox" id="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck" style="color: black;">
                         Acepto las condiciones
                     </label>
                 </div>
-
-                <button type="submit" class="btn forma">
+                <button type="submit" class="btn forma mt-3">
                     Enviar
                 </button>
             </div>
-
         </div>
     </div>
 
 
-
     <!-- Footer -->
-    <footer class="bg-light text-center text-black mt-5 p-3 font-weight-bold">
+    <footer class="mt-5 p-3 text-center">
         <p>© 2026 Iván. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Popover -->
     <script>
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-
         const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
             container: 'body'
         }));
