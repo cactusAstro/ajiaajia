@@ -62,12 +62,27 @@
             color: black;
         }
 
-        .patricio {
-            background-color: #ff0000;
+        .formulario {
+            background-color: #ffffff;
             border-radius: 20px;
             padding: 20px;
             font-weight: bold;
             font-size: 20px;
+        }
+
+        .forma {
+            color: red;
+            border-radius: 20px;
+            border-color: lightcoral;
+            border-width: 3px;
+            background-color: black;
+        }
+        .forma:hover {
+            background-color: yellow;
+            color: black;
+            border-color: black;
+            border-width: 5px;
+            transition: background-color 2s, color 0.3s, border-color 0.3s;
         }
 
         .card-title {
@@ -120,6 +135,7 @@
     </nav>
 
 
+    <!-- Carrusel -->
     <div id="carouselExample" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -158,12 +174,14 @@
 
     </div>
 
+
+    <!-- Cards -->
     <div class="container text-center mx-auto">
         <div class="row">
             <div class="col-12 col-md-4 mt-5">
                 <div class="card" style="mx-auto">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
-                        class="card-img-top " alt="...">
+                        class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -175,8 +193,8 @@
             </div>
             <div class="col-12 col-md-4 mt-5 ">
                 <div class="card" style="mx-auto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
-                        class="card-img-top" alt="...">
+                    <img src="https://i.pinimg.com/564x/4a/49/5d/4a495dc97a467dd57c19e56f2331560d.jpg"
+                        class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -186,10 +204,10 @@
                     </div>
                 </div>
             </div>
-            <div class="12 col-md-4 mt-5 margin-left: 20px;">
+            <div class="col-12 col-md-4 mt-5 margin-left: 20px;">
                 <div class="card" style="mx-auto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
-                        class="card-img-top" alt="...">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9601b76d-da0e-4a63-9c67-f38f5dd76eca/dgk6hu4-4ce65dbf-6154-415f-9c89-2889d9a151ed.png/v1/fill/w_320,h_343/cursed_spongebob_image_2_by_timpyteam_dgk6hu4-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzQzIiwicGF0aCI6Ii9mLzk2MDFiNzZkLWRhMGUtNGE2My05YzY3LWYzOGY1ZGQ3NmVjYS9kZ2s2aHU0LTRjZTY1ZGJmLTYxNTQtNDE1Zi05Yzg5LTI4ODlkOWExNTFlZC5wbmciLCJ3aWR0aCI6Ijw9MzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.b-jiqT7GYibQwnTdTrpA76MBTOm5Z7eyT5RplbbsJy8"
+                        class="card-img-top object-fit-cover" style="height: 416px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -203,13 +221,13 @@
     </div>
 
 
-
+    <!-- Acordeón -->
     <div class="container mt-5">
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item" style="background-color: black; color: white;">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" style="background-color: yellow; color: black;" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                    <button class="accordion-button" style="background-color: yellow; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseOne">
                         Acordeón numero 1
                     </button>
@@ -229,10 +247,10 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item"style="background-color: black; color: white;">
+            <div class="accordion-item" style="background-color: black; color: white;">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" style="background-color: lightgreen; color: black;" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    <button class="accordion-button" style="background-color: lightgreen; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTwo">
                         Acordeón numero 2
                     </button>
@@ -254,10 +272,10 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" style="background-color: black; color: white;"> 
+            <div class="accordion-item" style="background-color: black; color: white;">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" style="background-color: lightblue; color: black;" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    <button class="accordion-button" style="background-color: lightblue; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseThree">
                         Acordeón numero 3
                     </button>
@@ -279,8 +297,8 @@
             </div>
             <div class="accordion-item" style="background-color: black; color: white;">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" style="background-color: lightcoral; color: black;" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
+                    <button class="accordion-button" style="background-color: lightcoral; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapsefour">
                         Acordeón numero 4
                     </button>
@@ -306,62 +324,74 @@
     </div>
 
 
+    <!-- Formulario -->
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 formulario">
+                <h1>Formulario de contacto</h1>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: black;">Email address</label>
+                    <input type="email" class="form-control forma" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
 
-    <div class="container mt-5 patricio">
-        <form class="row g-3">
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputEmail4" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputPassword4" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Ajia micky">
-            </div>
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputAddress2" class="form-label">Dirección 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="no me pegues gilipollas">
-            </div>
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputCity" class="form-label">Ciudad </label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-2 col-12 mx-auto">
-                <label for="inputState" class="form-label">Estado</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Elige...</option>
-                    <option>Mickey 1</option>
-                    <option>Mickey 2</option>
-                    <option>Mickey 3</option>
-                    <option>Mickey 4</option>
-                    <option>Mickey 5</option>
-                </select>
-            </div>
-            <div class="col-md-12 col-12 mx-auto">
-                <label for="inputZip" class="form-label">Reseña</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Example textarea</label>
+                    <textarea class="form-control forma" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Nombre" class="form-label" style="color: black;">Nombre</label>
+                    <input type="text" class="form-control forma" id="Nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Apellidos" class="form-label" style="color: black;">Apellidos</label>
+                    <input type="text" class="form-control forma" id="Apellidos">
+                </div>  
+
+                <div class="mb-3">
+                    <label for="inputCity" class="form-label" style="color: black;">Ciudad</label>
+                    <input type="text" class="form-control forma" id="inputCity">
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputState" class="form-label" style="color: black;">Estado</label>
+                    <select id="inputState" class="form-select forma">
+                        <option selected>Elige...</option>
+                        <option>Eurpa</option>
+                        <option>EE. UU.</option>
+                        <option>Peruanos de mierda</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputZip" class="form-label" style="color: black;">Reseña</label>
+                    <input type="text" class="form-control forma" id="inputZip">
+                </div>
+
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Pulsame si eres gilipollas
+                    <input class="form-check-input forma" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck" style="color: black;">
+                        Acepto las condiciones
                     </label>
                 </div>
+
+                <button type="submit" class="btn forma">
+                    Enviar
+                </button>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">inicion sesiada</button>
-            </div>
-        </form>
+
+        </div>
     </div>
+
+
+
+    <!-- Footer -->
     <footer class="bg-light text-center text-black mt-5 p-3 font-weight-bold">
         <p>© 2026 Iván. Todos los derechos reservados.</p>
     </footer>
 
-
+    <!-- Popover -->
     <script>
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 
