@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pág 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .nav-link:hover {
+            color: blue;
+            transition: 2s;
+        }
+
+        #liveAlertBtn {
+            margin: 20px auto;
+            color: white;
+            background-color: red;
+            border: 2px solid white;
+        }
+
+        #liveAlertBtn:hover {
+            background-color: white;
+            color: red;
+            border: 2px solid red;
+            transition: 0.5s;
+        }
+
+        .alert {
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+        }
+
+        .card {
+            background-color: lightcoral;
+            color: white;
+            border: 5px solid lightgreen;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background-color: lightgreen;
+            color: black;
+            border: 4px solid lightcoral;
+            transition: 2s;
+        }
+
+        .card-img-top {
+            border-bottom: 5px solid white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Iván</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://claude.ai/new">Claude AI</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Desplegable
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.youtube.com">YT</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com">IG</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página 1</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="btn-group">
+        <a href="https://www.myprotein.es/p/nutricion-deportiva/creatina-monohidrato-en-polvo/10530050/?affil=thggpsad&switchcurrency=EUR&shippingcountry=ES&variation=11773554&affil=thgppc&kwds=&thg_ppc_campaign=23527587496&adtype=pla&product_id=11773554&cq_src=google_ads&cq_cmp=23527587496&cq_con=&cq_term=&cq_med=pla&cq_plac=&cq_net=x&cq_plt=gp&gclsrc=aw.ds&gad_source=1&gad_campaignid=23517847149&gbraid=0AAAAADuhnyGNZCEB2J0P31VlgBgKz6uWh&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
+            class="btn btn-primary" aria-current="page">Comprar creatina</a>
+        <a href="https://classroom.google.com/u/1/" class="btn btn-primary">Comprar testosterona</a>
+        <a href="https://www.myprotein.es/p/nutricion-deportiva/comprimidos-de-bisglicinato-de-magnesio/15736555/?affil=thggpsad&thg_ppc_campaign=23527587496&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
+            class="btn btn-primary">Comprar magnesio</a>
+    </div>
+
+    <!-- Cards -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq064C1h8feiE85sG59R-KaINNeaOkx2Ijbg&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ceratina</h5>
+                        <p class="card-text">Suplemento deportivo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="https://d3gr7hv60ouvr1.cloudfront.net/CACHE/images/products/2c8a4d20d69a4e1c91630493c1335afe/1c724f21cd3b4c715e708cf37fca6db2.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Testosterona</h5>
+                        <p class="card-text">Hormona masculina</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="https://blog.sensafarma.es/wp-content/uploads/2024/04/400Wx400H-1-14946.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Magnesio</h5>
+                        <p class="card-text">Mineral esencial para el funcionamiento del cuerpo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live alert -->
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary d-flex justify-content-center" id="liveAlertBtn">Mostrar info de estso
+        suplementos en un
+        alert</button>
+
+
+    <!-- Accordion -->
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Creatina
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <h3>¿Qué es la creatina?</h3>
+                                <p>La creatina es un compuesto natural formado por tres aminoácidos: arginina,
+                                    glicina y metionina. Se produce de forma endógena en el hígado, páncreas y
+                                    riñones, y se almacena principalmente en los músculos esqueléticos (95%) en
+                                    forma de fosfocreatina. También se obtiene a través de la dieta, principalmente
+                                    del consumo de carne roja y pescado.</p>
+
+                                <h3>Mecanismo de acción</h3>
+                                <p>La creatina funciona como un sistema de energía rápida para actividades de alta
+                                    intensidad y corta duración. Durante el ejercicio intenso, el ATP (adenosín
+                                    trifosfato) se descompone para liberar energía, convirtiéndose en ADP (adenosín
+                                    difosfato). La fosfocreatina dona un grupo fosfato al ADP para regenerar ATP
+                                    rápidamente, permitiendo mantener la producción de energía durante ejercicios
+                                    explosivos.</p>
+
+                                <h3>Tipos de creatina</h3>
+                                <p><strong>Creatina monohidrato:</strong> La forma más estudiada y efectiva.
+                                    Contiene aproximadamente 88% de creatina pura y 12% de agua. Es la más económica
+                                    y con mayor respaldo científico.</p>
+                                <p><strong>Creatina micronizada:</strong> Monohidrato procesado para reducir el
+                                    tamaño de las partículas, mejorando su solubilidad y absorción.</p>
+                                <p><strong>Creatina etil éster:</strong> Teóricamente mejor absorbida, aunque
+                                    estudios demuestran que no es superior al monohidrato.</p>
+                                <p><strong>Creatina HCL (clorhidrato):</strong> Más soluble en agua, se promociona
+                                    requiriendo dosis menores, pero falta evidencia que demuestre superioridad real.
+                                </p>
+                                <p><strong>Creatina tamponada (Kre-Alkalyn):</strong> Con pH más elevado para
+                                    reducir conversión a creatinina, aunque la evidencia no muestra ventajas
+                                    significativas.</p>
+                                <p><strong>Creatina líquida:</strong> Menos estable y efectiva que las formas en
+                                    polvo.</p>
+
+                                <h3>Beneficios comprobados</h3>
+                                <p><strong>Rendimiento deportivo:</strong> Aumento de fuerza muscular (5-15%),
+                                    mejora en potencia explosiva, mayor capacidad en ejercicios de alta intensidad,
+                                    mejor rendimiento en series repetidas e incremento de la masa muscular magra
+                                    (1-2 kg en las primeras semanas).</p>
+                                <p><strong>Beneficios cognitivos:</strong> Mejora de la memoria a corto plazo,
+                                    reducción de fatiga mental, mejor función cognitiva en situaciones de privación
+                                    de sueño y potencial neuroprotector.</p>
+                                <p><strong>Otros beneficios:</strong> Posible mejora en recuperación de lesiones,
+                                    efectos antioxidantes, potencial terapéutico en enfermedades neuromusculares y
+                                    mejora de la salud ósea en combinación con entrenamiento.</p>
+
+                                <h3>Dosis recomendadas</h3>
+                                <p><strong>Fase de carga (opcional):</strong> 20-25 g/día divididos en 4-5 tomas
+                                    durante 5-7 días. Acelera la saturación muscular, aunque no es estrictamente
+                                    necesaria.</p>
+                                <p><strong>Fase de mantenimiento:</strong> 3-5 g/día en una sola toma, suficiente
+                                    para mantener niveles óptimos. Puede tomarse en cualquier momento del día,
+                                    opcionalmente con carbohidratos para mejorar absorción.</p>
+                                <p><strong>Protocolo alternativo sin fase de carga:</strong> 3-5 g/día desde el
+                                    inicio. Alcanza saturación muscular en 3-4 semanas. Método más económico y
+                                    igualmente efectivo.</p>
+
+                                <h3>Momento óptimo de consumo</h3>
+                                <p>Aunque tradicionalmente se ha recomendado post-entrenamiento, estudios demuestran
+                                    que el momento exacto es poco relevante. Lo importante es la consistencia
+                                    diaria. Puede tomarse pre-entrenamiento, post-entrenamiento (posiblemente
+                                    ligeramente superior) o en cualquier momento del día en días de descanso.</p>
+
+                                <h3>Efectos secundarios y consideraciones</h3>
+                                <p><strong>Retención de agua:</strong> El efecto secundario más común, con aumento
+                                    de 1-2 kg de peso por retención intracelular (dentro del músculo, no
+                                    subcutánea).</p>
+                                <p><strong>Problemas gastrointestinales:</strong> Pueden aparecer con dosis altas,
+                                    solucionables dividiendo la dosis o usando creatina micronizada.</p>
+                                <p><strong>Calambres musculares:</strong> Mito mayormente desmentido; pueden
+                                    prevenirse con hidratación adecuada.</p>
+                                <p><strong>Función renal:</strong> No afecta negativamente a personas sanas. Puede
+                                    elevar la creatinina sérica (marcador de función renal) sin que esto indique
+                                    daño real.</p>
+                                <p><strong>Caída de cabello:</strong> Estudio aislado sugirió aumento de DHT, pero
+                                    evidencia insuficiente para confirmarlo.</p>
+
+                                <h3>Contraindicaciones</h3>
+                                <p>Enfermedad renal preexistente, durante el embarazo y lactancia (por falta de
+                                    estudios), precaución en personas con problemas hepáticos y consulta médica si
+                                    se toman medicamentos que afectan riñones.</p>
+
+                                <h3>Mitos comunes</h3>
+                                <p>❌ <strong>"La creatina es un esteroide":</strong> FALSO. Es un compuesto natural
+                                    presente en alimentos.</p>
+                                <p>❌ <strong>"Causa daño renal":</strong> FALSO en personas sanas con función renal
+                                    normal.</p>
+                                <p>❌ <strong>"Hay que hacer ciclos":</strong> FALSO. Puede tomarse indefinidamente
+                                    de forma segura.</p>
+                                <p>❌ <strong>"Solo funciona en hombres":</strong> FALSO. Beneficia igualmente a
+                                    mujeres.</p>
+                                <p>❌ <strong>"Necesitas fase de carga obligatoriamente":</strong> FALSO. Es opcional
+                                    y solo acelera resultados.</p>
+                                <p>❌ <strong>"Pierdes todo al dejarla":</strong> Parcialmente falso. Pierdes la
+                                    retención de agua y parte de la ganancia, pero las adaptaciones musculares
+                                    permanecen.</p>
+
+                                <h3>Combinaciones efectivas</h3>
+                                <p><strong>Con carbohidratos:</strong> Mejora la absorción por pico de insulina.
+                                    <strong>Con proteína:</strong> Potencia la síntesis proteica post-entrenamiento.
+                                    <strong>Con beta-alanina:</strong> Sinergia para rendimiento de alta intensidad.
+                                    <strong>Con cafeína:</strong> Compatible, aunque algunos estudios sugieren
+                                    posible interferencia (evidencia mixta).
+                                </p>
+
+                                <h3>Recomendaciones prácticas</h3>
+                                <p>✅ Elige creatina monohidrato como primera opción (mejor relación
+                                    calidad-precio-evidencia)</p>
+                                <p>✅ Mantén una hidratación adecuada (2.5-3L agua/día)</p>
+                                <p>✅ Sé consistente con la dosis diaria</p>
+                                <p>✅ No esperes resultados inmediatos; los beneficios máximos aparecen tras 4-6
+                                    semanas</p>
+                                <p>✅ Combínala con entrenamiento de fuerza para maximizar resultados</p>
+                                <p>✅ No es necesario ciclarla; es segura a largo plazo</p>
+
+                                <h3>Respaldo científico</h3>
+                                <p>La creatina es el suplemento deportivo con mayor evidencia científica. Miles de
+                                    estudios respaldan su eficacia y seguridad. Está aprobada por organizaciones
+                                    como el IOC (Comité Olímpico Internacional), NCAA (Asociación Nacional Atlética
+                                    Universitaria) e ISSN (Sociedad Internacional de Nutrición Deportiva).</p>
+
+                                <h3>Conclusión</h3>
+                                <p>La creatina monohidrato es el suplemento más efectivo, seguro y económico para
+                                    mejorar rendimiento deportivo, especialmente en actividades de fuerza y
+                                    potencia. Con más de 30 años de investigación, su perfil de seguridad es
+                                    excepcional para personas sanas.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Testosterona
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h3>¿Qué es la testosterona?</h3>
+                                <p>La testosterona es la principal hormona sexual masculina, aunque también está
+                                    presente en mujeres en menores cantidades. Es un esteroide androgénico producido
+                                    principalmente en los testículos (en hombres) y en los ovarios y glándulas
+                                    suprarrenales (en mujeres). Pertenece al grupo de hormonas llamadas andrógenos y es
+                                    fundamental para el desarrollo y mantenimiento de características sexuales
+                                    masculinas.</p>
+
+                                <h3>Funciones principales</h3>
+                                <p><strong>Desarrollo sexual:</strong> Desarrollo de órganos reproductivos masculinos,
+                                    espermatogénesis (producción de esperma), desarrollo de características sexuales
+                                    secundarias durante la pubertad (voz grave, vello facial y corporal, aumento de masa
+                                    muscular).</p>
+                                <p><strong>Composición corporal:</strong> Aumento y mantenimiento de masa muscular,
+                                    reducción de grasa corporal, aumento de densidad ósea y fortaleza del esqueleto.</p>
+                                <p><strong>Función sexual:</strong> Libido y deseo sexual, función eréctil, producción
+                                    de esperma y fertilidad.</p>
+                                <p><strong>Salud general:</strong> Producción de glóbulos rojos, regulación del estado
+                                    de ánimo y bienestar, función cognitiva y memoria, distribución de grasa corporal y
+                                    niveles de energía.</p>
+
+                                <h3>Niveles normales de testosterona</h3>
+                                <p><strong>Hombres adultos:</strong> 300-1000 ng/dL (nanogramos por decilitro). El rango
+                                    óptimo suele considerarse entre 500-800 ng/dL.</p>
+                                <p><strong>Mujeres adultas:</strong> 15-70 ng/dL.</p>
+                                <p><strong>Nota importante:</strong> Los niveles varían según la edad, hora del día
+                                    (pico por la mañana), laboratorio y método de medición. La testosterona disminuye
+                                    naturalmente aproximadamente 1-2% por año después de los 30 años.</p>
+
+                                <h3>Síntomas de testosterona baja (hipogonadismo)</h3>
+                                <p><strong>Síntomas físicos:</strong> Reducción de masa muscular y fuerza, aumento de
+                                    grasa corporal (especialmente abdominal), disminución de densidad ósea (riesgo de
+                                    osteoporosis), fatiga crónica y falta de energía, ginecomastia (desarrollo de tejido
+                                    mamario) y reducción de vello corporal y facial.</p>
+                                <p><strong>Síntomas sexuales:</strong> Disminución del deseo sexual, disfunción eréctil,
+                                    reducción del volumen de semen e infertilidad.</p>
+                                <p><strong>Síntomas mentales/emocionales:</strong> Depresión y cambios de humor,
+                                    dificultad de concentración y memoria, irritabilidad y pérdida de motivación.</p>
+
+                                <h3>Causas de testosterona baja</h3>
+                                <p><strong>Hipogonadismo primario:</strong> Problemas testiculares directos (lesión,
+                                    infección, síndrome de Klinefelter, tratamientos de cáncer).</p>
+                                <p><strong>Hipogonadismo secundario:</strong> Problemas en hipotálamo o hipófisis
+                                    (tumores, medicamentos, obesidad, estrés crónico, envejecimiento natural).</p>
+                                <p><strong>Factores de estilo de vida:</strong> Obesidad (la grasa convierte
+                                    testosterona en estrógeno), falta de sueño, estrés crónico, consumo excesivo de
+                                    alcohol, uso de opioides y otros medicamentos, y sedentarismo.</p>
+
+                                <h3>Formas naturales de optimizar testosterona</h3>
+                                <p><strong>Ejercicio y entrenamiento de fuerza:</strong> El entrenamiento con pesas y
+                                    ejercicios compuestos (sentadillas, peso muerto) estimulan la producción. HIIT
+                                    (entrenamiento de alta intensidad) también es efectivo.</p>
+                                <p><strong>Nutrición adecuada:</strong> Consumo suficiente de grasas saludables
+                                    (aguacate, frutos secos, aceite de oliva), proteína de calidad, micronutrientes
+                                    clave (zinc, magnesio, vitamina D). Evitar dietas extremadamente bajas en calorías o
+                                    carbohidratos.</p>
+                                <p><strong>Sueño de calidad:</strong> 7-9 horas de sueño profundo. La mayoría de la
+                                    testosterona se produce durante el sueño.</p>
+                                <p><strong>Manejo del estrés:</strong> El cortisol elevado (hormona del estrés) reduce
+                                    la testosterona. Prácticas como meditación, yoga o técnicas de respiración ayudan.
+                                </p>
+                                <p><strong>Mantener peso saludable:</strong> La obesidad reduce significativamente los
+                                    niveles de testosterona.</p>
+                                <p><strong>Exposición solar:</strong> La vitamina D es crucial para la producción de
+                                    testosterona. 15-30 minutos de sol diario o suplementación si es necesario.</p>
+                                <p><strong>Limitar alcohol y evitar drogas:</strong> El consumo excesivo de alcohol
+                                    reduce drásticamente la testosterona.</p>
+
+                                <h3>Terapia de reemplazo de testosterona (TRT)</h3>
+                                <p><strong>¿Qué es?</strong> Tratamiento médico que administra testosterona exógena para
+                                    restaurar niveles normales en personas diagnosticadas con hipogonadismo.</p>
+                                <p><strong>Formas de administración:</strong> Inyecciones intramusculares (semanales o
+                                    quincenales), geles o cremas tópicas (aplicación diaria), parches transdérmicos,
+                                    implantes subcutáneos (pellets que duran 3-6 meses) y comprimidos bucales.</p>
+                                <p><strong>Requisitos:</strong> Diagnóstico médico confirmado con análisis de sangre (al
+                                    menos 2 mediciones matutinas con niveles bajos), síntomas clínicos verificados y
+                                    supervisión médica continua.</p>
+
+                                <h3>Beneficios del TRT (bajo supervisión médica)</h3>
+                                <p>Aumento de masa muscular y fuerza, reducción de grasa corporal, mejora de densidad
+                                    ósea, incremento de libido y función sexual, mejora del estado de ánimo y energía,
+                                    mejor función cognitiva y posible reducción de riesgo cardiovascular (en casos de
+                                    hipogonadismo comprobado).</p>
+
+                                <h3>Efectos secundarios del TRT</h3>
+                                <p><strong>Comunes:</strong> Acné y piel grasa, retención de líquidos, aumento de
+                                    glóbulos rojos (policitemia), reducción de producción natural de testosterona y
+                                    supresión de fertilidad (reducción de producción de esperma).</p>
+                                <p><strong>Potencialmente graves:</strong> Aumento de riesgo de apnea del sueño,
+                                    crecimiento de próstata (puede empeorar síntomas urinarios), ginecomastia (si se
+                                    convierte en estrógeno), cambios en perfil lipídico, aumento de presión arterial y
+                                    posibles efectos cardiovasculares (tema controversial, requiere monitoreo).</p>
+
+                                <h3>Contraindicaciones del TRT</h3>
+                                <p>Cáncer de próstata o sospecha del mismo, cáncer de mama masculino, enfermedad
+                                    cardiovascular severa no controlada, policitemia severa, apnea del sueño no tratada
+                                    y deseo de preservar fertilidad a corto plazo.</p>
+
+                                <h3>Monitoreo médico necesario</h3>
+                                <p>El TRT requiere seguimiento médico regular con análisis de sangre (cada 3-6 meses)
+                                    para monitorear: niveles de testosterona total y libre, hematocrito y hemoglobina
+                                    (recuento de glóbulos rojos), PSA (antígeno prostático específico), función hepática
+                                    y renal, perfil lipídico (colesterol) y estrógenos (para ajustar dosis si es
+                                    necesario).</p>
+
+                                <h3>Uso ilegal de esteroides anabólicos</h3>
+                                <p><strong>ADVERTENCIA:</strong> El uso de testosterona o esteroides anabólicos sin
+                                    prescripción médica es ilegal y extremadamente peligroso. Dosis suprafisiológicas
+                                    (muy por encima de niveles normales) utilizadas en culturismo causan: daño hepático
+                                    y renal grave, problemas cardiovasculares severos (infartos, derrames), atrofia
+                                    testicular permanente, infertilidad, ginecomastia severa, cambios psicológicos
+                                    ("roid rage"), acné severo y dependencia psicológica.</p>
+
+                                <h3>Mitos comunes</h3>
+                                <p>❌ <strong>"Más testosterona siempre es mejor":</strong> FALSO. Niveles excesivamente
+                                    altos causan efectos secundarios graves y se convierten en estrógeno.</p>
+                                <p>❌ <strong>"El TRT es solo para ancianos":</strong> FALSO. Hombres jóvenes pueden
+                                    tener hipogonadismo legítimo.</p>
+                                <p>❌ <strong>"Los suplementos de testosterona de venta libre funcionan":</strong> FALSO.
+                                    Los "boosters" de testosterona sin receta tienen efectos mínimos o nulos.</p>
+                                <p>❌ <strong>"El TRT causa cáncer de próstata":</strong> No comprobado. No lo causa,
+                                    pero puede acelerar un cáncer existente.</p>
+                                <p>❌ <strong>"Puedo hacer TRT yo mismo":</strong> PELIGROSO. Requiere supervisión médica
+                                    obligatoria.</p>
+                                <p>❌ <strong>"El TRT te hace perder pelo":</strong> Parcialmente cierto. Acelera
+                                    calvicie en personas genéticamente predispuestas.</p>
+
+                                <h3>Suplementos con evidencia científica</h3>
+                                <p><strong>Vitamina D:</strong> Deficiencia correlaciona con testosterona baja.
+                                    Suplementar si hay deficiencia (2000-5000 UI/día).</p>
+                                <p><strong>Zinc:</strong> Esencial para producción de testosterona. Suplementar si hay
+                                    deficiencia (15-30 mg/día).</p>
+                                <p><strong>Magnesio:</strong> Mejora testosterona libre. 200-400 mg/día.</p>
+                                <p><strong>Ashwagandha:</strong> Adaptógeno que puede reducir cortisol y aumentar
+                                    testosterona moderadamente (300-500 mg/día).</p>
+                                <p><strong>Ácido D-aspártico:</strong> Evidencia mixta, puede funcionar temporalmente en
+                                    hombres con niveles bajos.</p>
+                                <p><strong>DHEA:</strong> Precursor hormonal. Solo bajo supervisión médica.</p>
+
+                                <h3>Cuándo consultar a un médico</h3>
+                                <p>Si experimentas síntomas persistentes de testosterona baja (fatiga crónica, pérdida
+                                    de libido, disfunción eréctil, depresión, pérdida de masa muscular), solicita
+                                    análisis de sangre completos. Busca un endocrinólogo o médico especializado en
+                                    medicina hormonal para evaluación y tratamiento apropiado.</p>
+
+                                <h3>Conclusión</h3>
+                                <p>La testosterona es una hormona crucial para la salud masculina. La optimización
+                                    natural a través de estilo de vida debe ser el primer paso. El TRT es un tratamiento
+                                    médico legítimo para hipogonadismo diagnosticado, pero requiere supervisión
+                                    profesional continua. El uso de esteroides sin prescripción es ilegal, peligroso y
+                                    puede causar daños permanentes. Siempre consulta con profesionales médicos
+                                    cualificados antes de considerar cualquier intervención hormonal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Magnesio
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container m-5">
+
+
+    </div>
+
+
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Testosterona para fuerza, creatina para naturales y magnesio para descansar!', 'success')
+            })
+        }
+    </script>
+</body>
+
+</html>
