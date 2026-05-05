@@ -71,6 +71,24 @@
             border-bottom: 5px solid white;
 
         }
+
+        .acordeon1 {
+            background-color: lightcoral;
+            color: black;
+            border: 3px solid lightgreen;
+        }
+
+        .acordeon2 {
+            background-color: lightgreen;
+            color: black;
+            border: 3px solid lightgreen;
+        }
+
+        .acordeon3 {
+            background-color: lightblue;
+            color: black;
+            border: 3px solid lightgreen;
+        }
     </style>
 </head>
 
@@ -79,13 +97,14 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Iván</a>
+            <a class="navbar-brand" style="color: black; font-weight: bold; font-size: 20px;" href="#">Iván</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Lista de la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="https://claude.ai/new">Claude AI</a>
@@ -93,17 +112,19 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Desplegable
+                            Tiendas de suplementos y ropa deportiva
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.youtube.com">YT</a></li>
-                            <li><a class="dropdown-item" href="https://www.instagram.com">IG</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="https://www.myprotein.es">MyProtein</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://eu.gymshark.com/es-ES?gclsrc=aw.ds&gad_source=1&gad_campaignid=23510489496&gbraid=0AAAAADMZ0iqO_MIbfAGsGwjhlwBvoDLsB&gclid=CjwKCAjwqubPBhBOEiwAzgZX2otRua19zT8G_B8n0Qdqfg2Vb8MDcbbZzZ2tSZrkK0e1_-ivLLrkFhoC3pIQAvD_BwE">Gymshark</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- Lista de la derecha -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Página 1</a>
                     </li>
@@ -169,15 +190,15 @@
         <div class="row align-items-start">
             <div class="col">
                 <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
+                    <div class="accordion-item acordeon1">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne"
+                                style="background-color: lightcoral; color: black; font-weight: bold; border: 3px solid lightgreen;">
                                 Creatina
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
 
                                 <h3>¿Qué es la creatina?</h3>
@@ -308,10 +329,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item acordeon2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                style="background-color: lightgreen; color: black; font-weight: bold; border: 3px solid lightgreen;">
                                 Testosterona
                             </button>
                         </h2>
@@ -472,16 +494,220 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item acordeon3">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree "
+                                style="background-color: lightblue; color: black; font-weight: bold; border: 3px solid lightgreen;">
                                 Magnesio
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                
+                                <h3>¿Qué es el magnesio?</h3>
+                                <p>El magnesio es un mineral esencial y el cuarto catión más abundante en el cuerpo
+                                    humano. Es un cofactor en más de 300 reacciones enzimáticas, participando en
+                                    procesos fundamentales como la síntesis de proteínas, función muscular y nerviosa,
+                                    control de glucosa en sangre, regulación de la presión arterial y producción de
+                                    energía (ATP). Aproximadamente el 60% del magnesio corporal se encuentra en los
+                                    huesos, 25% en los músculos y el resto en tejidos blandos y fluidos.</p>
+
+                                <h3>Funciones principales del magnesio</h3>
+                                <p><strong>Producción de energía:</strong> Esencial para la conversión de alimentos en
+                                    ATP (energía celular). Participa en el metabolismo de carbohidratos, proteínas y
+                                    grasas.</p>
+                                <p><strong>Función muscular:</strong> Regula la contracción y relajación muscular.
+                                    Previene calambres y espasmos. Fundamental para el rendimiento deportivo.</p>
+                                <p><strong>Sistema nervioso:</strong> Actúa como regulador de neurotransmisores. Tiene
+                                    efecto calmante sobre el sistema nervioso. Mejora la calidad del sueño y reduce
+                                    ansiedad.</p>
+                                <p><strong>Salud ósea:</strong> Influye en la formación de huesos y metabolismo de
+                                    vitamina D. Regula niveles de calcio y mejora densidad ósea.</p>
+                                <p><strong>Salud cardiovascular:</strong> Regula el ritmo cardíaco, mantiene presión
+                                    arterial saludable, previene arritmias y mejora función endotelial.</p>
+                                <p><strong>Regulación de glucosa:</strong> Mejora sensibilidad a la insulina, ayuda en
+                                    control de diabetes tipo 2 y regula niveles de azúcar en sangre.</p>
+                                <p><strong>Síntesis de proteínas:</strong> Necesario para la creación de ADN, ARN y
+                                    proteínas. Fundamental para crecimiento y reparación muscular.</p>
+
+                                <h3>Deficiencia de magnesio (hipomagnesemia)</h3>
+                                <p><strong>Prevalencia:</strong> Se estima que 50-70% de la población occidental no
+                                    alcanza la ingesta diaria recomendada. Es una de las deficiencias minerales más
+                                    comunes.</p>
+                                <p><strong>Causas de deficiencia:</strong> Dieta baja en alimentos ricos en magnesio
+                                    (procesados, refinados), consumo excesivo de alcohol, enfermedades
+                                    gastrointestinales (Crohn, celiaquía, diarrea crónica), diabetes mal controlada, uso
+                                    prolongado de diuréticos o inhibidores de bomba de protones, estrés crónico (aumenta
+                                    excreción de magnesio), ejercicio intenso (pérdida por sudor) y edad avanzada (menor
+                                    absorción).</p>
+
+                                <h3>Síntomas de deficiencia de magnesio</h3>
+                                <p><strong>Síntomas tempranos:</strong> Fatiga y debilidad, pérdida de apetito, náuseas
+                                    y calambres musculares frecuentes.</p>
+                                <p><strong>Síntomas moderados:</strong> Entumecimiento y hormigueo, contracciones
+                                    musculares involuntarias (fasciculaciones), migrañas frecuentes, insomnio o sueño no
+                                    reparador, ansiedad e irritabilidad y palpitaciones cardíacas.</p>
+                                <p><strong>Síntomas severos (deficiencia grave):</strong> Convulsiones, arritmias
+                                    cardíacas graves, hipocalcemia (niveles bajos de calcio), hipopotasemia (niveles
+                                    bajos de potasio) y cambios de personalidad.</p>
+
+                                <h3>Tipos de suplementos de magnesio</h3>
+                                <p><strong>Magnesio glicinato/bisglicinato:</strong> Alta biodisponibilidad (fácil
+                                    absorción), no causa efectos laxantes, ideal para mejorar sueño y reducir ansiedad.
+                                    Mejor opción para uso general.</p>
+                                <p><strong>Magnesio citrato:</strong> Buena absorción, efecto laxante moderado (útil
+                                    para estreñimiento), económico y efectivo. Buena opción para deficiencia general.
+                                </p>
+                                <p><strong>Magnesio malato:</strong> Bien absorbido, puede aumentar energía, útil para
+                                    fatiga y fibromialgia. Sin efecto laxante significativo.</p>
+                                <p><strong>Magnesio taurato:</strong> Beneficioso para salud cardiovascular, buena
+                                    absorción. Combina magnesio con taurina (aminoácido).</p>
+                                <p><strong>Magnesio treonato:</strong> Única forma que cruza barrera hematoencefálica
+                                    eficazmente. Excelente para función cognitiva y memoria. Más caro.</p>
+                                <p><strong>Magnesio óxido:</strong> Baja biodisponibilidad (4%), fuerte efecto laxante.
+                                    Útil principalmente como laxante, no recomendado para suplementación general.</p>
+                                <p><strong>Magnesio cloruro:</strong> Buena absorción, puede usarse tópicamente (aceite
+                                    de magnesio). Sabor amargo en forma oral.</p>
+                                <p><strong>Magnesio sulfato (sales de Epsom):</strong> Para uso en baños (absorción
+                                    transdérmica), efecto relajante muscular. No para consumo oral regular.</p>
+
+                                <h3>Dosis recomendadas</h3>
+                                <p><strong>Ingesta diaria recomendada (RDA):</strong> Hombres adultos: 400-420 mg/día.
+                                    Mujeres adultas: 310-320 mg/día. Embarazo: 350-400 mg/día. Lactancia: 310-360
+                                    mg/día. Adolescentes: 360-410 mg/día.</p>
+                                <p><strong>Dosis de suplementación:</strong> Deficiencia leve-moderada: 200-400 mg/día.
+                                    Deportistas o personas activas: 400-600 mg/día. Para mejorar sueño: 200-400 mg antes
+                                    de dormir. Para estreñimiento: 300-500 mg de citrato. Límite superior tolerable: 350
+                                    mg/día de magnesio suplementario (además de la dieta).</p>
+                                <p><strong>Momento óptimo:</strong> Con alimentos para mejor absorción y reducir
+                                    molestias gastrointestinales. Por la noche para mejorar sueño (glicinato). Dividir
+                                    dosis si se toma más de 300 mg.</p>
+
+                                <h3>Fuentes alimentarias de magnesio</h3>
+                                <p><strong>Fuentes excelentes (por 100g):</strong> Semillas de calabaza: 550 mg,
+                                    almendras: 270 mg, espinacas cocidas: 87 mg, anacardos: 292 mg, chocolate negro
+                                    (70-85%): 228 mg, aguacate: 29 mg.</p>
+                                <p><strong>Buenas fuentes:</strong> Legumbres (frijoles negros, lentejas, garbanzos),
+                                    cereales integrales (arroz integral, quinoa, avena), plátanos, pescado (salmón,
+                                    caballa), tofu y verduras de hoja verde.</p>
+                                <p><strong>Nota:</strong> El procesamiento de alimentos reduce significativamente el
+                                    contenido de magnesio.</p>
+
+                                <h3>Beneficios comprobados de la suplementación</h3>
+                                <p><strong>Mejora del sueño:</strong> Reduce tiempo para conciliar el sueño, aumenta
+                                    sueño profundo, reduce insomnio en adultos mayores. Especialmente efectivo el
+                                    glicinato.</p>
+                                <p><strong>Reducción de ansiedad y estrés:</strong> Regula el eje HPA
+                                    (hipotálamo-pituitaria-adrenal), reduce síntomas de ansiedad generalizada y mejora
+                                    respuesta al estrés.</p>
+                                <p><strong>Rendimiento deportivo:</strong> Mejora capacidad de ejercicio, reduce lactato
+                                    sanguíneo durante ejercicio, previene calambres musculares y mejora recuperación
+                                    muscular.</p>
+                                <p><strong>Salud cardiovascular:</strong> Reduce presión arterial (especialmente en
+                                    hipertensos), disminuye riesgo de enfermedad cardiovascular, mejora perfil lipídico
+                                    y reduce inflamación.</p>
+                                <p><strong>Control de glucosa:</strong> Mejora sensibilidad a insulina, reduce riesgo de
+                                    diabetes tipo 2 y ayuda en control glucémico en diabéticos.</p>
+                                <p><strong>Reducción de migrañas:</strong> Disminuye frecuencia e intensidad de
+                                    migrañas. Dosis efectiva: 400-600 mg/día.</p>
+                                <p><strong>Salud ósea:</strong> Mejora densidad mineral ósea, reduce riesgo de
+                                    osteoporosis y mejora absorción de calcio.</p>
+                                <p><strong>Reducción de calambres:</strong> Efectivo en calambres nocturnos, calambres
+                                    musculares asociados al ejercicio y calambres en embarazo.</p>
+                                <p><strong>Función cognitiva:</strong> Mejora memoria (especialmente con treonato),
+                                    protección neuroprotectora y posible reducción de riesgo de demencia.</p>
+
+                                <h3>Efectos secundarios de la suplementación</h3>
+                                <p><strong>Comunes (generalmente con dosis altas):</strong> Diarrea y malestar
+                                    gastrointestinal (especialmente con óxido y citrato), náuseas y calambres
+                                    abdominales.</p>
+                                <p><strong>Raros (dosis muy altas o problemas renales):</strong> Hipermagnesemia (exceso
+                                    de magnesio): debilidad muscular, presión arterial baja, náuseas severas, dificultad
+                                    respiratoria, arritmias cardíacas y confusión mental.</p>
+                                <p><strong>Nota:</strong> El exceso de magnesio es muy raro en personas con función
+                                    renal normal, ya que los riñones excretan el exceso.</p>
+
+                                <h3>Interacciones con medicamentos</h3>
+                                <p><strong>Antibióticos (tetraciclinas, quinolonas):</strong> El magnesio reduce su
+                                    absorción. Separar tomas por 2-3 horas.</p>
+                                <p><strong>Bifosfonatos (para osteoporosis):</strong> El magnesio interfiere con
+                                    absorción. Separar por 2 horas.</p>
+                                <p><strong>Diuréticos:</strong> Algunos aumentan pérdida de magnesio (tiazidas), otros
+                                    lo retienen (ahorradores de potasio).</p>
+                                <p><strong>Inhibidores de bomba de protones (omeprazol):</strong> Uso prolongado reduce
+                                    absorción de magnesio.</p>
+                                <p><strong>Medicamentos para hipertensión:</strong> El magnesio puede potenciar el
+                                    efecto hipotensor. Monitorear presión.</p>
+
+                                <h3>Relación con otros nutrientes</h3>
+                                <p><strong>Calcio:</strong> Equilibrio importante (ratio ideal 1:1 o 2:1
+                                    calcio:magnesio). Exceso de calcio puede reducir absorción de magnesio.</p>
+                                <p><strong>Vitamina D:</strong> La vitamina D mejora absorción de magnesio. El magnesio
+                                    es necesario para activar vitamina D. Deficiencia de uno afecta al otro.</p>
+                                <p><strong>Potasio:</strong> El magnesio es necesario para mantener niveles adecuados de
+                                    potasio. Deficiencia de magnesio puede causar hipopotasemia.</p>
+                                <p><strong>Zinc:</strong> Dosis muy altas de zinc pueden competir con absorción de
+                                    magnesio.</p>
+
+                                <h3>Contraindicaciones y precauciones</h3>
+                                <p><strong>Enfermedad renal severa:</strong> No suplementar sin supervisión médica. Los
+                                    riñones no pueden eliminar exceso.</p>
+                                <p><strong>Bloqueo cardíaco:</strong> El magnesio puede empeorar la conducción cardíaca.
+                                </p>
+                                <p><strong>Miastenia gravis:</strong> Puede exacerbar debilidad muscular.</p>
+                                <p><strong>Precaución en:</strong> Personas con problemas gastrointestinales severos,
+                                    uso de múltiples medicamentos (consultar interacciones) y embarazo/lactancia
+                                    (respetar dosis recomendadas).</p>
+
+                                <h3>Magnesio para deportistas</h3>
+                                <p>Los atletas tienen mayores necesidades de magnesio debido a: pérdida por sudor
+                                    durante ejercicio intenso, mayor demanda metabólica, estrés oxidativo del ejercicio
+                                    y mayor recambio de ATP. Se recomienda: 400-600 mg/día para deportistas regulares,
+                                    hasta 800 mg/día para atletas de élite (dividir en varias tomas), considerar formas
+                                    como malato o glicinato y monitorear niveles con análisis de sangre periódicos.</p>
+
+                                <h3>Cómo saber si necesitas magnesio</h3>
+                                <p><strong>Análisis de sangre:</strong> Magnesio sérico (en sangre): método estándar
+                                    pero no muy preciso (solo refleja 1% del magnesio total). Magnesio en glóbulos rojos
+                                    (RBC): más preciso pero menos disponible. Niveles normales de magnesio sérico:
+                                    1.7-2.2 mg/dL.</p>
+                                <p><strong>Señales clínicas:</strong> Calambres frecuentes, insomnio persistente,
+                                    ansiedad sin causa clara, fatiga crónica, palpitaciones y dieta baja en alimentos
+                                    ricos en magnesio.</p>
+
+                                <h3>Mitos comunes</h3>
+                                <p>❌ <strong>"Todos los tipos de magnesio son iguales":</strong> FALSO. La
+                                    biodisponibilidad varía enormemente entre formas.</p>
+                                <p>❌ <strong>"Más magnesio siempre es mejor":</strong> FALSO. Dosis excesivas causan
+                                    diarrea y otros efectos secundarios.</p>
+                                <p>❌ <strong>"El magnesio tópico funciona igual que el oral":</strong> Evidencia mixta.
+                                    La absorción transdérmica es menor pero puede ser útil.</p>
+                                <p>❌ <strong>"Si comes bien no necesitas suplementos":</strong> Parcialmente falso.
+                                    Incluso con buena dieta, muchas personas no alcanzan RDA debido a suelos
+                                    empobrecidos.</p>
+                                <p>❌ <strong>"El magnesio cura la ansiedad":</strong> Ayuda, pero no es cura única. Es
+                                    un factor coadyuvante.</p>
+                                <p>❌ <strong>"Puedes tomar todo el magnesio de una vez":</strong> FALSO. Dosis mayores a
+                                    300-400 mg se absorben peor. Mejor dividir.</p>
+
+                                <h3>Recomendaciones prácticas</h3>
+                                <p>✅ Elige glicinato para uso general y mejor sueño (sin efecto laxante)</p>
+                                <p>✅ Toma con comidas para minimizar molestias digestivas</p>
+                                <p>✅ Empieza con dosis bajas (200 mg) y aumenta gradualmente</p>
+                                <p>✅ Toma por la noche si buscas mejorar el sueño</p>
+                                <p>✅ Combina con alimentación rica en magnesio</p>
+                                <p>✅ Mantén equilibrio con calcio y vitamina D</p>
+                                <p>✅ Si tienes diarrea, cambia a glicinato o reduce dosis</p>
+                                <p>✅ Consulta con médico si tomas medicamentos regularmente</p>
+
+                                <h3>Conclusión</h3>
+                                <p>El magnesio es un mineral esencial frecuentemente deficiente en la población moderna.
+                                    La suplementación, especialmente con formas de alta biodisponibilidad como el
+                                    glicinato, puede mejorar significativamente el sueño, reducir ansiedad, optimizar
+                                    rendimiento deportivo y apoyar múltiples funciones corporales. Es uno de los
+                                    suplementos más seguros y con mejor relación beneficio-riesgo cuando se usa
+                                    apropiadamente. Para deportistas y personas activas, es prácticamente esencial para
+                                    mantener rendimiento óptimo y recuperación adecuada.</p>
                             </div>
                         </div>
                     </div>
@@ -491,11 +717,11 @@
         </div>
     </div>
 
-    <div class="container m-5">
-
-
-    </div>
-
+    <!-- Footer -->
+    <footer class="mt-5 p-3 text-center mx-auto"
+        style="background-color: lightblue; color: black; font-weight: bold; border: 3px solid lightgreen;">
+        <p>© 2026 Iván. Todos los derechos reservados.</p>
+    </footer>
 
 
     <script>
