@@ -30,6 +30,7 @@
             border-width: 2px;
             border-style: solid;
         }
+
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: red;
@@ -156,6 +157,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Lista de la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="https://claude.ai/new">Claude AI</a>
@@ -173,9 +175,12 @@
                             </li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- Lista de la derecha -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link"
-                            href="pagina_2.html">Pagina 2</a>
+                        <a class="nav-link" href="pagina_2.html">Página 2</a>
                     </li>
                 </ul>
             </div>
@@ -190,8 +195,8 @@
                 <div id="carouselExample" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://i.ytimg.com/vi/Xpxxuz_ItNE/hqdefault.jpg?v=5ea73063"
-                                class="d-block w-100" alt="foto 1">
+                            <img src="https://i.ytimg.com/vi/Xpxxuz_ItNE/hqdefault.jpg?v=5ea73063" class="d-block w-100"
+                                alt="foto 1">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Primer subtitulo ajiudo</h5>
                                 <p>Messi calvo</p>
@@ -239,7 +244,8 @@
                         class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 1</h5>
-                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=h7PM8_L7oYc" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial</a>
                     </div>
@@ -251,7 +257,8 @@
                         class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 2</h5>
-                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=2Jj2RA-NCc8" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial 2</a>
                     </div>
@@ -263,7 +270,8 @@
                         class="card-img-top object-fit-cover" style="height: 416px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tarjeta Nº 3</h5>
-                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA .</p>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
                         <a href="https://www.youtube.com/watch?v=IdtDSctsdl0" class="btn btn-success"
                             style="border-radius: 50px; border-color: black;">Video especial 3</a>
                     </div>
@@ -371,12 +379,14 @@
             <div class="col-12 col-md-12 formulario">
                 <h1>Formulario de contacto</h1>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label" style="color: black;">Cuenta de correo</label>
+                    <label for="exampleFormControlInput1" class="form-label" style="color: black;">Cuenta de
+                        correo</label>
                     <input type="email" class="form-control forma" id="exampleFormControlInput1"
                         placeholder="name@example.com">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Cuenta bancaria</label>
+                    <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Cuenta
+                        bancaria</label>
                     <textarea class="form-control forma" id="exampleFormControlTextarea1"
                         placeholder="Ponga todos sus datos bancarios aquí..." rows="1"></textarea>
                 </div>
@@ -386,11 +396,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="Apellidos" class="form-label" style="color: black;">Apellidos</label>
-                    <input type="text" class="form-control forma" placeholder="Escribe tus apellidos aquí..." id="Apellidos">
+                    <input type="text" class="form-control forma" placeholder="Escribe tus apellidos aquí..."
+                        id="Apellidos">
                 </div>
                 <div class="mb-3">
                     <label for="inputCity" class="form-label" style="color: black;">Ciudad</label>
-                    <input type="text" class="form-control forma" placeholder="Escribe tu ciudad aquí..." id="inputCity">
+                    <input type="text" class="form-control forma" placeholder="Escribe tu ciudad aquí..."
+                        id="inputCity">
                 </div>
                 <div class="mb-3">
                     <label for="inputState" class="form-label" style="color: black;">Estado</label>
