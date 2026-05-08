@@ -4,87 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 2</title>
+    <title>Pág 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <style>
+        /* Cuerpo */
         body {
-            background: linear-gradient(to right, #1a1a1a, #2a0000);
+            background-color: #000000;
         }
 
+        /* Cabecera */
         .navbar {
-            background: linear-gradient(to right, #1a1a1a, #2a0000);
+            background-color: #ff0000;
             font-weight: bold;
-            border-bottom: 4px solid white;
-
         }
 
-        .nav-link {
-            color: black;
+        /* Carrusel */
+
+        .carousel-item img {
+            border-radius: 20px;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
         }
 
-
-        #liveAlertBtn {
-            margin: 20px auto;
-            color: white;
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
             background-color: red;
-            border: 2px solid white;
+            width: 40px;
+            border-radius: 50%;
+            height: 40px;
         }
 
-        #liveAlertBtn:hover {
-            background-color: white;
-            color: red;
-            border: 2px solid red;
-            transition: 0.5s;
+        .carousel-control-prev-icon {
+            position: relative;
+            width: 40px;
         }
 
-        .alert {
-            width: 50%;
-            margin: 20px auto;
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-left: 300px;
+            margin-right: 300px;
+            border-radius: 90px;
+            color: lightblue;
+            font-weight: bold;
+            font-size: 20px;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
         }
 
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            margin: 10px auto;
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            max-width: 100%;
         }
 
+        .carrusel {
+            margin-top: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        /* Cartas */
         .card {
-            background: linear-gradient(to right, black, white, black);
-            color: black;
-            border: 5px solid white;
-            border-radius: 10px;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 20px;
+            border-color: white;
+            box-shadow: 0 4px 8px rgba(255, 225, 225, 4);
+            border-width: 2px;
         }
 
-        .card:hover {
-            background: linear-gradient(to right, white, black, white);
-            color: white;
-            border: 4px solid black;
-            transition: 2s;
+        .card-title {
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 10px;
         }
 
         .card-img-top {
-            border-bottom: 5px solid black;
+            border-radius: 20px 20px 0 0;
+            border-bottom: 2px solid white;
         }
 
-        .acordeon1 {
-            background-color: black;
-            color: white;
-
+        .btn-success:hover {
+            background-color: #ffff00;
+            border-color: rgb(255, 0, 0);
+            color: black;
         }
 
-        .acordeon2 {
-            background-color: black;
-            color: white;
+        /* Formulario */
+        .forma::placeholder {
+            color: gray;
+            border-radius: 20px;
         }
 
-        .acordeon3 {
-            background-color: black;
-            color: white;
+        .formulario {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
 
+        .forma {
+            background-color: white;
+            color: black;
+            border-color: orange;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 100px;
+        }
+
+        .forma:hover {
+            background-color: yellow;
+            color: black;
+            border-color: black;
+            border-width: 5px;
+            box-shadow: none !important;
+            transition: 2s;
+            border-radius: 10px;
+        }
+
+
+        .forma:focus {
+            box-shadow: none !important;
+            border-color: orange;
+            background-color: white;
+            color: black;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: white;
+            color: black;
+            width: 100%;
+            margin: 0;
+            padding: 15px;
         }
     </style>
 </head>
@@ -94,28 +156,27 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: white; font-weight: bold; font-size: 20px;" href="#"> <img src="golden's gym.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Iván</a>
+            <a class="navbar-brand" href="#"> <img src="golden's gym.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">Iván</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" style="background-color: white;">
+                aria-label="Toggle navigation" style="background-color: white; color: black;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Lista de la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://claude.ai/new" style="color: white;">Claude AI</a>
+                        <a class="nav-link" href="https://claude.ai/new">Claude AI</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" style="color: white;">
-                            Tiendas de suplementos y ropa deportiva
+                            aria-expanded="false">
+                            Desplegable
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.myprotein.es">MyProtein</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://eu.gymshark.com/es-ES?gclsrc=aw.ds&gad_source=1&gad_campaignid=23510489496&gbraid=0AAAAADMZ0iqO_MIbfAGsGwjhlwBvoDLsB&gclid=CjwKCAjwqubPBhBOEiwAzgZX2otRua19zT8G_B8n0Qdqfg2Vb8MDcbbZzZ2tSZrkK0e1_-ivLLrkFhoC3pIQAvD_BwE">Gymshark</a>
-                            </li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com">YT</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com">IG</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -123,10 +184,10 @@
                 <!-- Lista de la derecha -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html" style="color: white;">Página 1</a>
+                        <a class="nav-link" href="./pagina_2.html">Página 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pagina_3.html" style="color: white;">Página 3</a>
+                        <a class="nav-link" href="./pagina_3.html">Página 3</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./pagina_4.html">Página 4</a>
@@ -137,778 +198,265 @@
     </nav>
 
 
-    <div class="btn-group">
-        <a href="https://www.myprotein.es/p/nutricion-deportiva/creatina-monohidrato-en-polvo/10530050/?affil=thggpsad&switchcurrency=EUR&shippingcountry=ES&variation=11773554&affil=thgppc&kwds=&thg_ppc_campaign=23527587496&adtype=pla&product_id=11773554&cq_src=google_ads&cq_cmp=23527587496&cq_con=&cq_term=&cq_med=pla&cq_plac=&cq_net=x&cq_plt=gp&gclsrc=aw.ds&gad_source=1&gad_campaignid=23517847149&gbraid=0AAAAADuhnyGNZCEB2J0P31VlgBgKz6uWh&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
-            class="btn btn-primary" aria-current="page"
-            style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
-            creatina</a>
-        <a href="https://classroom.google.com/u/1/" class="btn btn-primary"
-            style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
-            testosterona</a>
-        <a href="https://www.myprotein.es/p/nutricion-deportiva/comprimidos-de-bisglicinato-de-magnesio/15736555/?affil=thggpsad&thg_ppc_campaign=23527587496&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
-            class="btn btn-primary"
-            style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
-            magnesio</a>
+    <!-- Carrusel -->
+    <div class="carrusel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.magnific.com/foto-gratis/paraiso-playa-tropical-palmeras-agua-turquesa_23-2151975534.jpg?semt=ais_hybrid&w=740&q=80"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Subtítulo 1 para probar</h5>
+                        <p>Parafaco de tortillaca de patatuelas moscar 1</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.10wallpaper.com/wallpaper/1920x1080/1409/Manhattan_New_York-HD_Widescreen_Wallpaper_1920x1080.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Subtítulo 2 para probar</h5>
+                        <p>Parafaco de tortillaca de patatuelas moscar 2</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.istockphoto.com/id/2224949027/es/foto/horizonte-al-atardecer-de-la-ciudad-de-miami.jpg?s=612x612&w=0&k=20&c=KLmzc1ZR7r8JCNLxFig5YsADaUgsE8ykag-gjG1kjvs="
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Subtítulo 3 para probar</h5>
+                        <p>Parafaco de tortillaca de patatuelas moscar 3</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 
     <!-- Cards -->
-    <div class="container text-center">
+    <div class="container text-center mx-auto">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center my-3">
-                <div class="card my-3" style="width: 18rem; height: 100%;">
-                    <img src="./creatina.png">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">Creatina</h5>
-                        <p class="card-text">Suplemento deportivo</p>
+            <div class="col-12 col-md-4 mt-5">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLKSslZljZD8AyBeJ_IA9BM3fxUR2nFHcyw&s"
+                        class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Nº 1</h5>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
+                        <a href="https://www.youtube.com/watch?v=h7PM8_L7oYc" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center">
-                <div class="card my-3" style="width: 18rem; height: 100%;">
-                    <img src="./test.png">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">Testosterona</h5>
-                        <p class="card-text">Hormona masculina</p>
+            <div class="col-12 col-md-4 mt-5">
+                <div class="card">
+                    <img src="https://i.pinimg.com/564x/4a/49/5d/4a495dc97a467dd57c19e56f2331560d.jpg"
+                        class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Nº 2</h5>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
+                        <a href="https://www.youtube.com/watch?v=2Jj2RA-NCc8" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial 2</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 d-flex flex-column align-items-center my-3">
-                <div class="card my-3" style="width: 18rem; height: 100%;">
-                    <img src="./magnesio.png">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">Magnesio</h5>
-                        <p class="card-text">Mineral esencial para el funcionamiento del cuerpo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Live alert -->
-    <div id="liveAlertPlaceholder" class="my-4"></div>
-    <button type="button" class="btn btn-primary d-flex justify-content-center " id="liveAlertBtn">Información</button>
-
-
-    <!-- Accordion -->
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item acordeon1">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne"
-                                style="background-color: white; color: black; font-weight: bold; border: 3px solid black;">
-                                Creatina
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                <h3>¿Qué es la creatina?</h3>
-                                <p>La creatina es un compuesto natural formado por tres aminoácidos: arginina,
-                                    glicina y metionina. Se produce de forma endógena en el hígado, páncreas y
-                                    riñones, y se almacena principalmente en los músculos esqueléticos (95%) en
-                                    forma de fosfocreatina. También se obtiene a través de la dieta, principalmente
-                                    del consumo de carne roja y pescado.</p>
-
-                                <h3>Mecanismo de acción</h3>
-                                <p>La creatina funciona como un sistema de energía rápida para actividades de alta
-                                    intensidad y corta duración. Durante el ejercicio intenso, el ATP (adenosín
-                                    trifosfato) se descompone para liberar energía, convirtiéndose en ADP (adenosín
-                                    difosfato). La fosfocreatina dona un grupo fosfato al ADP para regenerar ATP
-                                    rápidamente, permitiendo mantener la producción de energía durante ejercicios
-                                    explosivos.</p>
-
-                                <h3>Tipos de creatina</h3>
-                                <p><strong>Creatina monohidrato:</strong> La forma más estudiada y efectiva.
-                                    Contiene aproximadamente 88% de creatina pura y 12% de agua. Es la más económica
-                                    y con mayor respaldo científico.</p>
-                                <p><strong>Creatina micronizada:</strong> Monohidrato procesado para reducir el
-                                    tamaño de las partículas, mejorando su solubilidad y absorción.</p>
-                                <p><strong>Creatina etil éster:</strong> Teóricamente mejor absorbida, aunque
-                                    estudios demuestran que no es superior al monohidrato.</p>
-                                <p><strong>Creatina HCL (clorhidrato):</strong> Más soluble en agua, se promociona
-                                    requiriendo dosis menores, pero falta evidencia que demuestre superioridad real.
-                                </p>
-                                <p><strong>Creatina tamponada (Kre-Alkalyn):</strong> Con pH más elevado para
-                                    reducir conversión a creatinina, aunque la evidencia no muestra ventajas
-                                    significativas.</p>
-                                <p><strong>Creatina líquida:</strong> Menos estable y efectiva que las formas en
-                                    polvo.</p>
-
-                                <h3>Beneficios comprobados</h3>
-                                <p><strong>Rendimiento deportivo:</strong> Aumento de fuerza muscular (5-15%),
-                                    mejora en potencia explosiva, mayor capacidad en ejercicios de alta intensidad,
-                                    mejor rendimiento en series repetidas e incremento de la masa muscular magra
-                                    (1-2 kg en las primeras semanas).</p>
-                                <p><strong>Beneficios cognitivos:</strong> Mejora de la memoria a corto plazo,
-                                    reducción de fatiga mental, mejor función cognitiva en situaciones de privación
-                                    de sueño y potencial neuroprotector.</p>
-                                <p><strong>Otros beneficios:</strong> Posible mejora en recuperación de lesiones,
-                                    efectos antioxidantes, potencial terapéutico en enfermedades neuromusculares y
-                                    mejora de la salud ósea en combinación con entrenamiento.</p>
-
-                                <h3>Dosis recomendadas</h3>
-                                <p><strong>Fase de carga (opcional):</strong> 20-25 g/día divididos en 4-5 tomas
-                                    durante 5-7 días. Acelera la saturación muscular, aunque no es estrictamente
-                                    necesaria.</p>
-                                <p><strong>Fase de mantenimiento:</strong> 3-5 g/día en una sola toma, suficiente
-                                    para mantener niveles óptimos. Puede tomarse en cualquier momento del día,
-                                    opcionalmente con carbohidratos para mejorar absorción.</p>
-                                <p><strong>Protocolo alternativo sin fase de carga:</strong> 3-5 g/día desde el
-                                    inicio. Alcanza saturación muscular en 3-4 semanas. Método más económico y
-                                    igualmente efectivo.</p>
-
-                                <h3>Momento óptimo de consumo</h3>
-                                <p>Aunque tradicionalmente se ha recomendado post-entrenamiento, estudios demuestran
-                                    que el momento exacto es poco relevante. Lo importante es la consistencia
-                                    diaria. Puede tomarse pre-entrenamiento, post-entrenamiento (posiblemente
-                                    ligeramente superior) o en cualquier momento del día en días de descanso.</p>
-
-                                <h3>Efectos secundarios y consideraciones</h3>
-                                <p><strong>Retención de agua:</strong> El efecto secundario más común, con aumento
-                                    de 1-2 kg de peso por retención intracelular (dentro del músculo, no
-                                    subcutánea).</p>
-                                <p><strong>Problemas gastrointestinales:</strong> Pueden aparecer con dosis altas,
-                                    solucionables dividiendo la dosis o usando creatina micronizada.</p>
-                                <p><strong>Calambres musculares:</strong> Mito mayormente desmentido; pueden
-                                    prevenirse con hidratación adecuada.</p>
-                                <p><strong>Función renal:</strong> No afecta negativamente a personas sanas. Puede
-                                    elevar la creatinina sérica (marcador de función renal) sin que esto indique
-                                    daño real.</p>
-                                <p><strong>Caída de cabello:</strong> Estudio aislado sugirió aumento de DHT, pero
-                                    evidencia insuficiente para confirmarlo.</p>
-
-                                <h3>Contraindicaciones</h3>
-                                <p>Enfermedad renal preexistente, durante el embarazo y lactancia (por falta de
-                                    estudios), precaución en personas con problemas hepáticos y consulta médica si
-                                    se toman medicamentos que afectan riñones.</p>
-
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"La creatina es un esteroide":</strong> FALSO. Es un compuesto natural
-                                    presente en alimentos.</p>
-                                <p>❌ <strong>"Causa daño renal":</strong> FALSO en personas sanas con función renal
-                                    normal.</p>
-                                <p>❌ <strong>"Hay que hacer ciclos":</strong> FALSO. Puede tomarse indefinidamente
-                                    de forma segura.</p>
-                                <p>❌ <strong>"Solo funciona en hombres":</strong> FALSO. Beneficia igualmente a
-                                    mujeres.</p>
-                                <p>❌ <strong>"Necesitas fase de carga obligatoriamente":</strong> FALSO. Es opcional
-                                    y solo acelera resultados.</p>
-                                <p>❌ <strong>"Pierdes todo al dejarla":</strong> Parcialmente falso. Pierdes la
-                                    retención de agua y parte de la ganancia, pero las adaptaciones musculares
-                                    permanecen.</p>
-
-                                <h3>Combinaciones efectivas</h3>
-                                <p><strong>Con carbohidratos:</strong> Mejora la absorción por pico de insulina.
-                                    <strong>Con proteína:</strong> Potencia la síntesis proteica post-entrenamiento.
-                                    <strong>Con beta-alanina:</strong> Sinergia para rendimiento de alta intensidad.
-                                    <strong>Con cafeína:</strong> Compatible, aunque algunos estudios sugieren
-                                    posible interferencia (evidencia mixta).
-                                </p>
-
-                                <h3>Recomendaciones prácticas</h3>
-                                <p>✅ Elige creatina monohidrato como primera opción (mejor relación
-                                    calidad-precio-evidencia)</p>
-                                <p>✅ Mantén una hidratación adecuada (2.5-3L agua/día)</p>
-                                <p>✅ Sé consistente con la dosis diaria</p>
-                                <p>✅ No esperes resultados inmediatos; los beneficios máximos aparecen tras 4-6
-                                    semanas</p>
-                                <p>✅ Combínala con entrenamiento de fuerza para maximizar resultados</p>
-                                <p>✅ No es necesario ciclarla; es segura a largo plazo</p>
-
-                                <h3>Respaldo científico</h3>
-                                <p>La creatina es el suplemento deportivo con mayor evidencia científica. Miles de
-                                    estudios respaldan su eficacia y seguridad. Está aprobada por organizaciones
-                                    como el IOC (Comité Olímpico Internacional), NCAA (Asociación Nacional Atlética
-                                    Universitaria) e ISSN (Sociedad Internacional de Nutrición Deportiva).</p>
-
-                                <h3>Conclusión</h3>
-                                <p>La creatina monohidrato es el suplemento más efectivo, seguro y económico para
-                                    mejorar rendimiento deportivo, especialmente en actividades de fuerza y
-                                    potencia. Con más de 30 años de investigación, su perfil de seguridad es
-                                    excepcional para personas sanas.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item acordeon2">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                                style="background-color: white; color: black; font-weight: bold; border: 3px solid black;">
-                                Testosterona
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <h3>¿Qué es la testosterona?</h3>
-                                <p>La testosterona es la principal hormona sexual masculina, aunque también está
-                                    presente en mujeres en menores cantidades. Es un esteroide androgénico producido
-                                    principalmente en los testículos (en hombres) y en los ovarios y glándulas
-                                    suprarrenales (en mujeres). Pertenece al grupo de hormonas llamadas andrógenos y es
-                                    fundamental para el desarrollo y mantenimiento de características sexuales
-                                    masculinas.</p>
-
-                                <h3>Funciones principales</h3>
-                                <p><strong>Desarrollo sexual:</strong> Desarrollo de órganos reproductivos masculinos,
-                                    espermatogénesis (producción de esperma), desarrollo de características sexuales
-                                    secundarias durante la pubertad (voz grave, vello facial y corporal, aumento de masa
-                                    muscular).</p>
-                                <p><strong>Composición corporal:</strong> Aumento y mantenimiento de masa muscular,
-                                    reducción de grasa corporal, aumento de densidad ósea y fortaleza del esqueleto.</p>
-                                <p><strong>Función sexual:</strong> Libido y deseo sexual, función eréctil, producción
-                                    de esperma y fertilidad.</p>
-                                <p><strong>Salud general:</strong> Producción de glóbulos rojos, regulación del estado
-                                    de ánimo y bienestar, función cognitiva y memoria, distribución de grasa corporal y
-                                    niveles de energía.</p>
-
-                                <h3>Niveles normales de testosterona</h3>
-                                <p><strong>Hombres adultos:</strong> 300-1000 ng/dL (nanogramos por decilitro). El rango
-                                    óptimo suele considerarse entre 500-800 ng/dL.</p>
-                                <p><strong>Mujeres adultas:</strong> 15-70 ng/dL.</p>
-                                <p><strong>Nota importante:</strong> Los niveles varían según la edad, hora del día
-                                    (pico por la mañana), laboratorio y método de medición. La testosterona disminuye
-                                    naturalmente aproximadamente 1-2% por año después de los 30 años.</p>
-
-                                <h3>Síntomas de testosterona baja (hipogonadismo)</h3>
-                                <p><strong>Síntomas físicos:</strong> Reducción de masa muscular y fuerza, aumento de
-                                    grasa corporal (especialmente abdominal), disminución de densidad ósea (riesgo de
-                                    osteoporosis), fatiga crónica y falta de energía, ginecomastia (desarrollo de tejido
-                                    mamario) y reducción de vello corporal y facial.</p>
-                                <p><strong>Síntomas sexuales:</strong> Disminución del deseo sexual, disfunción eréctil,
-                                    reducción del volumen de semen e infertilidad.</p>
-                                <p><strong>Síntomas mentales/emocionales:</strong> Depresión y cambios de humor,
-                                    dificultad de concentración y memoria, irritabilidad y pérdida de motivación.</p>
-
-                                <h3>Causas de testosterona baja</h3>
-                                <p><strong>Hipogonadismo primario:</strong> Problemas testiculares directos (lesión,
-                                    infección, síndrome de Klinefelter, tratamientos de cáncer).</p>
-                                <p><strong>Hipogonadismo secundario:</strong> Problemas en hipotálamo o hipófisis
-                                    (tumores, medicamentos, obesidad, estrés crónico, envejecimiento natural).</p>
-                                <p><strong>Factores de estilo de vida:</strong> Obesidad (la grasa convierte
-                                    testosterona en estrógeno), falta de sueño, estrés crónico, consumo excesivo de
-                                    alcohol, uso de opioides y otros medicamentos, y sedentarismo.</p>
-
-                                <h3>Formas naturales de optimizar testosterona</h3>
-                                <p><strong>Ejercicio y entrenamiento de fuerza:</strong> El entrenamiento con pesas y
-                                    ejercicios compuestos (sentadillas, peso muerto) estimulan la producción. HIIT
-                                    (entrenamiento de alta intensidad) también es efectivo.</p>
-                                <p><strong>Nutrición adecuada:</strong> Consumo suficiente de grasas saludables
-                                    (aguacate, frutos secos, aceite de oliva), proteína de calidad, micronutrientes
-                                    clave (zinc, magnesio, vitamina D). Evitar dietas extremadamente bajas en calorías o
-                                    carbohidratos.</p>
-                                <p><strong>Sueño de calidad:</strong> 7-9 horas de sueño profundo. La mayoría de la
-                                    testosterona se produce durante el sueño.</p>
-                                <p><strong>Manejo del estrés:</strong> El cortisol elevado (hormona del estrés) reduce
-                                    la testosterona. Prácticas como meditación, yoga o técnicas de respiración ayudan.
-                                </p>
-                                <p><strong>Mantener peso saludable:</strong> La obesidad reduce significativamente los
-                                    niveles de testosterona.</p>
-                                <p><strong>Exposición solar:</strong> La vitamina D es crucial para la producción de
-                                    testosterona. 15-30 minutos de sol diario o suplementación si es necesario.</p>
-                                <p><strong>Limitar alcohol y evitar drogas:</strong> El consumo excesivo de alcohol
-                                    reduce drásticamente la testosterona.</p>
-
-                                <h3>Terapia de reemplazo de testosterona (TRT)</h3>
-                                <p><strong>¿Qué es?</strong> Tratamiento médico que administra testosterona exógena para
-                                    restaurar niveles normales en personas diagnosticadas con hipogonadismo.</p>
-                                <p><strong>Formas de administración:</strong> Inyecciones intramusculares (semanales o
-                                    quincenales), geles o cremas tópicas (aplicación diaria), parches transdérmicos,
-                                    implantes subcutáneos (pellets que duran 3-6 meses) y comprimidos bucales.</p>
-                                <p><strong>Requisitos:</strong> Diagnóstico médico confirmado con análisis de sangre (al
-                                    menos 2 mediciones matutinas con niveles bajos), síntomas clínicos verificados y
-                                    supervisión médica continua.</p>
-
-                                <h3>Beneficios del TRT (bajo supervisión médica)</h3>
-                                <p>Aumento de masa muscular y fuerza, reducción de grasa corporal, mejora de densidad
-                                    ósea, incremento de libido y función sexual, mejora del estado de ánimo y energía,
-                                    mejor función cognitiva y posible reducción de riesgo cardiovascular (en casos de
-                                    hipogonadismo comprobado).</p>
-
-                                <h3>Efectos secundarios del TRT</h3>
-                                <p><strong>Comunes:</strong> Acné y piel grasa, retención de líquidos, aumento de
-                                    glóbulos rojos (policitemia), reducción de producción natural de testosterona y
-                                    supresión de fertilidad (reducción de producción de esperma).</p>
-                                <p><strong>Potencialmente graves:</strong> Aumento de riesgo de apnea del sueño,
-                                    crecimiento de próstata (puede empeorar síntomas urinarios), ginecomastia (si se
-                                    convierte en estrógeno), cambios en perfil lipídico, aumento de presión arterial y
-                                    posibles efectos cardiovasculares (tema controversial, requiere monitoreo).</p>
-
-                                <h3>Contraindicaciones del TRT</h3>
-                                <p>Cáncer de próstata o sospecha del mismo, cáncer de mama masculino, enfermedad
-                                    cardiovascular severa no controlada, policitemia severa, apnea del sueño no tratada
-                                    y deseo de preservar fertilidad a corto plazo.</p>
-
-                                <h3>Monitoreo médico necesario</h3>
-                                <p>El TRT requiere seguimiento médico regular con análisis de sangre (cada 3-6 meses)
-                                    para monitorear: niveles de testosterona total y libre, hematocrito y hemoglobina
-                                    (recuento de glóbulos rojos), PSA (antígeno prostático específico), función hepática
-                                    y renal, perfil lipídico (colesterol) y estrógenos (para ajustar dosis si es
-                                    necesario).</p>
-
-                                <h3>Uso ilegal de esteroides anabólicos</h3>
-                                <p><strong>ADVERTENCIA:</strong> El uso de testosterona o esteroides anabólicos sin
-                                    prescripción médica es ilegal y extremadamente peligroso. Dosis suprafisiológicas
-                                    (muy por encima de niveles normales) utilizadas en culturismo causan: daño hepático
-                                    y renal grave, problemas cardiovasculares severos (infartos, derrames), atrofia
-                                    testicular permanente, infertilidad, ginecomastia severa, cambios psicológicos
-                                    ("roid rage"), acné severo y dependencia psicológica.</p>
-
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"Más testosterona siempre es mejor":</strong> FALSO. Niveles excesivamente
-                                    altos causan efectos secundarios graves y se convierten en estrógeno.</p>
-                                <p>❌ <strong>"El TRT es solo para ancianos":</strong> FALSO. Hombres jóvenes pueden
-                                    tener hipogonadismo legítimo.</p>
-                                <p>❌ <strong>"Los suplementos de testosterona de venta libre funcionan":</strong> FALSO.
-                                    Los "boosters" de testosterona sin receta tienen efectos mínimos o nulos.</p>
-                                <p>❌ <strong>"El TRT causa cáncer de próstata":</strong> No comprobado. No lo causa,
-                                    pero puede acelerar un cáncer existente.</p>
-                                <p>❌ <strong>"Puedo hacer TRT yo mismo":</strong> PELIGROSO. Requiere supervisión médica
-                                    obligatoria.</p>
-                                <p>❌ <strong>"El TRT te hace perder pelo":</strong> Parcialmente cierto. Acelera
-                                    calvicie en personas genéticamente predispuestas.</p>
-
-                                <h3>Suplementos con evidencia científica</h3>
-                                <p><strong>Vitamina D:</strong> Deficiencia correlaciona con testosterona baja.
-                                    Suplementar si hay deficiencia (2000-5000 UI/día).</p>
-                                <p><strong>Zinc:</strong> Esencial para producción de testosterona. Suplementar si hay
-                                    deficiencia (15-30 mg/día).</p>
-                                <p><strong>Magnesio:</strong> Mejora testosterona libre. 200-400 mg/día.</p>
-                                <p><strong>Ashwagandha:</strong> Adaptógeno que puede reducir cortisol y aumentar
-                                    testosterona moderadamente (300-500 mg/día).</p>
-                                <p><strong>Ácido D-aspártico:</strong> Evidencia mixta, puede funcionar temporalmente en
-                                    hombres con niveles bajos.</p>
-                                <p><strong>DHEA:</strong> Precursor hormonal. Solo bajo supervisión médica.</p>
-
-                                <h3>Cuándo consultar a un médico</h3>
-                                <p>Si experimentas síntomas persistentes de testosterona baja (fatiga crónica, pérdida
-                                    de libido, disfunción eréctil, depresión, pérdida de masa muscular), solicita
-                                    análisis de sangre completos. Busca un endocrinólogo o médico especializado en
-                                    medicina hormonal para evaluación y tratamiento apropiado.</p>
-
-                                <h3>Conclusión</h3>
-                                <p>La testosterona es una hormona crucial para la salud masculina. La optimización
-                                    natural a través de estilo de vida debe ser el primer paso. El TRT es un tratamiento
-                                    médico legítimo para hipogonadismo diagnosticado, pero requiere supervisión
-                                    profesional continua. El uso de esteroides sin prescripción es ilegal, peligroso y
-                                    puede causar daños permanentes. Siempre consulta con profesionales médicos
-                                    cualificados antes de considerar cualquier intervención hormonal.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item acordeon3">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree "
-                                style="background-color: white; color: black; font-weight: bold; border: 3px solid black">
-                                Magnesio
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <h3>¿Qué es el magnesio?</h3>
-                                <p>El magnesio es un mineral esencial y el cuarto catión más abundante en el cuerpo
-                                    humano. Es un cofactor en más de 300 reacciones enzimáticas, participando en
-                                    procesos fundamentales como la síntesis de proteínas, función muscular y nerviosa,
-                                    control de glucosa en sangre, regulación de la presión arterial y producción de
-                                    energía (ATP). Aproximadamente el 60% del magnesio corporal se encuentra en los
-                                    huesos, 25% en los músculos y el resto en tejidos blandos y fluidos.</p>
-
-                                <h3>Funciones principales del magnesio</h3>
-                                <p><strong>Producción de energía:</strong> Esencial para la conversión de alimentos en
-                                    ATP (energía celular). Participa en el metabolismo de carbohidratos, proteínas y
-                                    grasas.</p>
-                                <p><strong>Función muscular:</strong> Regula la contracción y relajación muscular.
-                                    Previene calambres y espasmos. Fundamental para el rendimiento deportivo.</p>
-                                <p><strong>Sistema nervioso:</strong> Actúa como regulador de neurotransmisores. Tiene
-                                    efecto calmante sobre el sistema nervioso. Mejora la calidad del sueño y reduce
-                                    ansiedad.</p>
-                                <p><strong>Salud ósea:</strong> Influye en la formación de huesos y metabolismo de
-                                    vitamina D. Regula niveles de calcio y mejora densidad ósea.</p>
-                                <p><strong>Salud cardiovascular:</strong> Regula el ritmo cardíaco, mantiene presión
-                                    arterial saludable, previene arritmias y mejora función endotelial.</p>
-                                <p><strong>Regulación de glucosa:</strong> Mejora sensibilidad a la insulina, ayuda en
-                                    control de diabetes tipo 2 y regula niveles de azúcar en sangre.</p>
-                                <p><strong>Síntesis de proteínas:</strong> Necesario para la creación de ADN, ARN y
-                                    proteínas. Fundamental para crecimiento y reparación muscular.</p>
-
-                                <h3>Deficiencia de magnesio (hipomagnesemia)</h3>
-                                <p><strong>Prevalencia:</strong> Se estima que 50-70% de la población occidental no
-                                    alcanza la ingesta diaria recomendada. Es una de las deficiencias minerales más
-                                    comunes.</p>
-                                <p><strong>Causas de deficiencia:</strong> Dieta baja en alimentos ricos en magnesio
-                                    (procesados, refinados), consumo excesivo de alcohol, enfermedades
-                                    gastrointestinales (Crohn, celiaquía, diarrea crónica), diabetes mal controlada, uso
-                                    prolongado de diuréticos o inhibidores de bomba de protones, estrés crónico (aumenta
-                                    excreción de magnesio), ejercicio intenso (pérdida por sudor) y edad avanzada (menor
-                                    absorción).</p>
-
-                                <h3>Síntomas de deficiencia de magnesio</h3>
-                                <p><strong>Síntomas tempranos:</strong> Fatiga y debilidad, pérdida de apetito, náuseas
-                                    y calambres musculares frecuentes.</p>
-                                <p><strong>Síntomas moderados:</strong> Entumecimiento y hormigueo, contracciones
-                                    musculares involuntarias (fasciculaciones), migrañas frecuentes, insomnio o sueño no
-                                    reparador, ansiedad e irritabilidad y palpitaciones cardíacas.</p>
-                                <p><strong>Síntomas severos (deficiencia grave):</strong> Convulsiones, arritmias
-                                    cardíacas graves, hipocalcemia (niveles bajos de calcio), hipopotasemia (niveles
-                                    bajos de potasio) y cambios de personalidad.</p>
-
-                                <h3>Tipos de suplementos de magnesio</h3>
-                                <p><strong>Magnesio glicinato/bisglicinato:</strong> Alta biodisponibilidad (fácil
-                                    absorción), no causa efectos laxantes, ideal para mejorar sueño y reducir ansiedad.
-                                    Mejor opción para uso general.</p>
-                                <p><strong>Magnesio citrato:</strong> Buena absorción, efecto laxante moderado (útil
-                                    para estreñimiento), económico y efectivo. Buena opción para deficiencia general.
-                                </p>
-                                <p><strong>Magnesio malato:</strong> Bien absorbido, puede aumentar energía, útil para
-                                    fatiga y fibromialgia. Sin efecto laxante significativo.</p>
-                                <p><strong>Magnesio taurato:</strong> Beneficioso para salud cardiovascular, buena
-                                    absorción. Combina magnesio con taurina (aminoácido).</p>
-                                <p><strong>Magnesio treonato:</strong> Única forma que cruza barrera hematoencefálica
-                                    eficazmente. Excelente para función cognitiva y memoria. Más caro.</p>
-                                <p><strong>Magnesio óxido:</strong> Baja biodisponibilidad (4%), fuerte efecto laxante.
-                                    Útil principalmente como laxante, no recomendado para suplementación general.</p>
-                                <p><strong>Magnesio cloruro:</strong> Buena absorción, puede usarse tópicamente (aceite
-                                    de magnesio). Sabor amargo en forma oral.</p>
-                                <p><strong>Magnesio sulfato (sales de Epsom):</strong> Para uso en baños (absorción
-                                    transdérmica), efecto relajante muscular. No para consumo oral regular.</p>
-
-                                <h3>Dosis recomendadas</h3>
-                                <p><strong>Ingesta diaria recomendada (RDA):</strong> Hombres adultos: 400-420 mg/día.
-                                    Mujeres adultas: 310-320 mg/día. Embarazo: 350-400 mg/día. Lactancia: 310-360
-                                    mg/día. Adolescentes: 360-410 mg/día.</p>
-                                <p><strong>Dosis de suplementación:</strong> Deficiencia leve-moderada: 200-400 mg/día.
-                                    Deportistas o personas activas: 400-600 mg/día. Para mejorar sueño: 200-400 mg antes
-                                    de dormir. Para estreñimiento: 300-500 mg de citrato. Límite superior tolerable: 350
-                                    mg/día de magnesio suplementario (además de la dieta).</p>
-                                <p><strong>Momento óptimo:</strong> Con alimentos para mejor absorción y reducir
-                                    molestias gastrointestinales. Por la noche para mejorar sueño (glicinato). Dividir
-                                    dosis si se toma más de 300 mg.</p>
-
-                                <h3>Fuentes alimentarias de magnesio</h3>
-                                <p><strong>Fuentes excelentes (por 100g):</strong> Semillas de calabaza: 550 mg,
-                                    almendras: 270 mg, espinacas cocidas: 87 mg, anacardos: 292 mg, chocolate negro
-                                    (70-85%): 228 mg, aguacate: 29 mg.</p>
-                                <p><strong>Buenas fuentes:</strong> Legumbres (frijoles negros, lentejas, garbanzos),
-                                    cereales integrales (arroz integral, quinoa, avena), plátanos, pescado (salmón,
-                                    caballa), tofu y verduras de hoja verde.</p>
-                                <p><strong>Nota:</strong> El procesamiento de alimentos reduce significativamente el
-                                    contenido de magnesio.</p>
-
-                                <h3>Beneficios comprobados de la suplementación</h3>
-                                <p><strong>Mejora del sueño:</strong> Reduce tiempo para conciliar el sueño, aumenta
-                                    sueño profundo, reduce insomnio en adultos mayores. Especialmente efectivo el
-                                    glicinato.</p>
-                                <p><strong>Reducción de ansiedad y estrés:</strong> Regula el eje HPA
-                                    (hipotálamo-pituitaria-adrenal), reduce síntomas de ansiedad generalizada y mejora
-                                    respuesta al estrés.</p>
-                                <p><strong>Rendimiento deportivo:</strong> Mejora capacidad de ejercicio, reduce lactato
-                                    sanguíneo durante ejercicio, previene calambres musculares y mejora recuperación
-                                    muscular.</p>
-                                <p><strong>Salud cardiovascular:</strong> Reduce presión arterial (especialmente en
-                                    hipertensos), disminuye riesgo de enfermedad cardiovascular, mejora perfil lipídico
-                                    y reduce inflamación.</p>
-                                <p><strong>Control de glucosa:</strong> Mejora sensibilidad a insulina, reduce riesgo de
-                                    diabetes tipo 2 y ayuda en control glucémico en diabéticos.</p>
-                                <p><strong>Reducción de migrañas:</strong> Disminuye frecuencia e intensidad de
-                                    migrañas. Dosis efectiva: 400-600 mg/día.</p>
-                                <p><strong>Salud ósea:</strong> Mejora densidad mineral ósea, reduce riesgo de
-                                    osteoporosis y mejora absorción de calcio.</p>
-                                <p><strong>Reducción de calambres:</strong> Efectivo en calambres nocturnos, calambres
-                                    musculares asociados al ejercicio y calambres en embarazo.</p>
-                                <p><strong>Función cognitiva:</strong> Mejora memoria (especialmente con treonato),
-                                    protección neuroprotectora y posible reducción de riesgo de demencia.</p>
-
-                                <h3>Efectos secundarios de la suplementación</h3>
-                                <p><strong>Comunes (generalmente con dosis altas):</strong> Diarrea y malestar
-                                    gastrointestinal (especialmente con óxido y citrato), náuseas y calambres
-                                    abdominales.</p>
-                                <p><strong>Raros (dosis muy altas o problemas renales):</strong> Hipermagnesemia (exceso
-                                    de magnesio): debilidad muscular, presión arterial baja, náuseas severas, dificultad
-                                    respiratoria, arritmias cardíacas y confusión mental.</p>
-                                <p><strong>Nota:</strong> El exceso de magnesio es muy raro en personas con función
-                                    renal normal, ya que los riñones excretan el exceso.</p>
-
-                                <h3>Interacciones con medicamentos</h3>
-                                <p><strong>Antibióticos (tetraciclinas, quinolonas):</strong> El magnesio reduce su
-                                    absorción. Separar tomas por 2-3 horas.</p>
-                                <p><strong>Bifosfonatos (para osteoporosis):</strong> El magnesio interfiere con
-                                    absorción. Separar por 2 horas.</p>
-                                <p><strong>Diuréticos:</strong> Algunos aumentan pérdida de magnesio (tiazidas), otros
-                                    lo retienen (ahorradores de potasio).</p>
-                                <p><strong>Inhibidores de bomba de protones (omeprazol):</strong> Uso prolongado reduce
-                                    absorción de magnesio.</p>
-                                <p><strong>Medicamentos para hipertensión:</strong> El magnesio puede potenciar el
-                                    efecto hipotensor. Monitorear presión.</p>
-
-                                <h3>Relación con otros nutrientes</h3>
-                                <p><strong>Calcio:</strong> Equilibrio importante (ratio ideal 1:1 o 2:1
-                                    calcio:magnesio). Exceso de calcio puede reducir absorción de magnesio.</p>
-                                <p><strong>Vitamina D:</strong> La vitamina D mejora absorción de magnesio. El magnesio
-                                    es necesario para activar vitamina D. Deficiencia de uno afecta al otro.</p>
-                                <p><strong>Potasio:</strong> El magnesio es necesario para mantener niveles adecuados de
-                                    potasio. Deficiencia de magnesio puede causar hipopotasemia.</p>
-                                <p><strong>Zinc:</strong> Dosis muy altas de zinc pueden competir con absorción de
-                                    magnesio.</p>
-
-                                <h3>Contraindicaciones y precauciones</h3>
-                                <p><strong>Enfermedad renal severa:</strong> No suplementar sin supervisión médica. Los
-                                    riñones no pueden eliminar exceso.</p>
-                                <p><strong>Bloqueo cardíaco:</strong> El magnesio puede empeorar la conducción cardíaca.
-                                </p>
-                                <p><strong>Miastenia gravis:</strong> Puede exacerbar debilidad muscular.</p>
-                                <p><strong>Precaución en:</strong> Personas con problemas gastrointestinales severos,
-                                    uso de múltiples medicamentos (consultar interacciones) y embarazo/lactancia
-                                    (respetar dosis recomendadas).</p>
-
-                                <h3>Magnesio para deportistas</h3>
-                                <p>Los atletas tienen mayores necesidades de magnesio debido a: pérdida por sudor
-                                    durante ejercicio intenso, mayor demanda metabólica, estrés oxidativo del ejercicio
-                                    y mayor recambio de ATP. Se recomienda: 400-600 mg/día para deportistas regulares,
-                                    hasta 800 mg/día para atletas de élite (dividir en varias tomas), considerar formas
-                                    como malato o glicinato y monitorear niveles con análisis de sangre periódicos.</p>
-
-                                <h3>Cómo saber si necesitas magnesio</h3>
-                                <p><strong>Análisis de sangre:</strong> Magnesio sérico (en sangre): método estándar
-                                    pero no muy preciso (solo refleja 1% del magnesio total). Magnesio en glóbulos rojos
-                                    (RBC): más preciso pero menos disponible. Niveles normales de magnesio sérico:
-                                    1.7-2.2 mg/dL.</p>
-                                <p><strong>Señales clínicas:</strong> Calambres frecuentes, insomnio persistente,
-                                    ansiedad sin causa clara, fatiga crónica, palpitaciones y dieta baja en alimentos
-                                    ricos en magnesio.</p>
-
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"Todos los tipos de magnesio son iguales":</strong> FALSO. La
-                                    biodisponibilidad varía enormemente entre formas.</p>
-                                <p>❌ <strong>"Más magnesio siempre es mejor":</strong> FALSO. Dosis excesivas causan
-                                    diarrea y otros efectos secundarios.</p>
-                                <p>❌ <strong>"El magnesio tópico funciona igual que el oral":</strong> Evidencia mixta.
-                                    La absorción transdérmica es menor pero puede ser útil.</p>
-                                <p>❌ <strong>"Si comes bien no necesitas suplementos":</strong> Parcialmente falso.
-                                    Incluso con buena dieta, muchas personas no alcanzan RDA debido a suelos
-                                    empobrecidos.</p>
-                                <p>❌ <strong>"El magnesio cura la ansiedad":</strong> Ayuda, pero no es cura única. Es
-                                    un factor coadyuvante.</p>
-                                <p>❌ <strong>"Puedes tomar todo el magnesio de una vez":</strong> FALSO. Dosis mayores a
-                                    300-400 mg se absorben peor. Mejor dividir.</p>
-
-                                <h3>Recomendaciones prácticas</h3>
-                                <p>✅ Elige glicinato para uso general y mejor sueño (sin efecto laxante)</p>
-                                <p>✅ Toma con comidas para minimizar molestias digestivas</p>
-                                <p>✅ Empieza con dosis bajas (200 mg) y aumenta gradualmente</p>
-                                <p>✅ Toma por la noche si buscas mejorar el sueño</p>
-                                <p>✅ Combina con alimentación rica en magnesio</p>
-                                <p>✅ Mantén equilibrio con calcio y vitamina D</p>
-                                <p>✅ Si tienes diarrea, cambia a glicinato o reduce dosis</p>
-                                <p>✅ Consulta con médico si tomas medicamentos regularmente</p>
-
-                                <h3>Conclusión</h3>
-                                <p>El magnesio es un mineral esencial frecuentemente deficiente en la población moderna.
-                                    La suplementación, especialmente con formas de alta biodisponibilidad como el
-                                    glicinato, puede mejorar significativamente el sueño, reducir ansiedad, optimizar
-                                    rendimiento deportivo y apoyar múltiples funciones corporales. Es uno de los
-                                    suplementos más seguros y con mejor relación beneficio-riesgo cuando se usa
-                                    apropiadamente. Para deportistas y personas activas, es prácticamente esencial para
-                                    mantener rendimiento óptimo y recuperación adecuada.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-12">
-                <div class="container mt-3 d-flex flex-column align-items-center p-4"
-                    style="background-color: white; color: black; font-weight: bold; border: 3px solid white; border-radius: 10px;">
-                    <h2>¿Cuántas veces entrenas a la semana?</h2>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault1" id="radioDefault1">
-                        <label class="form-check-label" for="radioDefault1">
-                            1-2 veces
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault2" id="radioDefault2" checked>
-                        <label class="form-check-label" for="radioDefault2">
-                            3-4 veces
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault3" id="radioDefault3">
-                        <label class="form-check-label" for="radioDefault3">
-                            5-6 veces
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault4" id="radioDefault4" checked>
-                        <label class="form-check-label" for="radioDefault4">
-                            7 o más veces
-                        </label>
+            <div class="col-12 col-md-4 mt-5">
+                <div class="card">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9601b76d-da0e-4a63-9c67-f38f5dd76eca/dgk6hu4-4ce65dbf-6154-415f-9c89-2889d9a151ed.png/v1/fill/w_320,h_343/cursed_spongebob_image_2_by_timpyteam_dgk6hu4-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzQzIiwicGF0aCI6Ii9mLzk2MDFiNzZkLWRhMGUtNGE2My05YzY3LWYzOGY1ZGQ3NmVjYS9kZ2s2aHU0LTRjZTY1ZGJmLTYxNTQtNDE1Zi05Yzg5LTI4ODlkOWExNTFlZC5wbmciLCJ3aWR0aCI6Ijw9MzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.b-jiqT7GYibQwnTdTrpA76MBTOm5Z7eyT5RplbbsJy8"
+                        class="card-img-top object-fit-cover" style="height: 416px;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Nº 3</h5>
+                        <p class="card-text">AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA AJIA
+                            AJIA AJIA AJIA .</p>
+                        <a href="https://www.youtube.com/watch?v=IdtDSctsdl0" class="btn btn-success"
+                            style="border-radius: 50px; border-color: black;">Video especial 3</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container mt-3 p-3"
-        style="background-color: white; color: black; font-weight: bold; border: 4px solid white; border-radius: 10px;">
 
-        <!-- DÍA DE PIERNA -->
-        <div class="row mb-5">
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <img src="https://www.titaniumstrength.es/media/catalog/product/cache/091edd3dd24f94ee9e594de8bb6fb808/p/l/pl89_1.jpg"
-                    alt="Prensa de pierna" class="img-fluid"
-                    style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
+    <!-- Acordeón -->
+    <div class="container mt-5">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item" style="background-color: black; color: white;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" style="background-color: yellow; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Acordeón numero 1
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        El iPhone es el teléfono de Apple. Destaca por usar iOS, un sistema operativo muy optimizado,
+                        seguro y fácil de usar. Se integra muy bien con otros dispositivos Apple, permite hacer fotos
+                        de alta calidad, usar Face ID, instalar apps desde la App Store y sincronizar datos con iCloud.
+                        <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-title="AJIA"
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
+                            Me pulsas y te doy un premio GILIPOLLAS
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h3>DÍA DE PIERNA</h3>
-                <hr style="border: 2px solid black;">
-                <p>El día de pierna es una pedazo de mierda pero es importante debido a que sino, parecerás Larry la
-                    langosta</p>
-                <img src="https://static.wikia.nocookie.net/bobesponja/images/8/81/LarrytheLobsterTransparent.png/revision/latest/scale-to-width/360?cb=20250402145904"
-                    alt="Larry" class="img-fluid my-2" style="max-width: 210px; height: auto;">
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE NO PASA NADA SI TE SALTAS
-                    HACER PIERNA, DUELE MUCHO A LOS 2 DÍAS</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de pierna</li>
-                    <li>Descanso suficiente</li>
-                </ul>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>prensa vertical 2 x 7 - 10</li>
-                    <li>abductor 2 cierre 8-12</li>
-                    <li>curl femoral sentado x 7 - 10</li>
-                    <li>prensa horizontal uni 2 x 7 - 10</li>
-                    <li>peso muerto 3 x 6-10</li>
-                    <li>extensión quads 2 x 8-10</li>
-                    <li>gemelo de pie 4 x 15-20</li>
-                </ul>
+            <div class="accordion-item" style="background-color: black; color: white;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" style="background-color: lightgreen; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Acordeón numero 2
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        El Mac es la línea de ordenadores de Apple. Usa macOS, un sistema estable y pensado para
+                        trabajar, estudiar, editar fotos, programar y crear contenido. Los modelos con chip Apple
+                        Silicon, como M1, M2, M3 o M4, ofrecen buen rendimiento, bajo consumo y mucha autonomía.
+                        <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-title="AJIA"
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
+                            Me pulsas y te doy un premio GILIPOLLAS
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Separador entre secciones -->
-        <hr style="border: 3px solid black; margin: 40px 0;">
-
-        <!-- DÍA DE PECHO -->
-        <div class="row mb-5">
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <img src="https://s3assets.skimble.com/assets/1874168/image_full.jpg" alt="Press de banca"
-                    class="img-fluid"
-                    style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
+            <div class="accordion-item" style="background-color: black; color: white;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" style="background-color: lightblue; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Acordeón numero 3
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        El Apple Watch es el reloj inteligente de Apple. Sirve para recibir notificaciones, medir pasos,
+                        controlar entrenamientos, revisar la frecuencia cardíaca, usar Apple Pay y consultar información
+                        rápida sin sacar el iPhone. Es muy útil para deporte, salud y productividad diaria.
+                        <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-title="AJIA"
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
+                            Me pulsas y te doy un premio GILIPOLLAS
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h3>DÍA DE PECHO</h3>
-                <hr style="border: 2px solid black;">
-                <p>El mejor día de todos, ten cuidado porque las subnormales de las tias que solo hacen culo, usan tu
-                    banco favorito para hacer bulgaras. Un truco es que tu puedes usar la prensa que tiene el asiento
-                    inclinado para hacer el gran press inclinado, MUY ÚTIL para el desarrollo del pecho superior</p>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE SI NO TIRAS MÁS DE 100
-                    KG, TE PUEDES CONSIDERAR MUJER</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de pecho</li>
-                    <li>Descanso suficiente</li>
-                </ul>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>press pecho inclinado (Libre a mancuernas) 2 x 8-10</li>
-                    <li>banca 2 x 4-6</li>
-                    <li>press pecho inclinado (Máquina) 2 x 8-10</li>
-                    <li>elevaciones laterales 2 x 10-12</li>
-                    <li>fondos 2 x 8-10 última drop set</li>
-                    <li>triceps catana (Trasnuca en polea) 2 x 8-10</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Separador entre secciones -->
-        <hr style="border: 3px solid black; margin: 40px 0;">
-
-        <!-- DÍA DE ESPALDA -->
-        <div class="row mb-3">
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <img src="https://static.strengthlevel.com/images/exercises/lat-pulldown/lat-pulldown-800.jpg"
-                    alt="Jalón al pecho" class="img-fluid"
-                    style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
-            </div>
-            <div class="col-12 col-md-6">
-                <h3>DÍA DE ESPALDA</h3>
-                <hr style="border: 2px solid black;">
-                <p>Es uno de los musculos más dificiles de entrenar debido a que tienes que enfocar muy bien los
-                    movimientos que haces puesto que sino puedes entrenar otra parte que no quieres entrenar. En el
-                    antiguo culturimos se definian quienes sabian entrenar gracias a la espalda</p>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE SI NO TIRAS MÁS DE 20 KG
-                    POR BRAZO EN BÍCEPS, TE PUEDES CONSIDERAR MUJER</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: rgb(0, 30, 255); font-weight: bold; font-family: monospace; display: flex; justify-content: center;">TRUCO PARA BÍSES</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">SIÉNTATE NORMAL EN LA MÁQUINA DE JALÓN AL PECHO Y APOYA LA PARTE TRASERA DE LOS BRAZOS (TRÍCEPS/CODOS) EN EL PAD DE LAS PIERNAS QUE QUEDA DETRÁS DE TI. DESDE AHÍ, HAZ CURL DE BÍCEPS CON MANCUERNAS. COMO LOS CODOS ESTÁN FIJOS EN EL PAD, NO PUEDES BALANCEAR NI HACER TRAMPA, AISLANDO COMPLETAMENTE EL BÍCEPS. ES COMO HACER CURL DE PIE PERO CON ESTABILIZACIÓN TOTAL</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de espalda</li>
-                    <li>Descanso suficiente</li>
-                </ul>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>jalón pecho neutro 2 x 6 - 10</li>
-                    <li>pull over 2 x 6 - 10</li>
-                    <li>remo gironda 2 x 6 - 10</li>
-                    <li>jalón pecho unilateral 2 x 6 - 10</li>
-                    <li>remo unilateral 2 x 6 - 10</li>
-                    <li>biceps sentado 2 x 6 - 10</li>
-                    <li>deltoides posterior 2 x 6 - 10</li>
-                    <li>martillo 2 x 6 - 10</li>
-                    <li>predicador 2 x 6 - 10</li>
-                </ul>
+            <div class="accordion-item" style="background-color: black; color: white;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" style="background-color: lightcoral; color: black;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapsefour">
+                        Acordeón numero 4
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Los AirPods son los auriculares inalámbricos de Apple. Se conectan automáticamente al iPhone,
+                        iPad o Mac gracias al ecosistema Apple. Ofrecen buena calidad de sonido, cancelación de ruido
+                        en modelos Pro, modo transparencia y control táctil. También permiten usar Siri y cambiar de
+                        dispositivo de forma rápida.
+                        <button type="button" class="btn btn-lg btn-success mt-3" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-title="AJIA"
+                            data-bs-content="OSCAR QUE TE VAS A QUEDAR CALVO CABRÓN">
+                            Me pulsas y te doy un premio GILIPOLLAS
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
+
+    <!-- Formulario -->
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 formulario">
+                <h1>Formulario de contacto</h1>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: black;">Cuenta de
+                        correo</label>
+                    <input type="email" class="form-control forma" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Cuenta
+                        bancaria</label>
+                    <textarea class="form-control forma" id="exampleFormControlTextarea1"
+                        placeholder="Ponga todos sus datos bancarios aquí..." rows="1"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="Nombre" class="form-label" style="color: black;">Nombre</label>
+                    <input type="text" class="form-control forma" placeholder="Escribe tu nombre aquí..." id="Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="Apellidos" class="form-label" style="color: black;">Apellidos</label>
+                    <input type="text" class="form-control forma" placeholder="Escribe tus apellidos aquí..."
+                        id="Apellidos">
+                </div>
+                <div class="mb-3">
+                    <label for="inputCity" class="form-label" style="color: black;">Ciudad</label>
+                    <input type="text" class="form-control forma" placeholder="Escribe tu ciudad aquí..."
+                        id="inputCity">
+                </div>
+                <div class="mb-3">
+                    <label for="inputState" class="form-label" style="color: black;">Estado</label>
+                    <select id="inputState" class="form-select forma">
+                        <option selected>Elige...</option>
+                        <option>Messi_1</option>
+                        <option>Messi_2</option>
+                        <option>Messi_3</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="inputZip" class="form-label" style="color: black;">Reseña</label>
+                    <input type="text" class="form-control forma" placeholder="Escribe tu reseña aquí..." id="inputZip">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck" style="color: black;">
+                        Acepto las condiciones
+                    </label>
+                </div>
+                <button type="submit" class="btn forma mt-3">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer -->
-    <footer class="mt-5 p-3 text-center mx-auto"
-        style="background-color: lightblue; color: black; font-weight: bold; border: 3px solid black;">
+    <footer class="mt-5 p-3 text-center">
         <p>© 2026 Iván. Todos los derechos reservados.</p>
     </footer>
 
-
+    <!-- Popover -->
     <script>
-        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-        const appendAlert = (message, type) => {
-            const wrapper = document.createElement('div')
-            wrapper.innerHTML = [
-                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                `   <div>${message}</div>`,
-                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                '</div>'
-            ].join('')
-
-            alertPlaceholder.append(wrapper)
-        }
-
-        const alertTrigger = document.getElementById('liveAlertBtn')
-        if (alertTrigger) {
-            alertTrigger.addEventListener('click', () => {
-                appendAlert('Testosterona para fuerza, creatina para naturales y magnesio para descansar!', 'success')
-            })
-        }
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+            container: 'body'
+        }));
     </script>
+
 </body>
 
 </html>
