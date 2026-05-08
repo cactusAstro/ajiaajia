@@ -86,6 +86,23 @@
             color: white;
 
         }
+
+        /* ESTILOS DEL FORMULARIO DE CONTACTO */
+        .btn-enviar {
+            background-color: red;
+            color: white;
+            border: 3px solid white;
+            font-weight: bold;
+            padding: 10px 30px;
+            margin-top: 20px;
+        }
+
+        .btn-enviar:hover {
+            background-color: white;
+            color: red;
+            border: 3px solid red;
+            transition: 0.5s;
+        }
     </style>
 </head>
 
@@ -94,7 +111,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: white; font-weight: bold; font-size: 20px;" href="#"> <img src="golden's gym.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Iván</a>
+            <a class="navbar-brand" style="color: white; font-weight: bold; font-size: 20px;" href="#"> <img
+                    src="golden's gym.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">Iván</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" style="background-color: white;">
@@ -735,7 +754,7 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" >
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
                         <label class="form-check-label" for="radioDefault2">
                             3-4 veces
                         </label>
@@ -752,6 +771,96 @@
                             7 o más veces
                         </label>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULARIO OBJETIVO + CONTACTO -->
+    <div class="container text-center mt-3">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="container d-flex flex-column align-items-start p-4"
+                    style="background-color: white; color: black; font-weight: bold; border: 3px solid white; border-radius: 10px;">
+                    <h2 class="text-center w-100 mb-4">📩 Cuéntame tu objetivo en el gimnasio</h2>
+
+                    <form id="formularioObjetivo" class="w-100">
+
+                        <!-- Nombre -->
+                        <div class="mb-3 text-start">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required
+                                style="border: 2px solid black;">
+                        </div>
+
+                        <!-- Edad -->
+                        <div class="mb-3 text-start">
+                            <label for="edad" class="form-label">Edad:</label>
+                            <input type="number" class="form-control" id="edad" placeholder="Tu edad" min="10" max="100"
+                                required style="border: 2px solid black;">
+                        </div>
+
+                        <!-- Email del usuario -->
+                        <div class="mb-3 text-start">
+                            <label for="emailUsuario" class="form-label">Tu Email:</label>
+                            <input type="email" class="form-control" id="emailUsuario"
+                                placeholder="tucorreo@ejemplo.com" required style="border: 2px solid black;">
+                        </div>
+
+                        <!-- Objetivo (selección) -->
+                        <div class="mb-3 text-start">
+                            <label class="form-label">¿Cuál es tu objetivo principal?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoFuerza"
+                                    value="Ganar Fuerza">
+                                <label class="form-check-label" for="objetivoFuerza">
+                                    💪 Ganar Fuerza
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoMusculo"
+                                    value="Ganar Músculo (Hipertrofia)" checked>
+                                <label class="form-check-label" for="objetivoMusculo">
+                                    🏋️ Ganar Músculo (Hipertrofia)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoResistencia"
+                                    value="Resistencia">
+                                <label class="form-check-label" for="objetivoResistencia">
+                                    🏃 Resistencia
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Nivel de experiencia -->
+                        <div class="mb-3 text-start">
+                            <label for="experiencia" class="form-label">Nivel de experiencia:</label>
+                            <select class="form-select" id="experiencia" required style="border: 2px solid black;">
+                                <option value="">Selecciona tu nivel</option>
+                                <option value="Principiante">Principiante (menos de 6 meses)</option>
+                                <option value="Intermedio">Intermedio (6 meses - 2 años)</option>
+                                <option value="Avanzado">Avanzado (más de 2 años)</option>
+                            </select>
+                        </div>
+
+                        <!-- Comentarios -->
+                        <div class="mb-3 text-start">
+                            <label for="comentarios" class="form-label">Cuéntame más sobre ti (objetivos específicos,
+                                dudas, etc.):</label>
+                            <textarea class="form-control" id="comentarios" rows="5"
+                                placeholder="Escribe aquí tus dudas, objetivos específicos, lesiones previas, suplementación actual..."
+                                required style="border: 2px solid black;"></textarea>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="text-center w-100">
+                            <button type="button" class="btn btn-enviar" onclick="enviarCorreo()">
+                                📧 Enviar por Correo
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -853,9 +962,15 @@
                 <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE SI NO TIRAS MÁS DE 20 KG
                     POR BRAZO EN BÍCEPS, TE PUEDES CONSIDERAR MUJER</h4>
                 <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: rgb(0, 30, 255); font-weight: bold; font-family: monospace; display: flex; justify-content: center;">TRUCO PARA BÍSES</h4>
+                <h4
+                    style="color: rgb(0, 30, 255); font-weight: bold; font-family: monospace; display: flex; justify-content: center;">
+                    TRUCO PARA BÍSES</h4>
                 <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">SIÉNTATE NORMAL EN LA MÁQUINA DE JALÓN AL PECHO Y APOYA LA PARTE TRASERA DE LOS BRAZOS (TRÍCEPS/CODOS) EN EL PAD DE LAS PIERNAS QUE QUEDA DETRÁS DE TI. DESDE AHÍ, HAZ CURL DE BÍCEPS CON MANCUERNAS. COMO LOS CODOS ESTÁN FIJOS EN EL PAD, NO PUEDES BALANCEAR NI HACER TRAMPA, AISLANDO COMPLETAMENTE EL BÍCEPS. ES COMO HACER CURL DE PIE PERO CON ESTABILIZACIÓN TOTAL</h4>
+                <h4 style="color: red; font-weight: bold; font-family: monospace">SIÉNTATE NORMAL EN LA MÁQUINA DE JALÓN
+                    AL PECHO Y APOYA LA PARTE TRASERA DE LOS BRAZOS (TRÍCEPS/CODOS) EN EL PAD DE LAS PIERNAS QUE QUEDA
+                    DETRÁS DE TI. DESDE AHÍ, HAZ CURL DE BÍCEPS CON MANCUERNAS. COMO LOS CODOS ESTÁN FIJOS EN EL PAD, NO
+                    PUEDES BALANCEAR NI HACER TRAMPA, AISLANDO COMPLETAMENTE EL BÍCEPS. ES COMO HACER CURL DE PIE PERO
+                    CON ESTABILIZACIÓN TOTAL</h4>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <ul>
                     <li>Calentamiento adecuado</li>
@@ -885,6 +1000,13 @@
     <footer class="mt-5 p-3 text-center mx-auto"
         style="background-color: lightblue; color: black; font-weight: bold; border: 3px solid black;">
         <p>© 2026 Iván. Todos los derechos reservados.</p>
+        <p>
+            📸 Sígueme en Instagram:
+            <a href="https://www.instagram.com/astro10__/" target="_blank"
+                style="color: #E1306C; text-decoration: none; font-weight: bold;">
+                @astro10__
+            </a>
+        </p>
     </footer>
 
 
@@ -907,6 +1029,59 @@
             alertTrigger.addEventListener('click', () => {
                 appendAlert('Testosterona para fuerza, creatina para naturales y magnesio para descansar!', 'success')
             })
+        }
+
+        // FUNCIÓN PARA ENVIAR EL CORREO
+        function enviarCorreo() {
+            // Recoger los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const edad = document.getElementById('edad').value;
+            const emailUsuario = document.getElementById('emailUsuario').value;
+            const experiencia = document.getElementById('experiencia').value;
+            const comentarios = document.getElementById('comentarios').value;
+
+            // Recoger el objetivo seleccionado (radio button)
+            const objetivoSeleccionado = document.querySelector('input[name="objetivoGym"]:checked');
+            const objetivo = objetivoSeleccionado ? objetivoSeleccionado.value : 'No seleccionado';
+
+            // Validar que todos los campos estén rellenos
+            if (!nombre || !edad || !emailUsuario || !experiencia || !comentarios) {
+                alert('⚠️ Por favor, completa todos los campos del formulario antes de enviar.');
+                return;
+            }
+
+            // Construir el asunto del correo
+            const asunto = `Consulta de ${nombre} - Objetivo: ${objetivo}`;
+
+            // Construir el cuerpo del correo
+            const cuerpo = `Hola Iván,
+
+Te escribo desde tu página web para contarte sobre mi entrenamiento.
+
+📋 DATOS PERSONALES:
+- Nombre: ${nombre}
+- Edad: ${edad} años
+- Email: ${emailUsuario}
+
+🏋️ INFORMACIÓN DEPORTIVA:
+- Objetivo principal: ${objetivo}
+- Nivel de experiencia: ${experiencia}
+
+💬 COMENTARIOS Y DUDAS:
+${comentarios}
+
+¡Espero tu respuesta!
+
+Saludos,
+${nombre}`;
+
+            // Codificar para URL
+            const asuntoCodificado = encodeURIComponent(asunto);
+            const cuerpoCodificado = encodeURIComponent(cuerpo);
+
+            // Crear el enlace mailto y abrirlo
+            const mailtoLink = `mailto:ivanib2007@icloud.com?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
+            window.location.href = mailtoLink;
         }
     </script>
 </body>
