@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria DOSP - Proyecto Intermodular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --dark-color: #0f172a;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+            padding-top: 70px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color), var(--primary-color));
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px !important;
+            border-radius: 6px;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 50px;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .section-subtitle {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 25px 0 15px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .budget-card {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .budget-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+        }
+
+        .budget-total {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .team-card {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .team-card strong {
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+
+        code {
+            background: #1e293b;
+            color: #10b981;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        pre code {
+            background: none;
+            color: #10b981;
+            padding: 0;
+        }
+
+        .list-custom {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-custom li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+
+        .list-custom li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .section-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🚀 Memoria DOSP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#explicacion">Explicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analisis">Análisis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planificacion">Planificación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#implementacion">Implementación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cliente">Cliente Windows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conclusion">Conclusión</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Otras Páginas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./index.html">Página Principal</a></li>
+                            <li><a class="dropdown-item" href="./pagina_2.html">Página 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1>Proyecto Intermodular</h1>
+            <p>Infraestructura de Red para la Empresa DOSP</p>
+            <p class="mb-0"><small>SMR2 - IES Chomón - Teruel 2025</small></p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Sección 1: Explicación -->
+        <div class="section-card" id="explicacion">
+            <h2 class="section-title">1. EXPLICACIÓN</h2>
+            
+            <p>La empresa DOSP es una empresa pequeña dedicada a la fabricación de ruedas para diferentes usos como carretillas o pequeñas embarcaciones.</p>
+            
+            <p>Actualmente la empresa tiene una infraestructura informática muy básica. Solo dispone de unos pocos ordenadores y no tiene ningún servidor que gestione los usuarios o los recursos de la empresa. Además, la comunicación entre los trabajadores se realiza de forma manual, sin ningún sistema organizado que permita gestionar la información o las tareas de manera eficiente.</p>
+            
+            <p>Nuestro objetivo es mejorar la organización y el funcionamiento de la empresa mediante la creación de una red local más estructurada. Para ello se implementarán varios servicios de red como DHCP para asignar direcciones IP automáticamente, DNS para resolver nombres dentro de la red y Active Directory para gestionar los usuarios y los equipos desde un servidor central.</p>
+            
+            <p>También implementaremos un servidor web que permitirá mejorar la presencia de la empresa en internet, creando una página web a la que los clientes puedan acceder.</p>
+
+            <div class="info-box">
+                <h5>🎯 Justificación del proyecto</h5>
+                <p>La implementación de esta infraestructura se justifica por las siguientes necesidades empresariales:</p>
+                <ul class="list-custom">
+                    <li>Centralización de la gestión de usuarios y equipos mediante Active Directory</li>
+                    <li>Automatización de la asignación de direcciones IP a través de DHCP</li>
+                    <li>Resolución de nombres interna mediante servidor DNS</li>
+                    <li>Segmentación de la red en subredes independientes para mejorar la seguridad</li>
+                    <li>Presencia online profesional mediante servidor web en DMZ</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección 2: Análisis y Diseño -->
+        <div class="section-card" id="analisis">
+            <h2 class="section-title">2. ANÁLISIS Y DISEÑO</h2>
+            
+            <h3 class="section-subtitle">2.1. Descripción de las soluciones</h3>
+            <p>Para mejorar la organización de la red de la empresa hemos diseñado una red con varias subredes para separar y organizar mejor los distintos departamentos de la empresa.</p>
+            
+            <p>El servidor principal será un <strong>Ubuntu Server</strong>, que actuará a modo de router y permitirá conectar subredes entre sí.</p>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="info-box">
+                        <h5>🖥️ Subred de trabajadores</h5>
+                        <p><strong>Red:</strong> 192.168.10.X</p>
+                        <p>Ordenadores para tareas diarias de los empleados, conectados mediante switch.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="info-box">
+                        <h5>👔 Subred del jefe</h5>
+                        <p><strong>Red:</strong> 192.168.1.X</p>
+                        <p>Dedicada al jefe con acceso a recursos privilegiados de la red.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="info-box">
+                        <h5>🗄️ Subred de administración</h5>
+                        <p><strong>Red:</strong> 192.168.20.X</p>
+                        <p>Recursos compartidos como servidores de datos e impresoras.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="info-box">
+                        <h5>🌐 Subred DMZ</h5>
+                        <p><strong>Red:</strong> 192.168.30.X</p>
+                        <p>Servidor web accesible desde internet de forma segura.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">2.2. Estudio de la viabilidad técnica</h3>
+            <p>El proyecto es técnicamente viable por los siguientes motivos:</p>
+            <ul class="list-custom">
+                <li><strong>Hardware disponible:</strong> Equipos suficientes para implementar mediante virtualización</li>
+                <li><strong>Software gratuito:</strong> Ubuntu Server, BIND9, ISC-DHCP con amplia documentación</li>
+                <li><strong>Conocimientos técnicos:</strong> Competencias adquiridas en administración de sistemas</li>
+                <li><strong>Escalabilidad:</strong> Diseño modular para futuras ampliaciones</li>
+                <li><strong>Tiempo:</strong> 10 días laborables estimados para el despliegue completo</li>
+            </ul>
+
+            <h3 class="section-subtitle">2.3. Estudio de la viabilidad económica</h3>
+            
+            <div class="budget-card">
+                <h5>💻 Ordenadores (5 unidades)</h5>
+                <ul>
+                    <li>Procesador Intel i5</li>
+                    <li>16GB RAM</li>
+                    <li>SSD 512GB</li>
+                </ul>
+                <p class="mb-0"><strong>Total: 3.000€</strong></p>
+            </div>
+
+            <div class="budget-card">
+                <h5>🖥️ Servidores (3 unidades)</h5>
+                <p><strong>Controlador de dominio:</strong> 16GB RAM, Intel Xeon E-2314, 2x SSD 480GB - 1.600€</p>
+                <p><strong>Servidor DNS:</strong> 16GB RAM, Intel Xeon E-2314, SSD 480GB - 1.300€</p>
+                <p><strong>Servidor Web:</strong> 32GB RAM, Intel Xeon E-2336, 2x SSD 960GB - 1.900€</p>
+                <p><strong>Licencia Windows Server:</strong> 500€</p>
+                <p class="mb-0"><strong>Subtotal: 5.300€</strong></p>
+            </div>
+
+            <div class="budget-card">
+                <h5>🖨️ Impresora láser</h5>
+                <p class="mb-0"><strong>500€</strong></p>
+            </div>
+
+            <div class="budget-card">
+                <h5>🔌 Switches TP-Link (4 unidades)</h5>
+                <p class="mb-0"><strong>1.400€</strong></p>
+            </div>
+
+            <div class="budget-card">
+                <h5>⚡ SAI 1750VA</h5>
+                <p class="mb-0"><strong>425€</strong></p>
+            </div>
+
+            <div class="budget-total">
+                💰 PRESUPUESTO TOTAL: 10.625€
+            </div>
+        </div>
+
+        <!-- Sección 3: Planificación -->
+        <div class="section-card" id="planificacion">
+            <h2 class="section-title">3. PLANIFICACIÓN</h2>
+            
+            <h3 class="section-subtitle">3.1. Temporización de las actividades</h3>
+            <p>La planificación temporal del proyecto se estructura en cinco fases principales, con una duración total estimada de <strong>10 días laborables y 9 horas</strong> de trabajo efectivo.</p>
+
+            <div class="info-box">
+                <h5>📊 Fases del proyecto</h5>
+                <ol>
+                    <li><strong>Análisis</strong> - Estudio de situación actual (1h)</li>
+                    <li><strong>Diseño</strong> - Planificación de red y subredes (2h)</li>
+                    <li><strong>Implantación</strong> - Configuración de servicios (9 días)</li>
+                    <li><strong>Pruebas</strong> - Testeo y verificación (4h)</li>
+                    <li><strong>Documentación</strong> - Memoria técnica (1 día)</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h5>📈 Interpretación del diagrama de Gantt</h5>
+                <p>El diagrama muestra la distribución temporal mediante código de colores:</p>
+                <ul class="list-custom">
+                    <li><span style="color: #10b981;">Verde ✓</span> - Tareas completadas</li>
+                    <li><span style="color: #f59e0b;">Amarillo →</span> - Tareas en progreso</li>
+                    <li>Vacío ⬜ - Tareas pendientes</li>
+                </ul>
+            </div>
+
+            <h3 class="section-subtitle">3.2. Recursos y logística</h3>
+            <ul class="list-custom">
+                <li><strong>Hardware:</strong> 4 ordenadores, 3 servidores, 4 switches, cableado Cat6</li>
+                <li><strong>Software:</strong> 2 Ubuntu Server, 1 Windows Server, 5 Windows 11 Pro</li>
+                <li><strong>Licencias:</strong> 5 Windows 11 Pro, 1 Windows Server, dominio correo</li>
+                <li><strong>Personal:</strong> 3 técnicos informáticos</li>
+            </ul>
+
+            <h3 class="section-subtitle">3.3. Asignación de recursos</h3>
+            
+            <div class="team-card">
+                <strong>👨‍💼 Coordinador: Oscar Arenas Riquelme</strong><br>
+                <p class="mb-0">Supervisión y coordinación del equipo, distribución de tareas</p>
+            </div>
+
+            <div class="team-card">
+                <strong>🔧 Técnico: Iván Ibáñez Benedicto</strong><br>
+                <p class="mb-0">Configuración e instalación de servidores Linux y Windows</p>
+            </div>
+
+            <div class="team-card">
+                <strong>📝 Documentación: Nicolás Catalán Pacheco</strong><br>
+                <p class="mb-0">Documentación del proyecto y revisión técnica</p>
+            </div>
+        </div>
+
+        <!-- Sección 4: Implementación -->
+        <div class="section-card" id="implementacion">
+            <h2 class="section-title">4. IMPLEMENTACIÓN Y DESARROLLO</h2>
+            
+            <p>El servidor web forma parte de la infraestructura del proyecto. Se ha instalado en un servidor Ubuntu ubicado en la DMZ, separado de la red interna para mayor seguridad.</p>
+
+            <h3 class="section-subtitle">4.2. Asignación de IP fija en el servidor DHCP</h3>
+            <p>Se ha realizado una <strong>reserva DHCP</strong> en el servidor Linux que funciona como router, garantizando que el servidor web tenga siempre la misma IP sin perder la centralización del servicio DHCP.</p>
+
+            <div class="info-box">
+                <h5>🔧 Pasos realizados</h5>
+                <ol>
+                    <li>Obtener dirección MAC: <code>ip a</code></li>
+                    <li>Editar configuración: <code>sudo nano /etc/dhcp/dhcpd.conf</code></li>
+                    <li>Añadir reserva DHCP</li>
+                    <li>Reiniciar servicio: <code>sudo systemctl restart isc-dhcp-server</code></li>
+                </ol>
+            </div>
+
+            <pre><code>host servidor-web {
+    hardware ethernet AA:BB:CC:DD:EE:FF;
+    fixed-address 192.168.30.10;
+}</code></pre>
+
+            <h3 class="section-subtitle">4.3. Instalación de Apache</h3>
+            <pre><code>sudo apt update && sudo apt upgrade -y
+sudo apt install apache2 -y
+sudo systemctl status apache2
+sudo systemctl enable apache2</code></pre>
+
+            <h3 class="section-subtitle">4.4. Despliegue de la página web</h3>
+            <p>Archivos colocados en <code>/var/www/html/</code></p>
+            <pre><code>sudo rm /var/www/html/index.html
+sudo cp -r /ruta/web/* /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/
+sudo chmod -R 755 /var/www/html/
+sudo systemctl restart apache2</code></pre>
+
+            <h3 class="section-subtitle">4.5. Verificación</h3>
+            <div class="info-box">
+                <p>✅ Acceder desde navegador a la IP del servidor web para verificar el correcto funcionamiento.</p>
+            </div>
+        </div>
+
+        <!-- Sección 5: Cliente Windows -->
+        <div class="section-card" id="cliente">
+            <h2 class="section-title">5. CLIENTE WINDOWS</h2>
+            
+            <p>Se han realizado pruebas desde un equipo cliente Windows para verificar el correcto funcionamiento de todos los servicios de red implementados.</p>
+
+            <h3 class="section-subtitle">5.1. ipconfig /all</h3>
+            
+            <div class="info-box">
+                <h5>🔍 Verificación de configuración de red</h5>
+                <p>La salida del comando <code>ipconfig /all</code> confirma que el cliente ha recibido correctamente la configuración desde el servidor DHCP:</p>
+                <ul class="list-custom">
+                    <li>Dirección IPv4 asignada dentro del rango DHCP</li>
+                    <li>Puerta de enlace predeterminada apuntando al servidor Ubuntu</li>
+                    <li>Servidor DNS configurado correctamente</li>
+                    <li>Sufijo DNS del dominio dosp.local</li>
+                </ul>
+            </div>
+
+            <h3 class="section-subtitle">5.2. Pruebas DNS con dig</h3>
+
+            <h4>5.2.1. Zona directa</h4>
+            <p>Las pruebas de resolución DNS directa demuestran que el servidor BIND9 responde correctamente a las consultas, traduciendo nombres como <code>router.dosp.local</code> y <code>web.dosp.local</code> a sus direcciones IP correspondientes. El tiempo de respuesta es inferior a 15ms, lo cual es óptimo para una red local.</p>
+
+            <h4>5.2.2. Zona inversa</h4>
+            <p>La resolución inversa (de IP a nombre) es fundamental para la verificación de identidad en servicios de red. Las pruebas confirman que el servidor DNS resuelve correctamente las consultas inversas.</p>
+        </div>
+
+        <!-- Sección 6: Conclusión -->
+        <div class="section-card" id="conclusion">
+            <h2 class="section-title">6. CONCLUSIÓN</h2>
+            
+            <p>En este proyecto se ha diseñado e implementado una infraestructura de red completa para mejorar la organización informática de la empresa DOSP.</p>
+            
+            <p>Usando servidores Linux y Windows se han configurado diferentes servicios de red como DHCP, DNS y Active Directory, que permiten gestionar los usuarios y los recursos de la empresa de forma centralizada y organizada.</p>
+
+            <div class="info-box">
+                <h5>🎯 Resultados obtenidos</h5>
+                <p>La implementación ha permitido alcanzar los siguientes objetivos:</p>
+                <ul class="list-custom">
+                    <li>Segmentación efectiva de la red en cuatro subredes funcionales</li>
+                    <li>Automatización completa de la asignación de direcciones IP mediante DHCP</li>
+                    <li>Resolución de nombres interna funcional con zonas directa e inversa</li>
+                    <li>Servidor web operativo y accesible desde la red interna</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h5>📚 Valor del aprendizaje</h5>
+                <p>Este proyecto ha consolidado los conocimientos adquiridos en el módulo de Redes, aplicando de forma práctica conceptos de subnetting, enrutamiento, servicios de red y administración de servidores Linux y Windows. La experiencia previa en las FCT del Hospital Obispo Polanco ha resultado especialmente útil para comprender el funcionamiento de redes en entornos reales.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-2">Memoria Proyecto Intermodular - SMR2</p>
+            <p class="mb-0">IES Chomón - Teruel, 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
