@@ -19,13 +19,11 @@
             background: linear-gradient(to right, #1a1a1a, #2a0000);
             font-weight: bold;
             border-bottom: 4px solid white;
-
         }
 
         .nav-link {
             color: black;
         }
-
 
         #liveAlertBtn {
             margin: 20px auto;
@@ -70,21 +68,11 @@
             border-bottom: 5px solid black;
         }
 
-        .acordeon1 {
-            background-color: black;
-            color: white;
-
-        }
-
-        .acordeon2 {
-            background-color: black;
-            color: white;
-        }
-
+        .acordeon1,
+        .acordeon2,
         .acordeon3 {
             background-color: black;
             color: white;
-
         }
 
         /* ESTILOS DEL FORMULARIO DE CONTACTO */
@@ -103,7 +91,588 @@
             border: 3px solid red;
             transition: 0.5s;
         }
+
+        /* BOTÓN FLOTANTE DE WHATSAPP */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-flotante:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+            color: white;
+        }
+
+        /* BOTÓN FLOTANTE DE INSTAGRAM */
+        .instagram-flotante {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .instagram-flotante:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* SECCIÓN REDES SOCIALES */
+        .seccion-redes {
+            background: linear-gradient(135deg, #1a1a1a, #2a0000);
+            color: white;
+            border: 3px solid white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .formulario-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: 3px solid white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .formulario-instagram {
+            background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);
+            color: white;
+            border: 3px solid white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .btn-whatsapp {
+            background-color: white;
+            color: #25D366;
+            border: 3px solid white;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 25px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+            border: 3px solid white;
+            transition: 0.3s;
+        }
+
+        .btn-instagram {
+            background-color: white;
+            color: #dc2743;
+            border: 3px solid white;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 25px;
+        }
+
+        .btn-instagram:hover {
+            background: linear-gradient(45deg, #833AB4, #FD1D1D);
+            color: white;
+            border: 3px solid white;
+            transition: 0.3s;
+        }
+
+        .seccion-tips {
+            background: #0a0a0a;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        .seccion-tips::before {
+            content: 'IVAN GYM';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 200px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.02);
+            letter-spacing: 20px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .marca-agua {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 4px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .titulo-seccion-tips {
+            color: white;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitulo-seccion-tips {
+            color: #888;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tip-card {
+            background: rgba(15, 15, 15, 0.95);
+            border-radius: 15px;
+            padding: 50px 40px;
+            max-width: 900px;
+            margin: 60px auto;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tip-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .badge-rojo {
+            background: rgba(220, 38, 38, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .badge-verde {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .badge-azul {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .badge-naranja {
+            background: rgba(249, 115, 22, 0.15);
+            color: #f97316;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .badge-morado {
+            background: rgba(168, 85, 247, 0.15);
+            color: #a855f7;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .badge-amarillo {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .tip-titulo {
+            color: white;
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tip-subtitulo {
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        .terminal-box {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .terminal-header {
+            background: #252525;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-rojo {
+            background: #ff5f56;
+        }
+
+        .dot-amarillo {
+            background: #ffbd2e;
+        }
+
+        .dot-verde {
+            background: #27c93f;
+        }
+
+        .terminal-label {
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .terminal-content {
+            padding: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .code-keyword {
+            color: #c084fc;
+            font-style: italic;
+        }
+
+        .code-string {
+            color: #86efac;
+        }
+
+        .code-comment {
+            color: #555;
+            font-style: italic;
+        }
+
+        .code-orange {
+            color: #fb923c;
+        }
+
+        .code-white {
+            color: white;
+        }
+
+        .tip-info {
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 12px;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tip-info-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .tip-info-text {
+            color: #fbbf24;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* BOTÓN COPIAR PROMPT */
+        .btn-copiar {
+            background: linear-gradient(135deg, #c084fc, #a855f7);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-copiar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
+        }
+
+        /* BOTÓN FLOTANTE DE LLAMADA */
+        .llamada-flotante {
+            position: fixed;
+            bottom: 170px;
+            right: 30px;
+            background-color: #007AFF;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .llamada-flotante:hover {
+            transform: scale(1.1);
+            background-color: #0051D5;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 122, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tip-titulo {
+                font-size: 36px;
+            }
+
+            .tip-card {
+                padding: 30px 20px;
+            }
+
+            .terminal-content {
+                font-size: 13px;
+                padding: 20px;
+            }
+
+            .seccion-tips::before {
+                font-size: 100px;
+            }
+
+            .titulo-seccion-tips {
+                font-size: 32px;
+            }
+        }
+
+        /* CHAT WIDGET */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .chat-burbuja {
+            background: linear-gradient(135deg, #ff0000, #8b0000);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            border: 3px solid white;
+            transition: 0.3s;
+            animation: chatBounce 2s infinite;
+        }
+
+        .chat-burbuja:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes chatBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .chat-ventana {
+            display: none;
+            position: fixed;
+            bottom: 110px;
+            left: 30px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            flex-direction: column;
+            border: 3px solid #1a1a1a;
+        }
+
+        .chat-ventana.activo {
+            display: flex;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #1a1a1a, #2a0000);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        .chat-header-info {
+            flex: 1;
+        }
+
+        .chat-header-info h5 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chat-header-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #22c55e;
+        }
+
+        .chat-cerrar {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .chat-mensajes {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #ece5dd;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><circle cx="50" cy="50" r="2" fill="black"/></svg>');
+        }
+
+        .mensaje {
+            margin-bottom: 12px;
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        .mensaje-iva {
+            background: white;
+            color: black;
+            border-bottom-left-radius: 0;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .mensaje-usuario {
+            background: #dcf8c6;
+            color: black;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-input-zona {
+            padding: 10px;
+            background: #f0f0f0;
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .chat-enviar {
+            background: #25D366;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .chat-enviar:hover {
+            background: #128C7E;
+        }
     </style>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2a0000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Iván GYM">
+    <link rel="apple-touch-icon" href="golden's gym.png">
 </head>
 
 <body>
@@ -111,9 +680,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-brand sticky-top mx-auto">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: white; font-weight: bold; font-size: 20px;" href="#"> <img
-                    src="golden's gym.png" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">Iván</a>
+            <a class="navbar-brand" style="color: white; font-weight: bold; font-size: 20px;" href="#">
+                <img src="golden's gym.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Iván
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" style="background-color: white;">
@@ -132,23 +701,21 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="https://www.myprotein.es">MyProtein</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://eu.gymshark.com/es-ES?gclsrc=aw.ds&gad_source=1&gad_campaignid=23510489496&gbraid=0AAAAADMZ0iqO_MIbfAGsGwjhlwBvoDLsB&gclid=CjwKCAjwqubPBhBOEiwAzgZX2otRua19zT8G_B8n0Qdqfg2Vb8MDcbbZzZ2tSZrkK0e1_-ivLLrkFhoC3pIQAvD_BwE">Gymshark</a>
-                            </li>
+                            <li><a class="dropdown-item" href="https://eu.gymshark.com/es-ES">Gymshark</a></li>
                         </ul>
                     </li>
-                </ul>
-
-                <!-- Lista de la derecha -->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html" style="color: white;">Página 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pagina_3.html" style="color: white;">Página 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pagina_4.html" style="color: white;">Página 4</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: white;">
+                            📱 Contacto
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://wa.me/34635816502" target="_blank">📲
+                                    WhatsApp</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/astro10__/" target="_blank">📸
+                                    Instagram</a></li>
+                            <li><a class="dropdown-item" href="mailto:ivanib2007@icloud.com">📧 Email</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -157,14 +724,14 @@
 
 
     <div class="btn-group">
-        <a href="https://www.myprotein.es/p/nutricion-deportiva/creatina-monohidrato-en-polvo/10530050/?affil=thggpsad&switchcurrency=EUR&shippingcountry=ES&variation=11773554&affil=thgppc&kwds=&thg_ppc_campaign=23527587496&adtype=pla&product_id=11773554&cq_src=google_ads&cq_cmp=23527587496&cq_con=&cq_term=&cq_med=pla&cq_plac=&cq_net=x&cq_plt=gp&gclsrc=aw.ds&gad_source=1&gad_campaignid=23517847149&gbraid=0AAAAADuhnyGNZCEB2J0P31VlgBgKz6uWh&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
-            class="btn btn-primary" aria-current="page"
+        <a href="https://www.myprotein.es/p/nutricion-deportiva/creatina-monohidrato-en-polvo/10530050/"
+            class="btn btn-primary"
             style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
             creatina</a>
         <a href="https://classroom.google.com/u/1/" class="btn btn-primary"
             style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
             testosterona</a>
-        <a href="https://www.myprotein.es/p/nutricion-deportiva/comprimidos-de-bisglicinato-de-magnesio/15736555/?affil=thggpsad&thg_ppc_campaign=23527587496&gclid=CjwKCAjwqubPBhBOEiwAzgZX2oovp8-s6IHgdDJ2EMCEtOuDpa66AD4tSdPJ5kzpFUcfNgFrsl1XWxoCrzMQAvD_BwE"
+        <a href="https://www.myprotein.es/p/nutricion-deportiva/comprimidos-de-bisglicinato-de-magnesio/15736555/"
             class="btn btn-primary"
             style="background-color: white; border: 4px solid black; color: black; font-weight: bold;">Comprar
             magnesio</a>
@@ -205,7 +772,7 @@
 
     <!-- Live alert -->
     <div id="liveAlertPlaceholder" class="my-4"></div>
-    <button type="button" class="btn btn-primary d-flex justify-content-center " id="liveAlertBtn">Información</button>
+    <button type="button" class="btn btn-primary d-flex justify-content-center" id="liveAlertBtn">Información</button>
 
 
     <!-- Accordion -->
@@ -223,132 +790,210 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-
                                 <h3>¿Qué es la creatina?</h3>
-                                <p>La creatina es un compuesto natural formado por tres aminoácidos: arginina,
-                                    glicina y metionina. Se produce de forma endógena en el hígado, páncreas y
-                                    riñones, y se almacena principalmente en los músculos esqueléticos (95%) en
-                                    forma de fosfocreatina. También se obtiene a través de la dieta, principalmente
-                                    del consumo de carne roja y pescado.</p>
+                                <p>La creatina es un compuesto natural formado por tres aminoácidos: arginina, glicina y
+                                    metionina...</p>
+                                <p><em>
+                                        <h1 class="mb-4">CREATINA: EL SUPLEMENTO MÁS IMPORTANTE PARA GANAR FUERZA Y MASA
+                                            MUSCULAR</h1>
 
-                                <h3>Mecanismo de acción</h3>
-                                <p>La creatina funciona como un sistema de energía rápida para actividades de alta
-                                    intensidad y corta duración. Durante el ejercicio intenso, el ATP (adenosín
-                                    trifosfato) se descompone para liberar energía, convirtiéndose en ADP (adenosín
-                                    difosfato). La fosfocreatina dona un grupo fosfato al ADP para regenerar ATP
-                                    rápidamente, permitiendo mantener la producción de energía durante ejercicios
-                                    explosivos.</p>
+                                        <p>
 
-                                <h3>Tipos de creatina</h3>
-                                <p><strong>Creatina monohidrato:</strong> La forma más estudiada y efectiva.
-                                    Contiene aproximadamente 88% de creatina pura y 12% de agua. Es la más económica
-                                    y con mayor respaldo científico.</p>
-                                <p><strong>Creatina micronizada:</strong> Monohidrato procesado para reducir el
-                                    tamaño de las partículas, mejorando su solubilidad y absorción.</p>
-                                <p><strong>Creatina etil éster:</strong> Teóricamente mejor absorbida, aunque
-                                    estudios demuestran que no es superior al monohidrato.</p>
-                                <p><strong>Creatina HCL (clorhidrato):</strong> Más soluble en agua, se promociona
-                                    requiriendo dosis menores, pero falta evidencia que demuestre superioridad real.
-                                </p>
-                                <p><strong>Creatina tamponada (Kre-Alkalyn):</strong> Con pH más elevado para
-                                    reducir conversión a creatinina, aunque la evidencia no muestra ventajas
-                                    significativas.</p>
-                                <p><strong>Creatina líquida:</strong> Menos estable y efectiva que las formas en
-                                    polvo.</p>
+                                            Si existe un suplemento que realmente ha demostrado funcionar tanto en
+                                            culturismo como en powerlifting,
 
-                                <h3>Beneficios comprobados</h3>
-                                <p><strong>Rendimiento deportivo:</strong> Aumento de fuerza muscular (5-15%),
-                                    mejora en potencia explosiva, mayor capacidad en ejercicios de alta intensidad,
-                                    mejor rendimiento en series repetidas e incremento de la masa muscular magra
-                                    (1-2 kg en las primeras semanas).</p>
-                                <p><strong>Beneficios cognitivos:</strong> Mejora de la memoria a corto plazo,
-                                    reducción de fatiga mental, mejor función cognitiva en situaciones de privación
-                                    de sueño y potencial neuroprotector.</p>
-                                <p><strong>Otros beneficios:</strong> Posible mejora en recuperación de lesiones,
-                                    efectos antioxidantes, potencial terapéutico en enfermedades neuromusculares y
-                                    mejora de la salud ósea en combinación con entrenamiento.</p>
+                                            esa es la <strong>creatina</strong>. No hablamos de marketing ni de
+                                            productos milagro. Hablamos de uno
 
-                                <h3>Dosis recomendadas</h3>
-                                <p><strong>Fase de carga (opcional):</strong> 20-25 g/día divididos en 4-5 tomas
-                                    durante 5-7 días. Acelera la saturación muscular, aunque no es estrictamente
-                                    necesaria.</p>
-                                <p><strong>Fase de mantenimiento:</strong> 3-5 g/día en una sola toma, suficiente
-                                    para mantener niveles óptimos. Puede tomarse en cualquier momento del día,
-                                    opcionalmente con carbohidratos para mejorar absorción.</p>
-                                <p><strong>Protocolo alternativo sin fase de carga:</strong> 3-5 g/día desde el
-                                    inicio. Alcanza saturación muscular en 3-4 semanas. Método más económico y
-                                    igualmente efectivo.</p>
+                                            de los suplementos más estudiados y utilizados dentro del mundo del
+                                            rendimiento deportivo.
 
-                                <h3>Momento óptimo de consumo</h3>
-                                <p>Aunque tradicionalmente se ha recomendado post-entrenamiento, estudios demuestran
-                                    que el momento exacto es poco relevante. Lo importante es la consistencia
-                                    diaria. Puede tomarse pre-entrenamiento, post-entrenamiento (posiblemente
-                                    ligeramente superior) o en cualquier momento del día en días de descanso.</p>
+                                        </p>
 
-                                <h3>Efectos secundarios y consideraciones</h3>
-                                <p><strong>Retención de agua:</strong> El efecto secundario más común, con aumento
-                                    de 1-2 kg de peso por retención intracelular (dentro del músculo, no
-                                    subcutánea).</p>
-                                <p><strong>Problemas gastrointestinales:</strong> Pueden aparecer con dosis altas,
-                                    solucionables dividiendo la dosis o usando creatina micronizada.</p>
-                                <p><strong>Calambres musculares:</strong> Mito mayormente desmentido; pueden
-                                    prevenirse con hidratación adecuada.</p>
-                                <p><strong>Función renal:</strong> No afecta negativamente a personas sanas. Puede
-                                    elevar la creatinina sérica (marcador de función renal) sin que esto indique
-                                    daño real.</p>
-                                <p><strong>Caída de cabello:</strong> Estudio aislado sugirió aumento de DHT, pero
-                                    evidencia insuficiente para confirmarlo.</p>
+                                        <p>
 
-                                <h3>Contraindicaciones</h3>
-                                <p>Enfermedad renal preexistente, durante el embarazo y lactancia (por falta de
-                                    estudios), precaución en personas con problemas hepáticos y consulta médica si
-                                    se toman medicamentos que afectan riñones.</p>
+                                            La creatina ayuda a producir energía rápida dentro del músculo, lo que
+                                            permite entrenar con más intensidad,
 
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"La creatina es un esteroide":</strong> FALSO. Es un compuesto natural
-                                    presente en alimentos.</p>
-                                <p>❌ <strong>"Causa daño renal":</strong> FALSO en personas sanas con función renal
-                                    normal.</p>
-                                <p>❌ <strong>"Hay que hacer ciclos":</strong> FALSO. Puede tomarse indefinidamente
-                                    de forma segura.</p>
-                                <p>❌ <strong>"Solo funciona en hombres":</strong> FALSO. Beneficia igualmente a
-                                    mujeres.</p>
-                                <p>❌ <strong>"Necesitas fase de carga obligatoriamente":</strong> FALSO. Es opcional
-                                    y solo acelera resultados.</p>
-                                <p>❌ <strong>"Pierdes todo al dejarla":</strong> Parcialmente falso. Pierdes la
-                                    retención de agua y parte de la ganancia, pero las adaptaciones musculares
-                                    permanecen.</p>
+                                            mover más peso y mejorar el rendimiento en ejercicios explosivos como press
+                                            banca, sentadilla, peso muerto,
 
-                                <h3>Combinaciones efectivas</h3>
-                                <p><strong>Con carbohidratos:</strong> Mejora la absorción por pico de insulina.
-                                    <strong>Con proteína:</strong> Potencia la síntesis proteica post-entrenamiento.
-                                    <strong>Con beta-alanina:</strong> Sinergia para rendimiento de alta intensidad.
-                                    <strong>Con cafeína:</strong> Compatible, aunque algunos estudios sugieren
-                                    posible interferencia (evidencia mixta).
-                                </p>
+                                            dominadas o sprints.
 
-                                <h3>Recomendaciones prácticas</h3>
-                                <p>✅ Elige creatina monohidrato como primera opción (mejor relación
-                                    calidad-precio-evidencia)</p>
-                                <p>✅ Mantén una hidratación adecuada (2.5-3L agua/día)</p>
-                                <p>✅ Sé consistente con la dosis diaria</p>
-                                <p>✅ No esperes resultados inmediatos; los beneficios máximos aparecen tras 4-6
-                                    semanas</p>
-                                <p>✅ Combínala con entrenamiento de fuerza para maximizar resultados</p>
-                                <p>✅ No es necesario ciclarla; es segura a largo plazo</p>
+                                        </p>
 
-                                <h3>Respaldo científico</h3>
-                                <p>La creatina es el suplemento deportivo con mayor evidencia científica. Miles de
-                                    estudios respaldan su eficacia y seguridad. Está aprobada por organizaciones
-                                    como el IOC (Comité Olímpico Internacional), NCAA (Asociación Nacional Atlética
-                                    Universitaria) e ISSN (Sociedad Internacional de Nutrición Deportiva).</p>
+                                        <h2 class="mt-5">¿QUÉ HACE REALMENTE LA CREATINA?</h2>
 
-                                <h3>Conclusión</h3>
-                                <p>La creatina monohidrato es el suplemento más efectivo, seguro y económico para
-                                    mejorar rendimiento deportivo, especialmente en actividades de fuerza y
-                                    potencia. Con más de 30 años de investigación, su perfil de seguridad es
-                                    excepcional para personas sanas.</p>
+                                        <ul class="mt-3">
 
+                                            <li class="mb-3">
+
+                                                <strong>Aumenta la fuerza:</strong>
+
+                                                al mejorar la producción de energía muscular, puedes rendir más durante
+                                                el entrenamiento y mover cargas
+
+                                                más pesadas.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Mejora el rendimiento:</strong>
+
+                                                ayuda especialmente en entrenamientos intensos y explosivos donde el
+                                                músculo necesita energía rápida.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Favorece la ganancia muscular:</strong>
+
+                                                entrenar con más fuerza y volumen normalmente se traduce en mejores
+                                                ganancias de masa muscular.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Mejora la recuperación:</strong>
+
+                                                muchas personas notan menos fatiga entre series y una mejor recuperación
+                                                muscular.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Aumenta la hidratación intramuscular:</strong>
+
+                                                la creatina hace que el músculo retenga más agua dentro de la célula
+                                                muscular, dando un aspecto más lleno
+
+                                                y favoreciendo el rendimiento.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">LA MEJOR OPCIÓN: CREATINA MONOHIDRATO</h2>
+
+                                        <p>
+
+                                            La <strong>creatina monohidrato</strong> es la forma más recomendada. Es la
+                                            más estudiada,
+
+                                            la más eficaz y normalmente la más barata.
+
+                                        </p>
+
+                                        <p>
+
+                                            No necesitas versiones “premium”, mezclas raras ni productos inflados de
+                                            precio.
+
+                                            La mayoría de veces, una buena monohidrato simple hace exactamente lo que
+                                            necesitas.
+
+                                        </p>
+
+                                        <h2 class="mt-5">¿CUÁNTA CREATINA TOMAR?</h2>
+
+                                        <p>
+
+                                            La dosis más utilizada suele ser entre <strong>3 y 5 gramos al día</strong>.
+
+                                        </p>
+
+                                        <p>
+
+                                            Mucha gente hace fase de carga, pero realmente no es obligatoria. Lo
+                                            importante es la constancia.
+
+                                            La creatina funciona por acumulación dentro del músculo, no por tomarla un
+                                            solo día.
+
+                                        </p>
+
+                                        <h2 class="mt-5">ERRORES QUE COMETE MUCHA GENTE</h2>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-3">
+
+                                                <strong>Pensar que es magia:</strong>
+
+                                                la creatina ayuda, pero no sustituye entrenar duro.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Tomarla sin comer bien:</strong>
+
+                                                si tu alimentación es mala, no esperes resultados increíbles.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>No hidratarse:</strong>
+
+                                                beber suficiente agua es importante cuando utilizas creatina.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Comprar productos absurdamente caros:</strong>
+
+                                                muchas marcas venden humo. La base sigue siendo la monohidrato clásica.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">¿ES SEGURA?</h2>
+
+                                        <p>
+
+                                            Sí. En personas sanas, la creatina es considerada uno de los suplementos más
+                                            seguros y estudiados
+
+                                            dentro del deporte.
+
+                                        </p>
+
+                                        <p>
+
+                                            Aun así, si una persona tiene problemas renales o alguna condición médica
+                                            importante,
+
+                                            debería consultar antes con un profesional.
+
+                                        </p>
+
+                                        <h2 class="mt-5">CONCLUSIÓN</h2>
+
+                                        <p>
+
+                                            La creatina no convierte a nadie en fuerte de la noche a la mañana, pero sí
+                                            puede ayudarte a rendir mejor,
+
+                                            entrenar más duro y progresar más rápido.
+
+                                        </p>
+
+                                        <p>
+
+                                            Si entrenas en serio y quieres mejorar fuerza, rendimiento y masa muscular,
+
+                                            probablemente sea el suplemento más rentable y útil que puedes añadir a tu
+                                            rutina.
+
+                                        </p>
+                                    </em></p>
                             </div>
                         </div>
                     </div>
@@ -363,164 +1008,204 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <h3>¿Qué es la testosterona?</h3>
-                                <p>La testosterona es la principal hormona sexual masculina, aunque también está
-                                    presente en mujeres en menores cantidades. Es un esteroide androgénico producido
-                                    principalmente en los testículos (en hombres) y en los ovarios y glándulas
-                                    suprarrenales (en mujeres). Pertenece al grupo de hormonas llamadas andrógenos y es
-                                    fundamental para el desarrollo y mantenimiento de características sexuales
-                                    masculinas.</p>
+                                <p>La testosterona es la principal hormona sexual masculina...</p>
+                                <p><em>
+                                        <h1 class="mb-4">TESTOSTERONA: LA HORMONA MÁS IMPORTANTE PARA LA FUERZA Y EL
+                                            DESARROLLO MUSCULAR</h1>
 
-                                <h3>Funciones principales</h3>
-                                <p><strong>Desarrollo sexual:</strong> Desarrollo de órganos reproductivos masculinos,
-                                    espermatogénesis (producción de esperma), desarrollo de características sexuales
-                                    secundarias durante la pubertad (voz grave, vello facial y corporal, aumento de masa
-                                    muscular).</p>
-                                <p><strong>Composición corporal:</strong> Aumento y mantenimiento de masa muscular,
-                                    reducción de grasa corporal, aumento de densidad ósea y fortaleza del esqueleto.</p>
-                                <p><strong>Función sexual:</strong> Libido y deseo sexual, función eréctil, producción
-                                    de esperma y fertilidad.</p>
-                                <p><strong>Salud general:</strong> Producción de glóbulos rojos, regulación del estado
-                                    de ánimo y bienestar, función cognitiva y memoria, distribución de grasa corporal y
-                                    niveles de energía.</p>
+                                        <p>
 
-                                <h3>Niveles normales de testosterona</h3>
-                                <p><strong>Hombres adultos:</strong> 300-1000 ng/dL (nanogramos por decilitro). El rango
-                                    óptimo suele considerarse entre 500-800 ng/dL.</p>
-                                <p><strong>Mujeres adultas:</strong> 15-70 ng/dL.</p>
-                                <p><strong>Nota importante:</strong> Los niveles varían según la edad, hora del día
-                                    (pico por la mañana), laboratorio y método de medición. La testosterona disminuye
-                                    naturalmente aproximadamente 1-2% por año después de los 30 años.</p>
+                                            La <strong>testosterona</strong> es una hormona producida principalmente en
+                                            los hombres por los testículos,
 
-                                <h3>Síntomas de testosterona baja (hipogonadismo)</h3>
-                                <p><strong>Síntomas físicos:</strong> Reducción de masa muscular y fuerza, aumento de
-                                    grasa corporal (especialmente abdominal), disminución de densidad ósea (riesgo de
-                                    osteoporosis), fatiga crónica y falta de energía, ginecomastia (desarrollo de tejido
-                                    mamario) y reducción de vello corporal y facial.</p>
-                                <p><strong>Síntomas sexuales:</strong> Disminución del deseo sexual, disfunción eréctil,
-                                    reducción del volumen de semen e infertilidad.</p>
-                                <p><strong>Síntomas mentales/emocionales:</strong> Depresión y cambios de humor,
-                                    dificultad de concentración y memoria, irritabilidad y pérdida de motivación.</p>
+                                            aunque también está presente en mujeres en cantidades mucho menores. Es una
+                                            de las hormonas más importantes
 
-                                <h3>Causas de testosterona baja</h3>
-                                <p><strong>Hipogonadismo primario:</strong> Problemas testiculares directos (lesión,
-                                    infección, síndrome de Klinefelter, tratamientos de cáncer).</p>
-                                <p><strong>Hipogonadismo secundario:</strong> Problemas en hipotálamo o hipófisis
-                                    (tumores, medicamentos, obesidad, estrés crónico, envejecimiento natural).</p>
-                                <p><strong>Factores de estilo de vida:</strong> Obesidad (la grasa convierte
-                                    testosterona en estrógeno), falta de sueño, estrés crónico, consumo excesivo de
-                                    alcohol, uso de opioides y otros medicamentos, y sedentarismo.</p>
+                                            relacionadas con la fuerza, la masa muscular, la recuperación y el
+                                            rendimiento físico.
 
-                                <h3>Formas naturales de optimizar testosterona</h3>
-                                <p><strong>Ejercicio y entrenamiento de fuerza:</strong> El entrenamiento con pesas y
-                                    ejercicios compuestos (sentadillas, peso muerto) estimulan la producción. HIIT
-                                    (entrenamiento de alta intensidad) también es efectivo.</p>
-                                <p><strong>Nutrición adecuada:</strong> Consumo suficiente de grasas saludables
-                                    (aguacate, frutos secos, aceite de oliva), proteína de calidad, micronutrientes
-                                    clave (zinc, magnesio, vitamina D). Evitar dietas extremadamente bajas en calorías o
-                                    carbohidratos.</p>
-                                <p><strong>Sueño de calidad:</strong> 7-9 horas de sueño profundo. La mayoría de la
-                                    testosterona se produce durante el sueño.</p>
-                                <p><strong>Manejo del estrés:</strong> El cortisol elevado (hormona del estrés) reduce
-                                    la testosterona. Prácticas como meditación, yoga o técnicas de respiración ayudan.
+                                        </p>
+
+                                        <p>
+
+                                            Dentro del mundo del culturismo y el powerlifting, la testosterona tiene un
+                                            papel fundamental porque influye
+
+                                            directamente en la capacidad del cuerpo para construir músculo, recuperarse
+                                            y rendir a alta intensidad.
+
+                                        </p>
+
+                                        <h2 class="mt-5">¿QUÉ HACE LA TESTOSTERONA EN EL CUERPO?</h2>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-3">
+
+                                                <strong>Aumenta la masa muscular:</strong>
+
+                                                favorece la síntesis de proteínas y ayuda al cuerpo a construir más
+                                                tejido muscular.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Mejora la fuerza:</strong>
+
+                                                niveles adecuados de testosterona suelen estar relacionados con un mejor
+                                                rendimiento físico.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Ayuda en la recuperación:</strong>
+
+                                                influye en la capacidad del cuerpo para recuperarse después de
+                                                entrenamientos intensos.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Influye en la energía y motivación:</strong>
+
+                                                niveles bajos pueden provocar fatiga, baja energía y menor rendimiento.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Participa en muchas funciones del cuerpo:</strong>
+
+                                                también afecta al estado de ánimo, densidad ósea, libido y producción de
+                                                glóbulos rojos.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">TESTOSTERONA NATURAL Y ENTRENAMIENTO</h2>
+
+                                        <p>
+
+                                            El entrenamiento de fuerza, dormir bien, reducir el estrés y mantener una
+                                            alimentación adecuada
+
+                                            son factores importantes para mantener buenos niveles naturales de
+                                            testosterona.
+
+                                        </p>
+
+                                        <p>
+
+                                            Mucha gente busca “aumentarla” con suplementos milagro, pero la realidad es
+                                            que los pilares más importantes
+
+                                            siguen siendo:
+
+                                        </p>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-2">Dormir suficientes horas.</li>
+
+                                            <li class="mb-2">Entrenar pesado y de forma constante.</li>
+
+                                            <li class="mb-2">Consumir suficientes calorías y grasas saludables.</li>
+
+                                            <li class="mb-2">Evitar exceso de estrés y mala recuperación.</li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">LA REALIDAD DEL MUNDO DEL CULTURISMO</h2>
+
+                                        <p>
+
+                                            En el culturismo profesional y en algunos deportes de fuerza, existen
+                                            personas que utilizan testosterona
+
+                                            y otras sustancias anabólicas para aumentar masa muscular y rendimiento de
+                                            manera artificial.
+
+                                        </p>
+
+                                        <p>
+
+                                            Sin embargo, esto no debe confundirse con la testosterona natural producida
+                                            por el cuerpo.
+
+                                            El uso externo de hormonas puede tener riesgos importantes para la salud si
+                                            no existe control médico.
+
+                                        </p>
+
+                                        <h2 class="mt-5">POSIBLES PROBLEMAS DE NIVELES BAJOS</h2>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-3">
+
+                                                Menor fuerza y rendimiento físico.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Fatiga constante.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Dificultad para ganar músculo.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Baja motivación y energía.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Disminución de la libido.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">CONCLUSIÓN</h2>
+
+                                        <p>
+
+                                            La testosterona es una de las hormonas más importantes para el rendimiento
+                                            físico y el desarrollo muscular.
+
+                                            Tener buenos hábitos, entrenar duro y cuidar la recuperación son claves para
+                                            mantener niveles saludables.
+
+                                        </p>
+
+                                        <p>
+
+                                            En el gimnasio, mucha gente busca atajos, pero la realidad es que la base
+                                            siempre será la disciplina,
+
+                                            la constancia y los años de entrenamiento serio.
+
+                                        </p>
+                                    </em>
                                 </p>
-                                <p><strong>Mantener peso saludable:</strong> La obesidad reduce significativamente los
-                                    niveles de testosterona.</p>
-                                <p><strong>Exposición solar:</strong> La vitamina D es crucial para la producción de
-                                    testosterona. 15-30 minutos de sol diario o suplementación si es necesario.</p>
-                                <p><strong>Limitar alcohol y evitar drogas:</strong> El consumo excesivo de alcohol
-                                    reduce drásticamente la testosterona.</p>
-
-                                <h3>Terapia de reemplazo de testosterona (TRT)</h3>
-                                <p><strong>¿Qué es?</strong> Tratamiento médico que administra testosterona exógena para
-                                    restaurar niveles normales en personas diagnosticadas con hipogonadismo.</p>
-                                <p><strong>Formas de administración:</strong> Inyecciones intramusculares (semanales o
-                                    quincenales), geles o cremas tópicas (aplicación diaria), parches transdérmicos,
-                                    implantes subcutáneos (pellets que duran 3-6 meses) y comprimidos bucales.</p>
-                                <p><strong>Requisitos:</strong> Diagnóstico médico confirmado con análisis de sangre (al
-                                    menos 2 mediciones matutinas con niveles bajos), síntomas clínicos verificados y
-                                    supervisión médica continua.</p>
-
-                                <h3>Beneficios del TRT (bajo supervisión médica)</h3>
-                                <p>Aumento de masa muscular y fuerza, reducción de grasa corporal, mejora de densidad
-                                    ósea, incremento de libido y función sexual, mejora del estado de ánimo y energía,
-                                    mejor función cognitiva y posible reducción de riesgo cardiovascular (en casos de
-                                    hipogonadismo comprobado).</p>
-
-                                <h3>Efectos secundarios del TRT</h3>
-                                <p><strong>Comunes:</strong> Acné y piel grasa, retención de líquidos, aumento de
-                                    glóbulos rojos (policitemia), reducción de producción natural de testosterona y
-                                    supresión de fertilidad (reducción de producción de esperma).</p>
-                                <p><strong>Potencialmente graves:</strong> Aumento de riesgo de apnea del sueño,
-                                    crecimiento de próstata (puede empeorar síntomas urinarios), ginecomastia (si se
-                                    convierte en estrógeno), cambios en perfil lipídico, aumento de presión arterial y
-                                    posibles efectos cardiovasculares (tema controversial, requiere monitoreo).</p>
-
-                                <h3>Contraindicaciones del TRT</h3>
-                                <p>Cáncer de próstata o sospecha del mismo, cáncer de mama masculino, enfermedad
-                                    cardiovascular severa no controlada, policitemia severa, apnea del sueño no tratada
-                                    y deseo de preservar fertilidad a corto plazo.</p>
-
-                                <h3>Monitoreo médico necesario</h3>
-                                <p>El TRT requiere seguimiento médico regular con análisis de sangre (cada 3-6 meses)
-                                    para monitorear: niveles de testosterona total y libre, hematocrito y hemoglobina
-                                    (recuento de glóbulos rojos), PSA (antígeno prostático específico), función hepática
-                                    y renal, perfil lipídico (colesterol) y estrógenos (para ajustar dosis si es
-                                    necesario).</p>
-
-                                <h3>Uso ilegal de esteroides anabólicos</h3>
-                                <p><strong>ADVERTENCIA:</strong> El uso de testosterona o esteroides anabólicos sin
-                                    prescripción médica es ilegal y extremadamente peligroso. Dosis suprafisiológicas
-                                    (muy por encima de niveles normales) utilizadas en culturismo causan: daño hepático
-                                    y renal grave, problemas cardiovasculares severos (infartos, derrames), atrofia
-                                    testicular permanente, infertilidad, ginecomastia severa, cambios psicológicos
-                                    ("roid rage"), acné severo y dependencia psicológica.</p>
-
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"Más testosterona siempre es mejor":</strong> FALSO. Niveles excesivamente
-                                    altos causan efectos secundarios graves y se convierten en estrógeno.</p>
-                                <p>❌ <strong>"El TRT es solo para ancianos":</strong> FALSO. Hombres jóvenes pueden
-                                    tener hipogonadismo legítimo.</p>
-                                <p>❌ <strong>"Los suplementos de testosterona de venta libre funcionan":</strong> FALSO.
-                                    Los "boosters" de testosterona sin receta tienen efectos mínimos o nulos.</p>
-                                <p>❌ <strong>"El TRT causa cáncer de próstata":</strong> No comprobado. No lo causa,
-                                    pero puede acelerar un cáncer existente.</p>
-                                <p>❌ <strong>"Puedo hacer TRT yo mismo":</strong> PELIGROSO. Requiere supervisión médica
-                                    obligatoria.</p>
-                                <p>❌ <strong>"El TRT te hace perder pelo":</strong> Parcialmente cierto. Acelera
-                                    calvicie en personas genéticamente predispuestas.</p>
-
-                                <h3>Suplementos con evidencia científica</h3>
-                                <p><strong>Vitamina D:</strong> Deficiencia correlaciona con testosterona baja.
-                                    Suplementar si hay deficiencia (2000-5000 UI/día).</p>
-                                <p><strong>Zinc:</strong> Esencial para producción de testosterona. Suplementar si hay
-                                    deficiencia (15-30 mg/día).</p>
-                                <p><strong>Magnesio:</strong> Mejora testosterona libre. 200-400 mg/día.</p>
-                                <p><strong>Ashwagandha:</strong> Adaptógeno que puede reducir cortisol y aumentar
-                                    testosterona moderadamente (300-500 mg/día).</p>
-                                <p><strong>Ácido D-aspártico:</strong> Evidencia mixta, puede funcionar temporalmente en
-                                    hombres con niveles bajos.</p>
-                                <p><strong>DHEA:</strong> Precursor hormonal. Solo bajo supervisión médica.</p>
-
-                                <h3>Cuándo consultar a un médico</h3>
-                                <p>Si experimentas síntomas persistentes de testosterona baja (fatiga crónica, pérdida
-                                    de libido, disfunción eréctil, depresión, pérdida de masa muscular), solicita
-                                    análisis de sangre completos. Busca un endocrinólogo o médico especializado en
-                                    medicina hormonal para evaluación y tratamiento apropiado.</p>
-
-                                <h3>Conclusión</h3>
-                                <p>La testosterona es una hormona crucial para la salud masculina. La optimización
-                                    natural a través de estilo de vida debe ser el primer paso. El TRT es un tratamiento
-                                    médico legítimo para hipogonadismo diagnosticado, pero requiere supervisión
-                                    profesional continua. El uso de esteroides sin prescripción es ilegal, peligroso y
-                                    puede causar daños permanentes. Siempre consulta con profesionales médicos
-                                    cualificados antes de considerar cualquier intervención hormonal.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item acordeon3">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree "
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
                                 style="background-color: white; color: black; font-weight: bold; border: 3px solid black">
                                 Magnesio
                             </button>
@@ -528,219 +1213,248 @@
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <h3>¿Qué es el magnesio?</h3>
-                                <p>El magnesio es un mineral esencial y el cuarto catión más abundante en el cuerpo
-                                    humano. Es un cofactor en más de 300 reacciones enzimáticas, participando en
-                                    procesos fundamentales como la síntesis de proteínas, función muscular y nerviosa,
-                                    control de glucosa en sangre, regulación de la presión arterial y producción de
-                                    energía (ATP). Aproximadamente el 60% del magnesio corporal se encuentra en los
-                                    huesos, 25% en los músculos y el resto en tejidos blandos y fluidos.</p>
+                                <p>El magnesio es un mineral esencial...</p>
+                                <p><em>
+                                        <h1 class="mb-4">MAGNESIO: UNO DE LOS MINERALES MÁS IMPORTANTES PARA EL
+                                            RENDIMIENTO Y LA RECUPERACIÓN</h1>
 
-                                <h3>Funciones principales del magnesio</h3>
-                                <p><strong>Producción de energía:</strong> Esencial para la conversión de alimentos en
-                                    ATP (energía celular). Participa en el metabolismo de carbohidratos, proteínas y
-                                    grasas.</p>
-                                <p><strong>Función muscular:</strong> Regula la contracción y relajación muscular.
-                                    Previene calambres y espasmos. Fundamental para el rendimiento deportivo.</p>
-                                <p><strong>Sistema nervioso:</strong> Actúa como regulador de neurotransmisores. Tiene
-                                    efecto calmante sobre el sistema nervioso. Mejora la calidad del sueño y reduce
-                                    ansiedad.</p>
-                                <p><strong>Salud ósea:</strong> Influye en la formación de huesos y metabolismo de
-                                    vitamina D. Regula niveles de calcio y mejora densidad ósea.</p>
-                                <p><strong>Salud cardiovascular:</strong> Regula el ritmo cardíaco, mantiene presión
-                                    arterial saludable, previene arritmias y mejora función endotelial.</p>
-                                <p><strong>Regulación de glucosa:</strong> Mejora sensibilidad a la insulina, ayuda en
-                                    control de diabetes tipo 2 y regula niveles de azúcar en sangre.</p>
-                                <p><strong>Síntesis de proteínas:</strong> Necesario para la creación de ADN, ARN y
-                                    proteínas. Fundamental para crecimiento y reparación muscular.</p>
+                                        <p>
 
-                                <h3>Deficiencia de magnesio (hipomagnesemia)</h3>
-                                <p><strong>Prevalencia:</strong> Se estima que 50-70% de la población occidental no
-                                    alcanza la ingesta diaria recomendada. Es una de las deficiencias minerales más
-                                    comunes.</p>
-                                <p><strong>Causas de deficiencia:</strong> Dieta baja en alimentos ricos en magnesio
-                                    (procesados, refinados), consumo excesivo de alcohol, enfermedades
-                                    gastrointestinales (Crohn, celiaquía, diarrea crónica), diabetes mal controlada, uso
-                                    prolongado de diuréticos o inhibidores de bomba de protones, estrés crónico (aumenta
-                                    excreción de magnesio), ejercicio intenso (pérdida por sudor) y edad avanzada (menor
-                                    absorción).</p>
+                                            El <strong>magnesio</strong> es un mineral esencial que participa en cientos
+                                            de procesos dentro del cuerpo.
 
-                                <h3>Síntomas de deficiencia de magnesio</h3>
-                                <p><strong>Síntomas tempranos:</strong> Fatiga y debilidad, pérdida de apetito, náuseas
-                                    y calambres musculares frecuentes.</p>
-                                <p><strong>Síntomas moderados:</strong> Entumecimiento y hormigueo, contracciones
-                                    musculares involuntarias (fasciculaciones), migrañas frecuentes, insomnio o sueño no
-                                    reparador, ansiedad e irritabilidad y palpitaciones cardíacas.</p>
-                                <p><strong>Síntomas severos (deficiencia grave):</strong> Convulsiones, arritmias
-                                    cardíacas graves, hipocalcemia (niveles bajos de calcio), hipopotasemia (niveles
-                                    bajos de potasio) y cambios de personalidad.</p>
+                                            Aunque mucha gente habla únicamente de proteínas o creatina, el magnesio
+                                            tiene un papel muy importante
 
-                                <h3>Tipos de suplementos de magnesio</h3>
-                                <p><strong>Magnesio glicinato/bisglicinato:</strong> Alta biodisponibilidad (fácil
-                                    absorción), no causa efectos laxantes, ideal para mejorar sueño y reducir ansiedad.
-                                    Mejor opción para uso general.</p>
-                                <p><strong>Magnesio citrato:</strong> Buena absorción, efecto laxante moderado (útil
-                                    para estreñimiento), económico y efectivo. Buena opción para deficiencia general.
-                                </p>
-                                <p><strong>Magnesio malato:</strong> Bien absorbido, puede aumentar energía, útil para
-                                    fatiga y fibromialgia. Sin efecto laxante significativo.</p>
-                                <p><strong>Magnesio taurato:</strong> Beneficioso para salud cardiovascular, buena
-                                    absorción. Combina magnesio con taurina (aminoácido).</p>
-                                <p><strong>Magnesio treonato:</strong> Única forma que cruza barrera hematoencefálica
-                                    eficazmente. Excelente para función cognitiva y memoria. Más caro.</p>
-                                <p><strong>Magnesio óxido:</strong> Baja biodisponibilidad (4%), fuerte efecto laxante.
-                                    Útil principalmente como laxante, no recomendado para suplementación general.</p>
-                                <p><strong>Magnesio cloruro:</strong> Buena absorción, puede usarse tópicamente (aceite
-                                    de magnesio). Sabor amargo en forma oral.</p>
-                                <p><strong>Magnesio sulfato (sales de Epsom):</strong> Para uso en baños (absorción
-                                    transdérmica), efecto relajante muscular. No para consumo oral regular.</p>
+                                            en la recuperación muscular, el rendimiento físico y el funcionamiento del
+                                            sistema nervioso.
 
-                                <h3>Dosis recomendadas</h3>
-                                <p><strong>Ingesta diaria recomendada (RDA):</strong> Hombres adultos: 400-420 mg/día.
-                                    Mujeres adultas: 310-320 mg/día. Embarazo: 350-400 mg/día. Lactancia: 310-360
-                                    mg/día. Adolescentes: 360-410 mg/día.</p>
-                                <p><strong>Dosis de suplementación:</strong> Deficiencia leve-moderada: 200-400 mg/día.
-                                    Deportistas o personas activas: 400-600 mg/día. Para mejorar sueño: 200-400 mg antes
-                                    de dormir. Para estreñimiento: 300-500 mg de citrato. Límite superior tolerable: 350
-                                    mg/día de magnesio suplementario (además de la dieta).</p>
-                                <p><strong>Momento óptimo:</strong> Con alimentos para mejor absorción y reducir
-                                    molestias gastrointestinales. Por la noche para mejorar sueño (glicinato). Dividir
-                                    dosis si se toma más de 300 mg.</p>
+                                        </p>
 
-                                <h3>Fuentes alimentarias de magnesio</h3>
-                                <p><strong>Fuentes excelentes (por 100g):</strong> Semillas de calabaza: 550 mg,
-                                    almendras: 270 mg, espinacas cocidas: 87 mg, anacardos: 292 mg, chocolate negro
-                                    (70-85%): 228 mg, aguacate: 29 mg.</p>
-                                <p><strong>Buenas fuentes:</strong> Legumbres (frijoles negros, lentejas, garbanzos),
-                                    cereales integrales (arroz integral, quinoa, avena), plátanos, pescado (salmón,
-                                    caballa), tofu y verduras de hoja verde.</p>
-                                <p><strong>Nota:</strong> El procesamiento de alimentos reduce significativamente el
-                                    contenido de magnesio.</p>
+                                        <p>
 
-                                <h3>Beneficios comprobados de la suplementación</h3>
-                                <p><strong>Mejora del sueño:</strong> Reduce tiempo para conciliar el sueño, aumenta
-                                    sueño profundo, reduce insomnio en adultos mayores. Especialmente efectivo el
-                                    glicinato.</p>
-                                <p><strong>Reducción de ansiedad y estrés:</strong> Regula el eje HPA
-                                    (hipotálamo-pituitaria-adrenal), reduce síntomas de ansiedad generalizada y mejora
-                                    respuesta al estrés.</p>
-                                <p><strong>Rendimiento deportivo:</strong> Mejora capacidad de ejercicio, reduce lactato
-                                    sanguíneo durante ejercicio, previene calambres musculares y mejora recuperación
-                                    muscular.</p>
-                                <p><strong>Salud cardiovascular:</strong> Reduce presión arterial (especialmente en
-                                    hipertensos), disminuye riesgo de enfermedad cardiovascular, mejora perfil lipídico
-                                    y reduce inflamación.</p>
-                                <p><strong>Control de glucosa:</strong> Mejora sensibilidad a insulina, reduce riesgo de
-                                    diabetes tipo 2 y ayuda en control glucémico en diabéticos.</p>
-                                <p><strong>Reducción de migrañas:</strong> Disminuye frecuencia e intensidad de
-                                    migrañas. Dosis efectiva: 400-600 mg/día.</p>
-                                <p><strong>Salud ósea:</strong> Mejora densidad mineral ósea, reduce riesgo de
-                                    osteoporosis y mejora absorción de calcio.</p>
-                                <p><strong>Reducción de calambres:</strong> Efectivo en calambres nocturnos, calambres
-                                    musculares asociados al ejercicio y calambres en embarazo.</p>
-                                <p><strong>Función cognitiva:</strong> Mejora memoria (especialmente con treonato),
-                                    protección neuroprotectora y posible reducción de riesgo de demencia.</p>
+                                            En deportes como el culturismo, powerlifting o entrenamiento de fuerza,
+                                            mantener buenos niveles de magnesio
 
-                                <h3>Efectos secundarios de la suplementación</h3>
-                                <p><strong>Comunes (generalmente con dosis altas):</strong> Diarrea y malestar
-                                    gastrointestinal (especialmente con óxido y citrato), náuseas y calambres
-                                    abdominales.</p>
-                                <p><strong>Raros (dosis muy altas o problemas renales):</strong> Hipermagnesemia (exceso
-                                    de magnesio): debilidad muscular, presión arterial baja, náuseas severas, dificultad
-                                    respiratoria, arritmias cardíacas y confusión mental.</p>
-                                <p><strong>Nota:</strong> El exceso de magnesio es muy raro en personas con función
-                                    renal normal, ya que los riñones excretan el exceso.</p>
+                                            puede ayudar a mejorar la recuperación, reducir la fatiga y favorecer un
+                                            mejor funcionamiento muscular.
 
-                                <h3>Interacciones con medicamentos</h3>
-                                <p><strong>Antibióticos (tetraciclinas, quinolonas):</strong> El magnesio reduce su
-                                    absorción. Separar tomas por 2-3 horas.</p>
-                                <p><strong>Bifosfonatos (para osteoporosis):</strong> El magnesio interfiere con
-                                    absorción. Separar por 2 horas.</p>
-                                <p><strong>Diuréticos:</strong> Algunos aumentan pérdida de magnesio (tiazidas), otros
-                                    lo retienen (ahorradores de potasio).</p>
-                                <p><strong>Inhibidores de bomba de protones (omeprazol):</strong> Uso prolongado reduce
-                                    absorción de magnesio.</p>
-                                <p><strong>Medicamentos para hipertensión:</strong> El magnesio puede potenciar el
-                                    efecto hipotensor. Monitorear presión.</p>
+                                        </p>
 
-                                <h3>Relación con otros nutrientes</h3>
-                                <p><strong>Calcio:</strong> Equilibrio importante (ratio ideal 1:1 o 2:1
-                                    calcio:magnesio). Exceso de calcio puede reducir absorción de magnesio.</p>
-                                <p><strong>Vitamina D:</strong> La vitamina D mejora absorción de magnesio. El magnesio
-                                    es necesario para activar vitamina D. Deficiencia de uno afecta al otro.</p>
-                                <p><strong>Potasio:</strong> El magnesio es necesario para mantener niveles adecuados de
-                                    potasio. Deficiencia de magnesio puede causar hipopotasemia.</p>
-                                <p><strong>Zinc:</strong> Dosis muy altas de zinc pueden competir con absorción de
-                                    magnesio.</p>
+                                        <h2 class="mt-5">¿QUÉ HACE EL MAGNESIO EN EL CUERPO?</h2>
 
-                                <h3>Contraindicaciones y precauciones</h3>
-                                <p><strong>Enfermedad renal severa:</strong> No suplementar sin supervisión médica. Los
-                                    riñones no pueden eliminar exceso.</p>
-                                <p><strong>Bloqueo cardíaco:</strong> El magnesio puede empeorar la conducción cardíaca.
-                                </p>
-                                <p><strong>Miastenia gravis:</strong> Puede exacerbar debilidad muscular.</p>
-                                <p><strong>Precaución en:</strong> Personas con problemas gastrointestinales severos,
-                                    uso de múltiples medicamentos (consultar interacciones) y embarazo/lactancia
-                                    (respetar dosis recomendadas).</p>
+                                        <ul class="mt-3">
 
-                                <h3>Magnesio para deportistas</h3>
-                                <p>Los atletas tienen mayores necesidades de magnesio debido a: pérdida por sudor
-                                    durante ejercicio intenso, mayor demanda metabólica, estrés oxidativo del ejercicio
-                                    y mayor recambio de ATP. Se recomienda: 400-600 mg/día para deportistas regulares,
-                                    hasta 800 mg/día para atletas de élite (dividir en varias tomas), considerar formas
-                                    como malato o glicinato y monitorear niveles con análisis de sangre periódicos.</p>
+                                            <li class="mb-3">
 
-                                <h3>Cómo saber si necesitas magnesio</h3>
-                                <p><strong>Análisis de sangre:</strong> Magnesio sérico (en sangre): método estándar
-                                    pero no muy preciso (solo refleja 1% del magnesio total). Magnesio en glóbulos rojos
-                                    (RBC): más preciso pero menos disponible. Niveles normales de magnesio sérico:
-                                    1.7-2.2 mg/dL.</p>
-                                <p><strong>Señales clínicas:</strong> Calambres frecuentes, insomnio persistente,
-                                    ansiedad sin causa clara, fatiga crónica, palpitaciones y dieta baja en alimentos
-                                    ricos en magnesio.</p>
+                                                <strong>Ayuda al funcionamiento muscular:</strong>
 
-                                <h3>Mitos comunes</h3>
-                                <p>❌ <strong>"Todos los tipos de magnesio son iguales":</strong> FALSO. La
-                                    biodisponibilidad varía enormemente entre formas.</p>
-                                <p>❌ <strong>"Más magnesio siempre es mejor":</strong> FALSO. Dosis excesivas causan
-                                    diarrea y otros efectos secundarios.</p>
-                                <p>❌ <strong>"El magnesio tópico funciona igual que el oral":</strong> Evidencia mixta.
-                                    La absorción transdérmica es menor pero puede ser útil.</p>
-                                <p>❌ <strong>"Si comes bien no necesitas suplementos":</strong> Parcialmente falso.
-                                    Incluso con buena dieta, muchas personas no alcanzan RDA debido a suelos
-                                    empobrecidos.</p>
-                                <p>❌ <strong>"El magnesio cura la ansiedad":</strong> Ayuda, pero no es cura única. Es
-                                    un factor coadyuvante.</p>
-                                <p>❌ <strong>"Puedes tomar todo el magnesio de una vez":</strong> FALSO. Dosis mayores a
-                                    300-400 mg se absorben peor. Mejor dividir.</p>
+                                                participa en la contracción y relajación de los músculos.
 
-                                <h3>Recomendaciones prácticas</h3>
-                                <p>✅ Elige glicinato para uso general y mejor sueño (sin efecto laxante)</p>
-                                <p>✅ Toma con comidas para minimizar molestias digestivas</p>
-                                <p>✅ Empieza con dosis bajas (200 mg) y aumenta gradualmente</p>
-                                <p>✅ Toma por la noche si buscas mejorar el sueño</p>
-                                <p>✅ Combina con alimentación rica en magnesio</p>
-                                <p>✅ Mantén equilibrio con calcio y vitamina D</p>
-                                <p>✅ Si tienes diarrea, cambia a glicinato o reduce dosis</p>
-                                <p>✅ Consulta con médico si tomas medicamentos regularmente</p>
+                                            </li>
 
-                                <h3>Conclusión</h3>
-                                <p>El magnesio es un mineral esencial frecuentemente deficiente en la población moderna.
-                                    La suplementación, especialmente con formas de alta biodisponibilidad como el
-                                    glicinato, puede mejorar significativamente el sueño, reducir ansiedad, optimizar
-                                    rendimiento deportivo y apoyar múltiples funciones corporales. Es uno de los
-                                    suplementos más seguros y con mejor relación beneficio-riesgo cuando se usa
-                                    apropiadamente. Para deportistas y personas activas, es prácticamente esencial para
-                                    mantener rendimiento óptimo y recuperación adecuada.</p>
+                                            <li class="mb-3">
+
+                                                <strong>Favorece la recuperación:</strong>
+
+                                                puede ayudar a disminuir la sensación de fatiga y mejorar la
+                                                recuperación después del entrenamiento.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Contribuye al descanso:</strong>
+
+                                                muchas personas lo utilizan para favorecer un sueño de mayor calidad.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Participa en la producción de energía:</strong>
+
+                                                el cuerpo necesita magnesio para muchos procesos relacionados con el
+                                                rendimiento físico.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Ayuda al sistema nervioso:</strong>
+
+                                                influye en la función nerviosa y en la transmisión de señales
+                                                musculares.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">SEÑALES DE POSIBLES NIVELES BAJOS</h2>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-3">
+
+                                                Calambres musculares frecuentes.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Fatiga o sensación de agotamiento.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Problemas de descanso o sueño.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Debilidad muscular.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                Sensación de estrés o tensión elevada.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">FUENTES NATURALES DE MAGNESIO</h2>
+
+                                        <p>
+
+                                            El magnesio se puede obtener mediante diferentes alimentos, especialmente:
+
+                                        </p>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-2">Frutos secos.</li>
+
+                                            <li class="mb-2">Chocolate negro.</li>
+
+                                            <li class="mb-2">Legumbres.</li>
+
+                                            <li class="mb-2">Verduras de hoja verde.</li>
+
+                                            <li class="mb-2">Cereales integrales.</li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">SUPLEMENTACIÓN DE MAGNESIO</h2>
+
+                                        <p>
+
+                                            Algunas personas utilizan suplementos de magnesio para complementar la
+                                            alimentación,
+
+                                            especialmente si entrenan duro o sienten mucha fatiga muscular.
+
+                                        </p>
+
+                                        <p>
+
+                                            Existen diferentes tipos, como:
+
+                                        </p>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-2">
+
+                                                <strong>Citrato de magnesio</strong>
+
+                                            </li>
+
+                                            <li class="mb-2">
+
+                                                <strong>Bisglicinato de magnesio</strong>
+
+                                            </li>
+
+                                            <li class="mb-2">
+
+                                                <strong>Óxido de magnesio</strong>
+
+                                            </li>
+
+                                        </ul>
+
+                                        <p>
+
+                                            Algunos tienen mejor absorción que otros, y no todos funcionan igual en
+                                            todas las personas.
+
+                                        </p>
+
+                                        <h2 class="mt-5">ERRORES QUE COMETE MUCHA GENTE</h2>
+
+                                        <ul class="mt-3">
+
+                                            <li class="mb-3">
+
+                                                <strong>Pensar que es mágico:</strong>
+
+                                                el magnesio ayuda, pero no sustituye descanso ni buena alimentación.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>Comprar cualquier suplemento barato:</strong>
+
+                                                algunos tipos tienen peor absorción o peor calidad.
+
+                                            </li>
+
+                                            <li class="mb-3">
+
+                                                <strong>No cuidar el sueño:</strong>
+
+                                                puedes tomar suplementos, pero si duermes mal cada día, el rendimiento
+                                                caerá igualmente.
+
+                                            </li>
+
+                                        </ul>
+
+                                        <h2 class="mt-5">CONCLUSIÓN</h2>
+
+                                        <p>
+
+                                            El magnesio es un mineral muy importante para cualquier persona que entrene
+                                            fuerza o quiera mejorar
+
+                                            recuperación, descanso y rendimiento físico.
+
+                                        </p>
+
+                                        <p>
+
+                                            No es un suplemento milagroso, pero sí puede ser una herramienta útil cuando
+                                            se combina con entrenamiento serio,
+
+                                            buena alimentación y hábitos correctos.
+
+                                        </p>
+                                    </em></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
 
+    <!-- FRECUENCIA DE ENTRENAMIENTO -->
     <div class="container text-center">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-12">
@@ -749,91 +1463,203 @@
                     <h2>¿Cuántas veces entrenas a la semana?</h2>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                        <label class="form-check-label" for="radioDefault1">
-                            1-2 veces
-                        </label>
+                        <label class="form-check-label" for="radioDefault1">1-2 veces</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
-                        <label class="form-check-label" for="radioDefault2">
-                            3-4 veces
-                        </label>
+                        <label class="form-check-label" for="radioDefault2">3-4 veces</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3" checked>
-                        <label class="form-check-label" for="radioDefault3">
-                            5-6 veces
-                        </label>
+                        <label class="form-check-label" for="radioDefault3">5-6 veces</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault4">
-                        <label class="form-check-label" for="radioDefault4">
-                            7 o más veces
-                        </label>
+                        <label class="form-check-label" for="radioDefault4">7 o más veces</label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FORMULARIO OBJETIVO + CONTACTO -->
+    <!-- ============================================ -->
+    <!-- SECCIÓN CONTACTO RÁPIDO POR REDES SOCIALES -->
+    <!-- ============================================ -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="seccion-redes">
+                    <h2 style="color: white; font-weight: bold;">📱 ¡CONTÁCTAME POR DONDE QUIERAS!</h2>
+                    <p style="color: white; font-size: 18px;">Elige el método que prefieras</p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+
+                        <!-- WhatsApp directo -->
+                        <a href="https://wa.me/34635816502" target="_blank" class="btn btn-lg" style="background-color: #25D366; color: white; border: 3px solid white; 
+                                  font-weight: bold; padding: 15px 30px; border-radius: 25px;">
+                            📲 WhatsApp Directo
+                        </a>
+
+                        <!-- Instagram perfil -->
+                        <a href="https://www.instagram.com/astro10__/" target="_blank" class="btn btn-lg" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+                                  color: white; border: 3px solid white; font-weight: bold; padding: 15px 30px; 
+                                  border-radius: 25px;">
+                            📸 Instagram
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:ivanib2007@icloud.com" class="btn btn-lg" style="background-color: red; color: white; border: 3px solid white; 
+                                  font-weight: bold; padding: 15px 30px; border-radius: 25px;">
+                            📧 Enviar Email
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!-- FORMULARIO INTERACTIVO PARA WHATSAPP -->
+    <!-- ============================================ -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="formulario-whatsapp">
+                    <h2 class="mb-4">📲 Envíame mensaje por WhatsApp</h2>
+
+                    <form id="formularioWhatsApp" class="text-start">
+
+                        <div class="mb-3">
+                            <label for="nombreWA" class="form-label">Tu nombre:</label>
+                            <input type="text" class="form-control" id="nombreWA" placeholder="¿Cómo te llamas?"
+                                style="border: 2px solid white;">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">¿Sobre qué quieres preguntar?</label>
+                            <select class="form-select" id="temaWA" style="border: 2px solid white;">
+                                <option value="rutina de entrenamiento">🏋️ Rutina de entrenamiento</option>
+                                <option value="suplementación">💊 Suplementación</option>
+                                <option value="dieta y nutrición">🥗 Dieta y nutrición</option>
+                                <option value="técnica de ejercicios">💪 Técnica de ejercicios</option>
+                                <option value="otra consulta">💬 Otra consulta</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensajeWA" class="form-label">Tu mensaje:</label>
+                            <textarea class="form-control" id="mensajeWA" rows="4"
+                                placeholder="Escribe tu pregunta aquí..." style="border: 2px solid white;"></textarea>
+                        </div>
+
+                        <div class="text-center w-100">
+                            <button type="button" class="btn btn-whatsapp" onclick="enviarWhatsApp()">
+                                📲 Abrir WhatsApp
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- ============================================ -->
+            <!-- FORMULARIO INTERACTIVO PARA INSTAGRAM -->
+            <!-- ============================================ -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="formulario-instagram">
+                    <h2 class="mb-4">📸 Envíame mensaje por Instagram</h2>
+
+                    <form id="formularioInstagram" class="text-start">
+
+                        <div class="mb-3">
+                            <label for="nombreIG" class="form-label">Tu nombre:</label>
+                            <input type="text" class="form-control" id="nombreIG" placeholder="¿Cómo te llamas?"
+                                style="border: 2px solid white;">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">¿De qué quieres hablar?</label>
+                            <select class="form-select" id="temaIG" style="border: 2px solid white;">
+                                <option value="rutina de entrenamiento">🏋️ Rutina de entrenamiento</option>
+                                <option value="suplementación">💊 Suplementación</option>
+                                <option value="dieta y nutrición">🥗 Dieta y nutrición</option>
+                                <option value="técnica de ejercicios">💪 Técnica de ejercicios</option>
+                                <option value="otra consulta">💬 Otra consulta</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensajeIG" class="form-label">Tu mensaje:</label>
+                            <textarea class="form-control" id="mensajeIG" rows="4"
+                                placeholder="Escribe tu pregunta aquí..." style="border: 2px solid white;"></textarea>
+                        </div>
+
+                        <div class="text-center w-100">
+                            <button type="button" class="btn btn-instagram" onclick="enviarInstagram()">
+                                📸 Abrir Instagram
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!-- FORMULARIO COMPLETO POR EMAIL -->
+    <!-- ============================================ -->
     <div class="container text-center mt-3">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
                 <div class="container d-flex flex-column align-items-start p-4"
                     style="background-color: white; color: black; font-weight: bold; border: 3px solid white; border-radius: 10px;">
-                    <h2 class="text-center w-100 mb-4">📩 Cuéntame tu objetivo en el gimnasio</h2>
+                    <h2 class="text-center w-100 mb-4">📩 Cuéntame tu objetivo en el gimnasio (Email)</h2>
 
                     <form id="formularioObjetivo" class="w-100">
 
-                        <!-- Nombre -->
                         <div class="mb-3 text-start">
                             <label for="nombre" class="form-label">Nombre:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required
                                 style="border: 2px solid black;">
                         </div>
 
-                        <!-- Edad -->
                         <div class="mb-3 text-start">
                             <label for="edad" class="form-label">Edad:</label>
                             <input type="number" class="form-control" id="edad" placeholder="Tu edad" min="10" max="100"
                                 required style="border: 2px solid black;">
                         </div>
 
-                        <!-- Email del usuario -->
                         <div class="mb-3 text-start">
                             <label for="emailUsuario" class="form-label">Tu Email:</label>
                             <input type="email" class="form-control" id="emailUsuario"
                                 placeholder="tucorreo@ejemplo.com" required style="border: 2px solid black;">
                         </div>
 
-                        <!-- Objetivo (selección) -->
                         <div class="mb-3 text-start">
                             <label class="form-label">¿Cuál es tu objetivo principal?</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoFuerza"
                                     value="Ganar Fuerza">
-                                <label class="form-check-label" for="objetivoFuerza">
-                                    💪 Ganar Fuerza
-                                </label>
+                                <label class="form-check-label" for="objetivoFuerza">💪 Ganar Fuerza</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoMusculo"
                                     value="Ganar Músculo (Hipertrofia)" checked>
-                                <label class="form-check-label" for="objetivoMusculo">
-                                    🏋️ Ganar Músculo (Hipertrofia)
-                                </label>
+                                <label class="form-check-label" for="objetivoMusculo">🏋️ Ganar Músculo
+                                    (Hipertrofia)</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="objetivoGym" id="objetivoResistencia"
                                     value="Resistencia">
-                                <label class="form-check-label" for="objetivoResistencia">
-                                    🏃 Resistencia
-                                </label>
+                                <label class="form-check-label" for="objetivoResistencia">🏃 Resistencia</label>
                             </div>
                         </div>
 
-                        <!-- Nivel de experiencia -->
                         <div class="mb-3 text-start">
                             <label for="experiencia" class="form-label">Nivel de experiencia:</label>
                             <select class="form-select" id="experiencia" required style="border: 2px solid black;">
@@ -844,16 +1670,13 @@
                             </select>
                         </div>
 
-                        <!-- Comentarios -->
                         <div class="mb-3 text-start">
-                            <label for="comentarios" class="form-label">Cuéntame más sobre ti (objetivos específicos,
-                                dudas, etc.):</label>
+                            <label for="comentarios" class="form-label">Cuéntame más sobre ti:</label>
                             <textarea class="form-control" id="comentarios" rows="5"
-                                placeholder="Escribe aquí tus dudas, objetivos específicos, lesiones previas, suplementación actual..."
+                                placeholder="Escribe aquí tus dudas, objetivos específicos, lesiones previas..."
                                 required style="border: 2px solid black;"></textarea>
                         </div>
 
-                        <!-- Botón de envío -->
                         <div class="text-center w-100">
                             <button type="button" class="btn btn-enviar" onclick="enviarCorreo()">
                                 📧 Enviar por Correo
@@ -866,6 +1689,10 @@
         </div>
     </div>
 
+
+    <!-- ============================================ -->
+    <!-- RUTINAS -->
+    <!-- ============================================ -->
     <div class="container mt-3 p-3"
         style="background-color: white; color: black; font-weight: bold; border: 4px solid white; border-radius: 10px;">
 
@@ -877,21 +1704,16 @@
                     style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
             </div>
             <div class="col-12 col-md-6">
-                <h3>DÍA DE PIERNA</h3>
+                <h3>DÍA DE PIERNA 🦵</h3>
                 <hr style="border: 2px solid black;">
                 <p>El día de pierna es una pedazo de mierda pero es importante debido a que sino, parecerás Larry la
                     langosta</p>
                 <img src="https://static.wikia.nocookie.net/bobesponja/images/8/81/LarrytheLobsterTransparent.png/revision/latest/scale-to-width/360?cb=20250402145904"
                     alt="Larry" class="img-fluid my-2" style="max-width: 210px; height: auto;">
                 <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE NO PASA NADA SI TE SALTAS
-                    HACER PIERNA, DUELE MUCHO A LOS 2 DÍAS</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de pierna</li>
-                    <li>Descanso suficiente</li>
-                </ul>
+                <h4 style="color: red; font-weight: bold; font-family: monospace">Si no quieres hacer pierna, puedes
+                    poner la excusa de que o tienes la rodilla mal, eres un culturista de la categoria Men's Physique o
+                    que juegas a futbol (Esta última la dicen más los flaquitos pero bueno)</h4>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <ul>
                     <li>prensa vertical 2 x 7 - 10</li>
@@ -905,7 +1727,6 @@
             </div>
         </div>
 
-        <!-- Separador entre secciones -->
         <hr style="border: 3px solid black; margin: 40px 0;">
 
         <!-- DÍA DE PECHO -->
@@ -916,20 +1737,11 @@
                     style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
             </div>
             <div class="col-12 col-md-6">
-                <h3>DÍA DE PECHO</h3>
+                <h3>DÍA DE PECHO 🏋️</h3>
                 <hr style="border: 2px solid black;">
-                <p>El mejor día de todos, ten cuidado porque las subnormales de las tias que solo hacen culo, usan tu
-                    banco favorito para hacer bulgaras. Un truco es que tu puedes usar la prensa que tiene el asiento
-                    inclinado para hacer el gran press inclinado, MUY ÚTIL para el desarrollo del pecho superior</p>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE SI NO TIRAS MÁS DE 100
-                    KG, TE PUEDES CONSIDERAR MUJER</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de pecho</li>
-                    <li>Descanso suficiente</li>
-                </ul>
+                <p>El mejor día de todos pero ten cuidado porque hay tias que solo hacen culo y usan tu banco favorito
+                    para hacer bulgaras. Si te quieres vengar de ellas, usa la prensa que tiene el asiento inclinado
+                    para hacer press inclinado :)</p>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <ul>
                     <li>press pecho inclinado (Libre a mancuernas) 2 x 8-10</li>
@@ -942,7 +1754,6 @@
             </div>
         </div>
 
-        <!-- Separador entre secciones -->
         <hr style="border: 3px solid black; margin: 40px 0;">
 
         <!-- DÍA DE ESPALDA -->
@@ -953,14 +1764,13 @@
                     style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
             </div>
             <div class="col-12 col-md-6">
-                <h3>DÍA DE ESPALDA</h3>
+                <h3>DÍA DE ESPALDA 💪</h3>
                 <hr style="border: 2px solid black;">
                 <p>Es uno de los musculos más dificiles de entrenar debido a que tienes que enfocar muy bien los
-                    movimientos que haces puesto que sino puedes entrenar otra parte que no quieres entrenar. En el
-                    antiguo culturimos se definian quienes sabian entrenar gracias a la espalda</p>
+                    movimientos que haces.</p>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <h4 style="color: red; font-weight: bold; font-family: monospace">RECUERDA QUE SI NO TIRAS MÁS DE 20 KG
-                    POR BRAZO EN BÍCEPS, TE PUEDES CONSIDERAR MUJER</h4>
+                    POR BRAZO EN BÍCEPS, NO TIENES BRAZOS, TIENES RAMITAS</h4>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <h4
                     style="color: rgb(0, 30, 255); font-weight: bold; font-family: monospace; display: flex; justify-content: center;">
@@ -971,12 +1781,6 @@
                     DETRÁS DE TI. DESDE AHÍ, HAZ CURL DE BÍCEPS CON MANCUERNAS. COMO LOS CODOS ESTÁN FIJOS EN EL PAD, NO
                     PUEDES BALANCEAR NI HACER TRAMPA, AISLANDO COMPLETAMENTE EL BÍCEPS. ES COMO HACER CURL DE PIE PERO
                     CON ESTABILIZACIÓN TOTAL</h4>
-                <hr style="border: 2px solid black; margin: 20px 0;">
-                <ul>
-                    <li>Calentamiento adecuado</li>
-                    <li>Ejercicios de espalda</li>
-                    <li>Descanso suficiente</li>
-                </ul>
                 <hr style="border: 2px solid black; margin: 20px 0;">
                 <ul>
                     <li>jalón pecho neutro 2 x 6 - 10</li>
@@ -992,25 +1796,609 @@
             </div>
         </div>
 
+        <div class="row mb-5">
+
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+
+                <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Biceps-Curl.gif" alt="Brazo"
+                    class="img-fluid"
+                    style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
+
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h3>DÍA DE BRAZO 💪</h3>
+
+                <hr style="border: 2px solid black;">
+
+                <p>
+
+                    AQUÍ VA TU INTRODUCCIÓN DEL DÍA DE BRAZO
+
+                </p>
+
+                <hr style="border: 2px solid black; margin: 20px 0;">
+
+                <h4 style="color: red; font-weight: bold; font-family: monospace">
+
+                    AQUÍ VA TU FRASE MOTIVADORA O TU TEXTO
+
+                </h4>
+
+                <hr style="border: 2px solid black; margin: 20px 0;">
+
+                <ul>
+
+                    <li>EJERCICIO 1</li>
+
+                    <li>EJERCICIO 2</li>
+
+                    <li>EJERCICIO 3</li>
+
+                    <li>EJERCICIO 4</li>
+
+                    <li>EJERCICIO 5</li>
+
+                    <li>EJERCICIO 6</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr style="border: 3px solid black; margin: 40px 0;">
+
+        <!-- DÍA DE PECHO Y ESPALDA -->
+
+        <div class="row mb-5">
+
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+
+                <img src="https://www.inspireusafoundation.org/wp-content/uploads/2022/10/chest-and-back-workout.jpg"
+                    alt="Pecho y espalda" class="img-fluid"
+                    style="max-width: 100%; height: auto; border: 3px solid black; border-radius: 8px;">
+
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h3>DÍA DE PECHO Y ESPALDA 🏋️</h3>
+
+                <hr style="border: 2px solid black;">
+
+                <p>
+
+                    AQUÍ VA TU INTRODUCCIÓN DEL DÍA DE PECHO Y ESPALDA
+
+                </p>
+
+                <hr style="border: 2px solid black; margin: 20px 0;">
+
+                <h4 style="color: rgb(0, 30, 255); font-weight: bold; font-family: monospace">
+
+                    AQUÍ VA TU CONSEJO O TEXTO IMPORTANTE
+
+                </h4>
+
+                <hr style="border: 2px solid black; margin: 20px 0;">
+
+                <ul>
+
+                    <li>EJERCICIO 1</li>
+
+                    <li>EJERCICIO 2</li>
+
+                    <li>EJERCICIO 3</li>
+
+                    <li>EJERCICIO 4</li>
+
+                    <li>EJERCICIO 5</li>
+
+                    <li>EJERCICIO 6</li>
+
+                    <li>EJERCICIO 7</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
     </div>
 
+    <!-- ============================================ -->
+    <!-- SECCIÓN A: PROMPTS DE IA PARA EL GYM -->
+    <!-- ============================================ -->
+    <section class="seccion-tips">
+        <div class="marca-agua">IVAN GYM</div>
 
-
-    <!-- Footer -->
-    <footer class="mt-5 p-3 text-center mx-auto"
-        style="background-color: lightblue; color: black; font-weight: bold; border: 3px solid black;">
-        <p>© 2026 Iván. Todos los derechos reservados.</p>
-        <p>
-            📸 Sígueme en Instagram:
-            <a href="https://www.instagram.com/astro10__/" target="_blank"
-                style="color: #E1306C; text-decoration: none; font-weight: bold;">
-                @astro10__
-            </a>
+        <h2 class="titulo-seccion-tips">🤖 PROMPTS DE IA PARA EL GYM</h2>
+        <p class="subtitulo-seccion-tips">Copia estos prompts y úsalos en ChatGPT o Claude para mejorar tu entrenamiento
         </p>
+
+        <!-- PROMPT 1: REVIEW DE RUTINA -->
+        <div class="tip-card">
+            <span class="tip-badge badge-azul">📝 REVIEW DE RUTINA</span>
+            <h2 class="tip-titulo">REVISA TU<br>RUTINA SIN FILTROS</h2>
+            <p class="tip-subtitulo">Como tener un entrenador senior que te dice las verdades a la cara.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">PROMPT</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Actúa como</span> <span class="code-white">entrenador con 10 años de
+                        experiencia.</span><br>
+                    <span class="code-white">Sé</span> <span class="code-orange">brutal y honesto.</span> <span
+                        class="code-white">Esta es mi rutina:</span><br>
+                    <span class="code-string">[pega tu rutina]</span><br><br>
+                    <span class="code-white">Busca:</span> <span class="code-orange">errores, ejercicios mal
+                        elegidos,</span><br>
+                    <span class="code-orange">volumen excesivo</span> <span class="code-white">y</span> <span
+                        class="code-orange">grupos descompensados.</span><br>
+                    <span class="code-comment">// Dame nota del 1 al 10 al final.</span>
+                </div>
+            </div>
+
+            <button class="btn-copiar" onclick="copiarPrompt(1)">📋 Copiar Prompt</button>
+
+            <div class="tip-info mt-3">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">"Brutal y honesto" hace que la IA no te endulce la respuesta. Sin eso, te dirá
+                    que está perfecta.</p>
+            </div>
+        </div>
+
+
+        <!-- PROMPT 2: DISEÑAR RUTINA DESDE 0 -->
+        <div class="tip-card">
+            <span class="tip-badge badge-verde">🏗️ DISEÑO DE RUTINA</span>
+            <h2 class="tip-titulo">DISEÑA TU<br>RUTINA DESDE 0</h2>
+            <p class="tip-subtitulo">Para cuando empiezas y no sabes ni cómo organizarte en el gym.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">PROMPT</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Eres</span> <span class="code-white">un entrenador experto en
+                        hipertrofia.</span><br>
+                    <span class="code-white">Quiero una rutina:</span> <span
+                        class="code-string">[días/semana]</span><br>
+                    <span class="code-white">Mi nivel:</span> <span
+                        class="code-string">[principiante/intermedio/avanzado]</span><br>
+                    <span class="code-white">Objetivo:</span> <span class="code-string">[ganar
+                        músculo/fuerza/resistencia]</span><br><br>
+                    <span class="code-white">Dame:</span> <span class="code-orange">split, ejercicios
+                        principales,</span><br>
+                    <span class="code-orange">series, repeticiones</span> <span class="code-white">y las</span> <span
+                        class="code-orange">3 reglas</span><br>
+                    <span class="code-orange">más importantes</span> <span class="code-white">que debo
+                        seguir.</span><br>
+                    <span class="code-comment">// Explica el porqué de cada decisión.</span>
+                </div>
+            </div>
+
+            <button class="btn-copiar" onclick="copiarPrompt(2)">📋 Copiar Prompt</button>
+
+            <div class="tip-info mt-3">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Pedir "3 reglas más importantes" fuerza a la IA a priorizar. Sin eso, te suelta
+                    una lista infinita.</p>
+            </div>
+        </div>
+
+
+        <!-- PROMPT 3: OPTIMIZAR ENTRENO -->
+        <div class="tip-card">
+            <span class="tip-badge badge-naranja">⚡ OPTIMIZACIÓN</span>
+            <h2 class="tip-titulo">ENTRENAMIENTOS<br>MÁS RÁPIDOS YA</h2>
+            <p class="tip-subtitulo">Para cuando tu sesión dura 2 horas y no sabes qué cortar.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">PROMPT</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Analiza</span> <span class="code-white">esta rutina y
+                        optimízala:</span><br>
+                    <span class="code-string">[pega tu rutina]</span><br><br>
+                    <span class="code-white">Contexto:</span> <span class="code-string">[tiempo disponible y
+                        objetivo]</span><br><br>
+                    <span class="code-white">Muéstrame:</span> <span class="code-orange">versión original</span> <span
+                        class="code-white">vs</span> <span class="code-orange">optimizada</span><br>
+                    <span class="code-white">y explica</span> <span class="code-orange">qué eliminar y por
+                        qué.</span><br>
+                    <span class="code-comment">// Ordena por impacto en hipertrofia.</span>
+                </div>
+            </div>
+
+            <button class="btn-copiar" onclick="copiarPrompt(3)">📋 Copiar Prompt</button>
+
+            <div class="tip-info mt-3">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Pedir "original vs optimizado" te muestra qué sobra. No solo palabras vacías.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- PROMPT 4: DIETA -->
+        <div class="tip-card">
+            <span class="tip-badge badge-rojo">🥗 PLAN DE DIETA</span>
+            <h2 class="tip-titulo">CALCULA TU<br>DIETA EN SEGUNDOS</h2>
+            <p class="tip-subtitulo">El prompt que más tiempo te ahorra. Macros y comidas hechas en 1 minuto.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">PROMPT</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Calcula</span> <span class="code-white">mis macros para:</span><br>
+                    <span class="code-string">[volumen / definición / mantenimiento]</span><br><br>
+                    <span class="code-white">Mis datos:</span><br>
+                    <span class="code-orange">Peso:</span> <span class="code-string">[kg]</span> <span
+                        class="code-orange">Altura:</span> <span class="code-string">[cm]</span><br>
+                    <span class="code-orange">Edad:</span> <span class="code-string">[años]</span> <span
+                        class="code-orange">Actividad:</span> <span class="code-string">[nivel]</span><br><br>
+                    <span class="code-white">Dame:</span> <span class="code-orange">calorías, proteína, carbos,
+                        grasas</span><br>
+                    <span class="code-white">y un</span> <span class="code-orange">menú de ejemplo</span> <span
+                        class="code-white">para 1 día.</span><br>
+                    <span class="code-comment">// Comidas reales y fáciles, no recetas raras.</span>
+                </div>
+            </div>
+
+            <button class="btn-copiar" onclick="copiarPrompt(4)">📋 Copiar Prompt</button>
+
+            <div class="tip-info mt-3">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Mencionar "comidas reales y fáciles" evita que te recomiende comer quinoa con
+                    espirulina cada día.</p>
+            </div>
+        </div>
+
+
+        <!-- PROMPT 5: CORREGIR TÉCNICA -->
+        <div class="tip-card">
+            <span class="tip-badge badge-morado">💪 TÉCNICA</span>
+            <h2 class="tip-titulo">CORRIGE TU<br>TÉCNICA AL INSTANTE</h2>
+            <p class="tip-subtitulo">El prompt que evita lesiones. Aprende la técnica perfecta de cualquier ejercicio.
+            </p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">PROMPT</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Explícame</span> <span class="code-white">la técnica perfecta
+                        de:</span><br>
+                    <span class="code-string">[nombre del ejercicio]</span><br><br>
+                    <span class="code-white">Incluye:</span> <span class="code-orange">postura inicial,
+                        recorrido,</span><br>
+                    <span class="code-orange">respiración, errores comunes</span><br>
+                    <span class="code-white">y</span> <span class="code-orange">cómo activar el músculo</span> <span
+                        class="code-white">objetivo.</span><br><br>
+                    <span class="code-white">También:</span> <span class="code-orange">2 variantes</span> <span
+                        class="code-white">si tengo</span><br>
+                    <span class="code-string">[lesión o limitación]</span><span class="code-comment">.</span><br>
+                    <span class="code-comment">// Sin tecnicismos, lenguaje claro.</span>
+                </div>
+            </div>
+
+            <button class="btn-copiar" onclick="copiarPrompt(5)">📋 Copiar Prompt</button>
+
+            <div class="tip-info mt-3">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Pedir "errores comunes" es clave. Te dice lo que NO debes hacer, no solo lo que
+                    debes hacer.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN B: CONSEJOS DIRECTOS DEL GYM -->
+    <!-- ============================================ -->
+    <section class="seccion-tips" style="background: #050505;">
+        <div class="marca-agua">CONSEJOS</div>
+
+        <h2 class="titulo-seccion-tips">🔥 CONSEJOS BRUTALES PARA EL GYM</h2>
+        <p class="subtitulo-seccion-tips">Verdades que nadie te dice cuando empiezas a entrenar</p>
+
+        <!-- CONSEJO 1: PROGRESIÓN -->
+        <div class="tip-card">
+            <span class="tip-badge badge-rojo">🔥 PROGRESIÓN</span>
+            <h2 class="tip-titulo">SIN PROGRESIÓN<br>NO HAY CRECIMIENTO</h2>
+            <p class="tip-subtitulo">El error nº1 de los gym bros: hacer siempre lo mismo y esperar resultados.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">REGLA</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Si</span> <span class="code-white">la semana pasada hiciste</span> <span
+                        class="code-string">"banca 80kg x 8"</span><br>
+                    <span class="code-white">esta semana tienes que hacer:</span><br><br>
+                    <span class="code-orange">→ 80kg x 9 reps</span> <span class="code-comment">(añadir 1
+                        rep)</span><br>
+                    <span class="code-orange">→ 82.5kg x 8 reps</span> <span class="code-comment">(subir
+                        peso)</span><br>
+                    <span class="code-orange">→ 80kg x 8 con mejor técnica</span><br><br>
+                    <span class="code-comment">// El músculo crece con sobrecarga progresiva, no con repetición.</span>
+                </div>
+            </div>
+
+            <div class="tip-info">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Apunta tus pesos en una libreta o app. Sin medir, no sabes si progresas.</p>
+            </div>
+        </div>
+
+
+        <!-- CONSEJO 2: TÉCNICA -->
+        <div class="tip-card">
+            <span class="tip-badge badge-amarillo">⚠️ TÉCNICA > EGO</span>
+            <h2 class="tip-titulo">DEJA EL EGO<br>EN LA PUERTA</h2>
+            <p class="tip-subtitulo">Mejor 60kg con técnica perfecta que 100kg balanceándote como un pollo.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">CHECKLIST</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-orange">✓</span> <span class="code-white">¿Controlas el peso en la
+                        bajada?</span><br>
+                    <span class="code-orange">✓</span> <span class="code-white">¿Sientes el músculo trabajar?</span><br>
+                    <span class="code-orange">✓</span> <span class="code-white">¿El movimiento es limpio?</span><br>
+                    <span class="code-orange">✓</span> <span class="code-white">¿Llegas al rango
+                        completo?</span><br><br>
+                    <span class="code-keyword">Si</span> <span class="code-white">respondiste</span> <span
+                        class="code-string">"NO"</span> <span class="code-white">a alguna,</span><br>
+                    <span class="code-orange">BAJA EL PESO.</span><br>
+                    <span class="code-comment">// Tu ego no construye músculo, la técnica sí.</span>
+                </div>
+            </div>
+
+            <div class="tip-info">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Grábate de vez en cuando. Lo que sientes y lo que se ve no siempre coincide.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- CONSEJO 3: DESCANSO -->
+        <div class="tip-card">
+            <span class="tip-badge badge-azul">😴 DESCANSO</span>
+            <h2 class="tip-titulo">NO CRECES EN EL GYM,<br>CRECES DURMIENDO</h2>
+            <p class="tip-subtitulo">El secreto que el 90% de los gym bros ignoran. Sin descanso, no hay músculo.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">FÓRMULA</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-orange">ENTRENO</span> <span class="code-white">+</span> <span
+                        class="code-orange">COMIDA</span> <span class="code-white">+</span> <span
+                        class="code-orange">DESCANSO</span> <span class="code-white">=</span> <span
+                        class="code-string">MÚSCULO</span><br><br>
+                    <span class="code-keyword">Mínimos:</span><br>
+                    <span class="code-orange">→</span> <span class="code-string">7-9 horas</span> <span
+                        class="code-white">de sueño</span><br>
+                    <span class="code-orange">→</span> <span class="code-string">48h</span> <span
+                        class="code-white">entre entrenar mismo músculo</span><br>
+                    <span class="code-orange">→</span> <span class="code-string">1-2 días</span> <span
+                        class="code-white">de descanso completo/semana</span><br><br>
+                    <span class="code-comment">// Si entrenas 7 días y duermes 5 horas, no creces. Te rompes.</span>
+                </div>
+            </div>
+
+            <div class="tip-info">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Si no rindes en el gym, probablemente sea porque no descansas, no porque te
+                    falten suplementos.</p>
+            </div>
+        </div>
+
+
+        <!-- CONSEJO 4: ALIMENTACIÓN -->
+        <div class="tip-card">
+            <span class="tip-badge badge-verde">🥗 ALIMENTACIÓN</span>
+            <h2 class="tip-titulo">SIN PROTE,<br>NO HAY MUSCLE</h2>
+            <p class="tip-subtitulo">Si no comes proteína, da igual cuánto entrenes. Tu cuerpo no tiene material para
+                construir.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">MACROS</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Regla básica:</span><br><br>
+                    <span class="code-orange">Proteína:</span> <span class="code-string">1.6 - 2.2g</span> <span
+                        class="code-white">por kg de peso</span><br>
+                    <span class="code-orange">Carbos:</span> <span class="code-string">3 - 5g</span> <span
+                        class="code-white">por kg de peso</span><br>
+                    <span class="code-orange">Grasas:</span> <span class="code-string">0.8 - 1g</span> <span
+                        class="code-white">por kg de peso</span><br><br>
+                    <span class="code-keyword">Ejemplo</span> <span class="code-white">si pesas</span> <span
+                        class="code-string">75kg:</span><br>
+                    <span class="code-orange">→</span> <span class="code-string">150g proteína / 300g carbos / 70g
+                        grasa</span><br>
+                    <span class="code-comment">// La proteína es lo más importante. No la negocies.</span>
+                </div>
+            </div>
+
+            <div class="tip-info">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Fuentes: pollo, atún, huevos, ternera, lácteos. Si no llegas con comida, mete
+                    proteína en polvo.</p>
+            </div>
+        </div>
+
+
+        <!-- CONSEJO 5: CONSTANCIA -->
+        <div class="tip-card">
+            <span class="tip-badge badge-morado">🎯 CONSTANCIA</span>
+            <h2 class="tip-titulo">ENTRENAR 6 MESES<br>NO ES SUFICIENTE</h2>
+            <p class="tip-subtitulo">El gym no es una dieta de 30 días. Es un cambio de vida. Acéptalo o vete.</p>
+
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-rojo"></span>
+                    <span class="terminal-dot dot-amarillo"></span>
+                    <span class="terminal-dot dot-verde"></span>
+                    <span class="terminal-label">REALIDAD</span>
+                </div>
+                <div class="terminal-content">
+                    <span class="code-keyword">Tiempo real</span> <span class="code-white">para ver
+                        resultados:</span><br><br>
+                    <span class="code-orange">3 meses:</span> <span class="code-white">tú notas el cambio</span><br>
+                    <span class="code-orange">6 meses:</span> <span class="code-white">tu familia lo nota</span><br>
+                    <span class="code-orange">1 año:</span> <span class="code-white">tus amigos lo notan</span><br>
+                    <span class="code-orange">2 años:</span> <span class="code-white">la gente te pregunta qué
+                        haces</span><br>
+                    <span class="code-orange">5+ años:</span> <span class="code-white">empiezas a verte como
+                        querías</span><br><br>
+                    <span class="code-comment">// Si dejas el gym a los 3 meses porque "no veo cambios", nunca verás
+                        nada.</span>
+                </div>
+            </div>
+
+            <div class="tip-info">
+                <span class="tip-info-icon">💡</span>
+                <p class="tip-info-text">Los que ves "naturales" llevan MÍNIMO 5 años entrenando duro. No te compares
+                    con un mes.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- FOOTER COMPLETO CON REDES SOCIALES -->
+    <!-- ============================================ -->
+    <footer class="mt-5 p-4 text-center mx-auto"
+        style="background: linear-gradient(135deg, #1a1a1a, #2a0000); color: white; font-weight: bold; border: 3px solid white;">
+
+        <h3 style="color: white;">¡Sígueme en mis redes! 🚀</h3>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/34635816502" target="_blank" style="background-color: #25D366; color: white; padding: 12px 25px; border-radius: 25px; 
+                      text-decoration: none; font-weight: bold; border: 2px solid white;">
+                📲 WhatsApp: 635 81 65 02
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/astro10__/" target="_blank" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+                      color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; 
+                      font-weight: bold; border: 2px solid white;">
+                📸 Instagram: @astro10__
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:ivanib2007@icloud.com" style="background-color: red; color: white; padding: 12px 25px; border-radius: 25px; 
+                      text-decoration: none; font-weight: bold; border: 2px solid white;">
+                📧 Email
+            </a>
+
+        </div>
+
+        <hr style="border: 2px solid white; width: 50%; margin: 20px auto;">
+        <p style="color: white;">© 2026 Iván. Todos los derechos reservados.</p>
+
     </footer>
 
 
+    <!-- ============================================ -->
+    <!-- BOTONES FLOTANTES (siempre visibles) -->
+    <!-- ============================================ -->
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/34635816502" target="_blank" class="whatsapp-flotante" title="Contactar por WhatsApp">
+        💬
+    </a>
+
+    <!-- Instagram flotante -->
+    <a href="https://www.instagram.com/astro10__/" target="_blank" class="instagram-flotante" title="Ver Instagram">
+        📸
+    </a>
+
+    <!-- Teléfono flotante -->
+    <a href="tel:+34635816502" class="llamada-flotante" title="Llamar a Iván">
+        📞
+    </a>
+
+    <!-- ============================================ -->
+    <!-- CHAT WIDGET -->
+    <!-- ============================================ -->
+    <div class="chat-widget">
+        <div class="chat-burbuja" onclick="abrirChat()">💬</div>
+    </div>
+
+    <div class="chat-ventana" id="chatVentana">
+        <div class="chat-header">
+            <img src="golden's gym.png" alt="Iván"
+                onerror="this.src='https://ui-avatars.com/api/?name=Ivan&background=ff0000&color=fff'">
+            <div class="chat-header-info">
+                <h5>Iván 💪</h5>
+                <p>● En línea</p>
+            </div>
+            <button class="chat-cerrar" onclick="abrirChat()">×</button>
+        </div>
+
+        <div class="chat-mensajes" id="chatMensajes">
+            <div class="mensaje mensaje-iva">
+                ¡Hola! 👋 Soy Iván.<br>¿En qué puedo ayudarte? 💪
+            </div>
+            <div class="mensaje mensaje-iva">
+                Pregúntame sobre rutinas, suplementos, dieta o cualquier duda del gym.
+            </div>
+        </div>
+
+        <div class="chat-input-zona">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Escribe tu mensaje..."
+                onkeypress="if(event.key === 'Enter') enviarMensajeChat()">
+            <button class="chat-enviar" onclick="enviarMensajeChat()">➤</button>
+        </div>
+    </div>
+
     <script>
+        // ============================================
+        // ALERT DE INFORMACIÓN
+        // ============================================
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
         const appendAlert = (message, type) => {
             const wrapper = document.createElement('div')
@@ -1020,7 +2408,6 @@
                 '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
                 '</div>'
             ].join('')
-
             alertPlaceholder.append(wrapper)
         }
 
@@ -1031,29 +2418,26 @@
             })
         }
 
-        // FUNCIÓN PARA ENVIAR EL CORREO
+
+        // ============================================
+        // FUNCIÓN ENVIAR EMAIL
+        // ============================================
         function enviarCorreo() {
-            // Recoger los valores del formulario
             const nombre = document.getElementById('nombre').value;
             const edad = document.getElementById('edad').value;
             const emailUsuario = document.getElementById('emailUsuario').value;
             const experiencia = document.getElementById('experiencia').value;
             const comentarios = document.getElementById('comentarios').value;
 
-            // Recoger el objetivo seleccionado (radio button)
             const objetivoSeleccionado = document.querySelector('input[name="objetivoGym"]:checked');
             const objetivo = objetivoSeleccionado ? objetivoSeleccionado.value : 'No seleccionado';
 
-            // Validar que todos los campos estén rellenos
             if (!nombre || !edad || !emailUsuario || !experiencia || !comentarios) {
-                alert('⚠️ Por favor, completa todos los campos del formulario antes de enviar.');
+                alert('⚠️ Por favor, completa todos los campos del formulario.');
                 return;
             }
 
-            // Construir el asunto del correo
             const asunto = `Consulta de ${nombre} - Objetivo: ${objetivo}`;
-
-            // Construir el cuerpo del correo
             const cuerpo = `Hola Iván,
 
 Te escribo desde tu página web para contarte sobre mi entrenamiento.
@@ -1075,15 +2459,191 @@ ${comentarios}
 Saludos,
 ${nombre}`;
 
-            // Codificar para URL
-            const asuntoCodificado = encodeURIComponent(asunto);
-            const cuerpoCodificado = encodeURIComponent(cuerpo);
-
-            // Crear el enlace mailto y abrirlo
-            const mailtoLink = `mailto:ivanib2007@icloud.com?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
+            const mailtoLink = `mailto:ivanib2007@icloud.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
             window.location.href = mailtoLink;
         }
+
+
+        // ============================================
+        // FUNCIÓN ENVIAR WHATSAPP
+        // ============================================
+        function enviarWhatsApp() {
+            const nombre = document.getElementById('nombreWA').value;
+            const tema = document.getElementById('temaWA').value;
+            const mensaje = document.getElementById('mensajeWA').value;
+
+            if (!nombre || !mensaje) {
+                alert('⚠️ Por favor, rellena tu nombre y mensaje.');
+                return;
+            }
+
+            const mensajeCompleto = `¡Hola Iván!
+
+Soy *${nombre}* y te escribo desde tu página web.
+
+*Tema:* ${tema}
+
+*Mensaje:*
+${mensaje}
+
+¡Gracias!`;
+
+            const numero = '34635816502';
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensajeCompleto)}`;
+            window.open(url, '_blank');
+        }
+
+
+        // ============================================
+        // FUNCIÓN ENVIAR INSTAGRAM
+        // ============================================
+        function enviarInstagram() {
+            const nombre = document.getElementById('nombreIG').value;
+            const tema = document.getElementById('temaIG').value;
+            const mensaje = document.getElementById('mensajeIG').value;
+
+            if (!nombre || !mensaje) {
+                alert('⚠️ Por favor, rellena tu nombre y mensaje.');
+                return;
+            }
+
+            const mensajeCompleto = `¡Hola Iván!
+
+Soy ${nombre} y te escribo desde tu página web.
+
+Tema: ${tema}
+
+Mensaje:
+${mensaje}
+
+¡Gracias!`;
+
+            navigator.clipboard.writeText(mensajeCompleto).then(() => {
+                alert('✅ ¡Mensaje copiado al portapapeles!\n\nAhora se abrirá Instagram. Solo pega el mensaje (Ctrl+V o Pegar) y envíalo.');
+                window.open('https://ig.me/m/astro10__', '_blank');
+            }).catch(() => {
+                alert('⚠️ Copia este mensaje manualmente y pégalo en Instagram:\n\n' + mensajeCompleto);
+                window.open('https://ig.me/m/astro10__', '_blank');
+            });
+        }
+
+
+        // ============================================
+        // FUNCIÓN COPIAR PROMPT AL PORTAPAPELES
+        // ============================================
+        function copiarPrompt(numero) {
+            const prompts = {
+                1: `Actúa como entrenador con 10 años de experiencia.
+Sé brutal y honesto. Esta es mi rutina:
+[pega tu rutina]
+
+Busca: errores, ejercicios mal elegidos,
+volumen excesivo y grupos descompensados.
+// Dame nota del 1 al 10 al final.`,
+
+                2: `Eres un entrenador experto en hipertrofia.
+Quiero una rutina: [días/semana]
+Mi nivel: [principiante/intermedio/avanzado]
+Objetivo: [ganar músculo/fuerza/resistencia]
+
+Dame: split, ejercicios principales,
+series, repeticiones y las 3 reglas
+más importantes que debo seguir.
+// Explica el porqué de cada decisión.`,
+
+                3: `Analiza esta rutina y optimízala:
+[pega tu rutina]
+
+Contexto: [tiempo disponible y objetivo]
+
+Muéstrame: versión original vs optimizada
+y explica qué eliminar y por qué.
+// Ordena por impacto en hipertrofia.`,
+
+                4: `Calcula mis macros para:
+[volumen / definición / mantenimiento]
+
+Mis datos:
+Peso: [kg] Altura: [cm]
+Edad: [años] Actividad: [nivel]
+
+Dame: calorías, proteína, carbos, grasas
+y un menú de ejemplo para 1 día.
+// Comidas reales y fáciles, no recetas raras.`,
+
+                5: `Explícame la técnica perfecta de:
+[nombre del ejercicio]
+
+Incluye: postura inicial, recorrido,
+respiración, errores comunes
+y cómo activar el músculo objetivo.
+
+También: 2 variantes si tengo
+[lesión o limitación].
+// Sin tecnicismos, lenguaje claro.`
+            };
+
+            const prompt = prompts[numero];
+
+            navigator.clipboard.writeText(prompt).then(() => {
+                alert('✅ ¡Prompt copiado al portapapeles!\n\nAhora pégalo en ChatGPT o Claude.');
+            }).catch(() => {
+                alert('⚠️ Copia manualmente este prompt:\n\n' + prompt);
+            });
+        }
+
+        // ============================================
+        // CHAT WIDGET
+        // ============================================
+        function abrirChat() {
+            const ventana = document.getElementById('chatVentana');
+            ventana.classList.toggle('activo');
+        }
+
+        function enviarMensajeChat() {
+            const input = document.getElementById('chatInput');
+            const mensaje = input.value.trim();
+
+            if (!mensaje) return;
+
+            // Mostrar mensaje del usuario en el chat
+            const chatMensajes = document.getElementById('chatMensajes');
+            const mensajeDiv = document.createElement('div');
+            mensajeDiv.className = 'mensaje mensaje-usuario';
+            mensajeDiv.innerText = mensaje;
+            chatMensajes.appendChild(mensajeDiv);
+
+            // Limpiar input
+            input.value = '';
+
+            // Scroll al final
+            chatMensajes.scrollTop = chatMensajes.scrollHeight;
+
+            // Mostrar respuesta del bot
+            const respuesta = document.createElement('div');
+            respuesta.className = 'mensaje mensaje-iva';
+            respuesta.innerHTML = `Gracias por tu mensaje! 💪<br>Abriendo WhatsApp...`;
+            chatMensajes.appendChild(respuesta);
+            chatMensajes.scrollTop = chatMensajes.scrollHeight;
+
+            // Abrir WhatsApp INMEDIATAMENTE (sin setTimeout para que no lo bloquee)
+            const url = `https://wa.me/34635816502?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // ============================================
+        // REGISTRAR PWA (APP INSTALABLE)
+        // ============================================
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(() => console.log('✅ App lista para instalar'))
+                    .catch(err => console.log('❌ Error:', err));
+            });
+        }
     </script>
+
+
 </body>
 
 </html>
